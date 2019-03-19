@@ -11,6 +11,28 @@
    "form.coordonnes_gps: accuracy (meters)": 6,
    "form.interviewer": "membre_simple",
    "form.ethnie.nbre_groupe_ethnique": 2,
+   "form_bad": {
+     "q1_id": "foo",
+     "q1_label": "bar",
+     "q1_response": "baz",
+     "q2_id": "quux",
+     "q2_label": "aay",
+     "q2_response": "bee"
+   },
+   "form_good": {
+     "questions": [
+       {
+         "id": "007",
+         "label": "bond",
+         "response": "shaken"
+       },
+       {
+         "id": "008",
+         "label": "nond",
+         "response": "stirred"
+       }
+     ]
+   },
    "form.CE_caracteristiques_demog_enquete.CE1_caracteristiques_enquete.CE2_sexe": "feminin",
    "form.CE_caracteristiques_demog_enquete.CE1_caracteristiques_enquete.CE3_groupe_ethnique": "wolof",
    "form.CE_caracteristiques_demog_enquete.CE1_caracteristiques_enquete.CE4_age_enquete.CE4x1_connait_age": "oui",
