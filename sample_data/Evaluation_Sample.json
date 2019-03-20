@@ -33,6 +33,20 @@
        }
      ]
    },
+   "form_medium": {
+     "q1": {
+       "type": "question",
+       "id": "007",
+       "label": "bond",
+       "response": "shaken"
+     },
+     "q2": {
+       "type": "question",
+       "id": "008",
+       "label": "nond",
+       "response": "stirred"
+     }
+   },
    "form.CE_caracteristiques_demog_enquete.CE1_caracteristiques_enquete.CE2_sexe": "feminin",
    "form.CE_caracteristiques_demog_enquete.CE1_caracteristiques_enquete.CE3_groupe_ethnique": "wolof",
    "form.CE_caracteristiques_demog_enquete.CE1_caracteristiques_enquete.CE4_age_enquete.CE4x1_connait_age": "oui",
