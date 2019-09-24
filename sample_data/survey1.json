@@ -1,0 +1,98 @@
+{
+  "data":{
+    "version": "513",
+    "uiversion": "1",
+    "type": "data",
+    "server_modified_on": "2019-09-05T10:16:53.659641Z",
+    "resource_uri": "",
+    "received_on": "2019-09-05T10:16:53.322722Z",
+    "problem": null,
+    "metadata": {
+      "username": "test.user",
+      "userID": "ABCb3fbd9195419a8c01f4759baca46f",
+      "timeStart": "2019-08-29T15:56:22.797000Z",
+      "timeEnd": "2019-08-29T16:02:14.458000Z",
+      "location": null,
+      "instanceID": "fb086874-af80-4941-82aa-fe3e499439fe",
+      "geo_point": null,
+      "drift": "",
+      "deviceID": "352948094196072",
+      "commcare_version": "2.42.0",
+      "app_build_version": 585,
+      "appVersion": "CommCare ODK, version \"2.42.0\"(448383). App v585. CommCare Version 2.42. Construction 448383, construit: 2018-02-16"
+    },
+    "is_phone_submission": true,
+    "initial_processing_complete": true,
+    "indexed_on": "2019-09-05T10:16:53.991704",
+    "id": "fb086874-af80-4941-82aa-fe3e499439fe",
+    "form": {
+      "meta": {
+        "username": "test.user",
+        "userID": "ABCb3fbd9195419a8c01f4759baca46f",
+        "timeStart": "2019-08-29T15:56:22.797000Z",
+        "timeEnd": "2019-08-29T16:02:14.458000Z",
+        "instanceID": "fb086874-af80-4941-82aa-fe3e499439fe",
+        "geo_point": null,
+        "drift": "",
+        "deviceID": "352948094196072",
+        "commcare_version": "2.42.0",
+        "app_build_version": 585,
+        "appVersion": "CommCare ODK, version \"2.42.0\"(448383). App v585. CommCare Version 2.42. Construction 448383, construit: 2018-02-16",
+        "@xmlns": "http://openrosa.org/jr/xforms"
+      },
+      "fixture_localization": {
+        "village": "mankacouna_vil",
+        "departement": "velingara_dep",
+        "commune": "nemataba_com"
+      },
+      "SUIVI_MENSUEL": {
+        "GOUVERNANCE": {
+          "Plan_action_prevention_conflit": "OUI",
+          "Nombre_activites_realisees": "1",
+          "Nombre_activites_non_realisees": "0",
+          "FORMATION_CP": {
+            "Total_Participants_CP": "",
+            "Participation_module": "NON",
+            "Module_en_cours": "Pas_Module"
+          },
+          "Activites_Realisees_CP": {
+            "nbre_homm_touches": "2",
+            "nbre_de_femmes_touchees": "39",
+            "Types_Activites_Consolidation_Paix": "causseri",
+            "Type_activites_Gestion_Resolution_Conflits": "causserie",
+            "Type_activite_Prevention_conflits": "causserie",
+            "Nombre_Mediations_realisees": "0",
+            "Nombre_Mediations_Reussies_CP": "0",
+            "Nombre_Autres_Activites_CP": "0",
+            "Nombre_Activites_Prevention_conflits": "1",
+            "Nombre_Activites_Gestion__Resolution_conflits": "1",
+            "Nombre_Activites_Consolidation_Paix": "1"
+          }
+        }
+      },
+      "Mois_Collecte": "AOUT",
+      "Coordonnees_GPS": "13.2026477 -14.0548804 42.79 7.5",
+      "@xmlns": "http://openrosa.org/formdesigner/A1F02700-442A-42B4-AF08-C4F3BEA67843",
+      "@version": "513",
+      "@uiVersion": "1",
+      "@name": "Suivi Comité de Paix",
+      "#type": "data"
+    },
+    "edited_on": null,
+    "edited_by_user_id": null,
+    "domain": "seratostan",
+    "build_id": "f5019a1181e74e07a882899c3d0dca4e",
+    "attachments": {
+      "form.xml": {
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/fb086874-af80-4941-82aa-fe3e499439fe/form.xml",
+        "length": 2268,
+        "content_type": "text/xml"
+      }
+    },
+    "archived": false,
+    "app_id": "dfa151b7562ccc68ed707d2d9fcee6af",
+    "__query_params": {
+      "app_id": "dfa151b7562ccc68ed707d2d9fcee6af"
+    }
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "data":{
+    "version": "3437",
+    "uiversion": "1",
+    "type": "data",
+    "server_modified_on": "2019-09-13T12:15:11.643741Z",
+    "resource_uri": "",
+    "received_on": "2019-09-13T12:15:11.584559Z",
+    "problem": null,
+    "metadata": {
+      "username": "gueyefatoumata",
+      "userID": "f59a4258dca642489d8d6baa5d1fcfbe",
+      "timeStart": "2019-09-13T12:00:08.512000Z",
+      "timeEnd": "2019-09-13T12:15:10.012000Z",
+      "location": null,
+      "instanceID": "2d440398-c293-4855-a5f3-9ae98e6f19d1",
+      "geo_point": null,
+      "drift": "0",
+      "deviceID": "359218099115409",
+      "commcare_version": "2.47.3",
+      "app_build_version": 3477,
+      "appVersion": "CommCare ODK, version \"2.47.3\"(459153). App v3477. CommCare Version 2.47. Build 459153, Dévelopé le : 2019-08-27"
+    },
+    "is_phone_submission": true,
+    "initial_processing_complete": true,
+    "indexed_on": "2019-09-13T12:15:12.040118",
+    "id": "2d440398-c293-4855-a5f3-9ae98e6f19d1",
+    "form": {
+      "type_evaluation": "mi_parcours",
+      "type_de_communaut": "beneficiaire",
+      "sante": {
+        "solution_de_rhydration_orale_sro": {
+          "SRO2_reaction_diarrhee": "amnerai_structure_sanitaire",
+          "SRO1_connaissance_SRO": "oui"
+        },
+        "question38": {
+          "dites_merci_beaucoup_maintenant_jai_quelques_petites_questions_sur_la_sant_": "OK",
+          "ESN3x1_liste_methode_ESN": "moderne",
+          "ESN3_utiliser_methode_ESN": "oui",
+          "ESN2_attitude_face_pratique_ESN": "japprcierai_bien",
+          "ESN1x1_liste_risques": "fragilisent_sante_mere_lenfant",
+          "ESN1_risques_grossesse_rapprochees": "oui"
+        },
+        "pratiques_nefastes": {
+          "violence_domestique_2-b": {
+            "VD2_4_raison_changement_attitude": "classes_tostan",
+            "VD2_3_meme_raction_que_dans_passe": "oui"
+          },
+          "violence_domestique_2-a": {
+            "violence_sociale1": "MARfaire_changer_avis",
+            "violence_sexuelle1": "MARfaire_changer_avis",
+            "violence_psychologique1": "MARfaire_changer_avis",
+            "violence_physique1": "MARfaire_changer_avis",
+            "violence_economique1": "MARfaire_changer_avis",
+            "VD2_2_attitude_si_temoin_violence": ""
+          },
+          "violence_domestique_2": {
+            "VD8x1_liste_consequences": "blessures_corporelles",
+            "VD8_consequence_battre_enfant": "oui",
+            "VD7_attitude_mbre_communaute": "apprecier_mal",
+            "VD6_proportion_comm_battre_enfant": "peu_de_gens_ou_personne"
+          },
+          "violence_domestique_1": {
+            "VD4_meme_appreciation_12mois": "oui",
+            "VD3_reaction_face_enfant_battu": "apprecie_mal",
+            "VD2_insulte_enfant": "isoler_enfant",
+            "VD1_existence_violence_conjoint": "no"
+          },
+          "question17": {
+            "violence_sociale": "peu_de_gens",
+            "violence_sexuelle": "peu_de_gens",
+            "violence_psychologique": "peu_de_gens",
+            "violence_physique": "peu_de_gens",
+            "violence_conomique": "peu_de_gens",
+            "VD2_1_proportion_des_membres_violence": ""
+          },
+          "mariage_des_enfants_2": {
+            "MARb10x1_liste_consequences": "grossesse_prcoce complications_accouchement",
+            "MAR9_attitude_communaute_mar_16": "apprecient_mal",
+            "MAR8_attitude_famille_mar_16": "apprecient_mal",
+            "MAR7_proportion_mariage_avt_16": "moins_de_la_moitie",
+            "MAR10_consequences_mariage": "oui"
+          },
+          "excision_2": {
+            "EXC9_attitude_mbre_communaute": "ils_apprcieraient_mal",
+            "EXC8_attitute_mbre_famille": "ils_apprcieraient_mal",
+            "EXC7_proportion_comm_exciser": "peu_de_gens_ou_personne",
+            "EXC6_continueriez_vous_pratique": "non",
+            "EXC5_possibilite_arreter": "oui",
+            "EXC10x1_liste_consequences": "choice14 infections",
+            "EXC10_connait_consequences_excision": "oui"
+          },
+          "excision": {
+            "Intro2_excision": "OK",
+            "Intro1_excision": "OK",
+            "EXC4x1_raison_changement": "classes_tostan",
+            "EXC4_meme_apreciation": "oui",
+            "EXC3_decision_personnelle_excision": "jinterviendrais_pour_le_convaincre_de_changer_davis",
+            "EXC2_excision_famille_12_derniers_mois": "non",
+            "EXC1_excision_personnel_12_derniers_mois": "non"
+          },
+          "dites_merci_encore_vraiment_pour_ces_rponses_maintenant_je_voudrais_avoir_v": "OK",
+          "CEE8_mariage_enfant": {
+            "MAR6x1_raison_changement": "classe_de_tostan",
+            "MAR6_meme_appreciation": "oui",
+            "MAR5_decision_mariage_avt_16": "MARfaire_changer_avis",
+            "MAR2_mariage_fille": "0"
+          }
+        },
+        "lavage_des_mains": {
+          "LAM2x1_liste_voie_transmission": "nourriture_contaminee eau_sale_pas_filtree",
+          "LAM2_transmission_microbe": "oui",
+          "LAM1_moments_recommandes": "apres_toilettes avant_de_manger apres_manger avant_de_cuisiner"
+        },
+        "allaitement_maternel_exclusif_ame": {
+          "AME2_reaction_decision_AME": "apprcierai_bien",
+          "AME1x1_liste_avantages": "protege_maladies_futures",
+          "AME1_connait_avantages": "oui"
+        }
+      },
+      "question22": {
+        "lecture_et_criture": {
+          "ecriture_nom_du_village": "OK",
+          "ecriture_nom_de_lenqut": "OK",
+          "association_images_et_mots": "OK",
+          "LEE3x1_capable_ecrire_nom": "oui",
+          "LEE3_ecriture_nom_propre": "oui",
+          "LEE2x1_capable_ecrire_v": "oui",
+          "LEE2_ecriture_nom_village": "oui",
+          "LEE1x1_nombre_association": "4",
+          "LEE1_associer_image_mot": "oui"
+        },
+        "CEE7_education_enfant": {
+          "EDU4_retrait_garcon_ecole": "non",
+          "EDU3_retrait_fille_ecole": "non",
+          "EDU1_nombre_fille_scolarisee": "0"
+        }
+      },
+      "meta": {
+        "username": "gueyefatoumata",
+        "userID": "f59a4258dca642489d8d6baa5d1fcfbe",
+        "timeStart": "2019-09-13T12:00:08.512000Z",
+        "timeEnd": "2019-09-13T12:15:10.012000Z",
+        "instanceID": "2d440398-c293-4855-a5f3-9ae98e6f19d1",
+        "geo_point": null,
+        "drift": "0",
+        "deviceID": "359218099115409",
+        "commcare_version": "2.47.3",
+        "app_build_version": 3477,
+        "appVersion": "CommCare ODK, version \"2.47.3\"(459153). App v3477. CommCare Version 2.47. Build 459153, Dévelopé le : 2019-08-27",
+        "@xmlns": "http://openrosa.org/jr/xforms"
+      },
+      "intro": {
+        "intro_3": "OK",
+        "intro_2": "OK",
+        "intro_1": "OK",
+        "intro0": "OK",
+        "consigne_enqueteur": "OK"
+      },
+      "interviewer": "participant",
+      "gouvernance": {
+        "participation_des_femmes": {
+          "GOUV8x4_pratique_espacement_naissances": "les_deux",
+          "GOUV8x3_enfants_aller__lcole": "les_deux",
+          "GOUV8x2_cgc_ou_association": "les_deux",
+          "GOUV8x1_runion_communautaire": "les_deux",
+          "GOUV8_prise_decision_famille": "",
+          "GOUV7_partage_idee": "non",
+          "GOUV6_nbre_rencontre_villageoise": "2"
+        },
+        "etat_civil": {
+          "GOUV4_nbre_fille_enregistre": "0"
+        },
+        "elections": {
+          "GOUV3_Vote_derniere_election": "oui",
+          "GOUV2_inscrit_liste_electorale": "oui",
+          "GOUV1_possession_CIN": "oui"
+        },
+        "droits_humains": {
+          "DH2x1_liste_changements": "importance_education_enfants",
+          "DH2_apporter_changement": "oui",
+          "DH1_connaissance_DH": "oui"
+        },
+        "dites_merci_beaucoup_pour_vos_rponses_je_voudrais_vous_poser_maintenant_dau": "OK"
+      },
+      "fixture_localization": {
+        "village": "linkering_quartier_sinthiang_woulata_vil",
+        "departement": "velingara_dep",
+        "commune": "linkering_com"
+      },
+      "fin_du_questionnaire_noubliez_pas_de_remercier_lenqueter_et_denregistrer_vo": "OK",
+      "ethnie": {
+        "nbre_groupe_ethnique": "2",
+        "ethnie": [
+          {
+            "ethnique": {
+              "question1": "pulaar"
+            }
+          },
+          {
+            "ethnique": {
+              "question1": "wolof"
+            }
+          }
+        ]
+      },
+      "environnement": {
+        "environnement": {
+          "ENV3_participation_nettoyage": "oui",
+          "ENV2_attitude_face_defecation": "apprecie_mal",
+          "ENV1_existence_latrine": "oui"
+        }
+      },
+      "economie": {
+        "Activites_GR": {
+          "ECO3_activite_hors_foyer": "non",
+          "ECO2_type_activite_exerce": "petit_commerce",
+          "ECO1_pratique_agr": "oui"
+        }
+      },
+      "count": {
+        "previous_village_name": "",
+        "previous_village": "",
+        "previous_participant_count": "",
+        "previous_othermember_count": "",
+        "previous_adopted_count": "",
+        "participant_count": "1"
+      },
+      "coordonnes_gps": "14.7663215 -16.916352 0.0 26.4",
+      "cgc": {
+        "classe_et_cgc": {
+          "posez_la_question_etes_vous_impliqus_dans_la_mise_en_oeuvre_du_plan_daction": "non",
+          "Intro_classe_cgc": "OK",
+          "CGC_satisfaire_besoins_com": "ont_satisfait",
+          "CGC1_niveau_de_satisfaction": "satisfait"
+        }
+      },
+      "CE_caracteristiques_demog_enquete": {
+        "intro1": "OK",
+        "CE7_poste_occupe": {
+          "CE7x1_poste_occupe": "aucun"
+        },
+        "CE6_niveau_etude_enquete": {
+          "CE6x3a_raisons_arret_scolarite": "mariage",
+          "CE6x3_arret_scolarite": "oui",
+          "CE6x2_niveau_etude": "second_1_cycle",
+          "CE6x1_freq_ecole": "oui"
+        },
+        "CE1_caracteristiques_enquete": {
+          "CE5_etat_matrimonial": "monogame",
+          "CE4_age_enquete": {
+            "categorie_age": "moins_30",
+            "CE4x1a_age_exact": "24",
+            "CE4x1_connait_age": "oui"
+          },
+          "CE3_groupe_ethnique": "pulaar",
+          "CE2_sexe": "feminin"
+        }
+      },
+      "CEE_carateristiques_enfants_enquete": {
+        "intro_CEE": "OK",
+        "copy-1-of-nombre_denfants": {
+          "total_enfant": "OK",
+          "nombre_denfants": "",
+          "CEE_intro_nombre_garcon": "0",
+          "CEE_intro_nombre_fille": "1",
+          "CEE1_nombre_de_fille": {
+            "CEE_total_fille_age": "1",
+            "CEE_info_total_fille": "OK",
+            "CEE1x5_plus_de_18": "0",
+            "CEE1x4_16_a_18": "0",
+            "CEE1x3_11_et_15": "0",
+            "CEE1x2_5_et_10": "0",
+            "CEE1x1_moins_de_5": "1"
+          },
+          "CEE1_nbre_de_fille": "OK"
+        }
+      },
+      "@xmlns": "http://openrosa.org/formdesigner/0B35156B-2AA3-4509-AA72-E610F20D121E",
+      "@version": "3437",
+      "@uiVersion": "1",
+      "@name": "Questionnaire Individuel V3",
+      "#type": "data"
+    },
+    "edited_on": null,
+    "edited_by_user_id": null,
+    "domain": "seratostan",
+    "build_id": "6ea37a3b1ab04296b49bd9859f59a175",
+    "attachments": {
+      "form.xml": {
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/2d440398-c293-4855-a5f3-9ae98e6f19d1/form.xml",
+        "length": 11061,
+        "content_type": "text/xml"
+      }
+    },
+    "archived": false,
+    "app_id": "15e23528b0c6952405bda524d0a66b27",
+    "__query_params": {
+      "app_id": "15e23528b0c6952405bda524d0a66b27"
+    }
+  }
+}
