@@ -197,7 +197,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Qualitative_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE6_niveau_etude_enquete.CE6x3b_autre_raisons')),
+      field('ampi__Text_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE6_niveau_etude_enquete.CE6x3b_autre_raisons')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 39
@@ -219,7 +219,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify another position'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Qualitative_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE7_poste_occupe.CE7x1a_specifier_autre_poste')),
+      field('ampi__Text_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE7_poste_occupe.CE7x1a_specifier_autre_poste')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 44
@@ -879,7 +879,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'What is the reason for your change in attitude?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Qualitative_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2-b.VD2_4_raison_changement_attitude')),
+      field('ampi__Text_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2-b.VD2_4_raison_changement_attitude')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 136
