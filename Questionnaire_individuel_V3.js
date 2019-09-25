@@ -197,7 +197,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Qualitative_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE6_niveau_etude_enquete.CE6x3b_autre_raisons')),
+      field('ampi__Text_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE6_niveau_etude_enquete.CE6x3b_autre_raisons')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 39
@@ -219,7 +219,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify another position'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Qualitative_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE7_poste_occupe.CE7x1a_specifier_autre_poste')),
+      field('ampi__Text_Response__c', dataValue('form.CE_caracteristiques_demog_enquete.CE7_poste_occupe.CE7x1a_specifier_autre_poste')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 44
@@ -583,6 +583,754 @@ steps(
       field('ampi__Description__c', 'Comment réagiriez-vous face à un enfant qui a la diarrhée?'),
       field('ampi__Response_Type__c', 'Picklist'),
       field('ampi__Picklist_Response__c', dataValue('form.sante.solution_de_rhydration_orale_sro.SRO2_reaction_diarrhee')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 100
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ESN1_risques_grossesse_rapprochees'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, are there risks associated with closely spaced pregnancies?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question38.ESN1_risques_grossesse_rapprochees')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 101
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ESN1x1_liste_risques'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What are the risks that you know of?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question38.ESN1x1_liste_risques')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 102
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ESN2_attitude_face_pratique_ESN'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' If someone you know decides to practice birth spacing, what will be your attitude?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question38.ESN2_attitude_face_pratique_ESN')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 103
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ESN3_utiliser_methode_ESN'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Are you currently using a birth spacing method?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question38.ESN3_utiliser_methode_ESN')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 104
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ESN3x1_liste_methode_ESN'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Which method do you use?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question38.ESN3x1_liste_methode_ESN')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 106
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'LAM1_moments_recommandes'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, at what times is it recommended to wash hands with soap and water?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.lavage_des_mains.LAM1_moments_recommandes')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 107
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'LAM2_transmission_microbe'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Do you know how germs are transmitted?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.lavage_des_mains.LAM2_transmission_microbe')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 108
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'LAM2x1_liste_voie_transmission'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What are the microbe transmission paths you know of?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.lavage_des_mains.LAM2x1_liste_voie_transmission')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 112
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD1_existence_violence_conjoint'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In the past 12 months, has there been any physical abuse between you and your spouse?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_1.VD1_existence_violence_conjoint')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 113
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD2_insulte_enfant'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Imagine that one of your children disrespected your mother. Youve explained it to him a few times before, but hes still doing it. This time, when you tell him not to, he insults you. What would be your reaction to discipline him?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_1.VD2_insulte_enfant')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 114
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD3_reaction_face_enfant_battu'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Imagine a child disrespecting his mother. The mother beats him to discipline him. How will you appreciate the mothers reaction?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_1.VD3_reaction_face_enfant_battu')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 115
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD4_meme_appreciation_12mois'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Is this the same assessment you would have made 12 months ago?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_1.VD4_meme_appreciation_12mois')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 116
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD5_raison_changement'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What is the **main reason** for the change in your assessment?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_1.VD5_raison_changement')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 118
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD2_1_proportion_des_membres_violence'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' In your opinion, what proportion of your community members are victims of:'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question17.VD2_1_proportion_des_membres_violence')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 119
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_physique'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Physical** Violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question17.violence_physique')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 120
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_psychologique'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Psychological** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question17.violence_psychologique')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 121
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_sexuelle'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Sexual** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question17.violence_sexuelle')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 122
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_conomique'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Economic** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question17.violence_conomique')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 123
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_sociale'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Social** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.question17.violence_sociale')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 125
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD2_2_attitude_si_temoin_violence'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What would be your attitude if you were witnessing a case of:'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_2.VD2_2_attitude_si_temoin_violence')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 126
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_physique1'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Physical** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_2.violence_physique1')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 127
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_psychologique1'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Psychological** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_2.violence_psychologique1')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 128
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_sexuelle1'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Sexual** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_2.violence_sexuelle1')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 129
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_economique1'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Economic** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_2.violence_economique1')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 130
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'violence_sociale1'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', '**Social** violence'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_2.violence_sociale1')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 132
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD2_3_meme_raction_que_dans_passe'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Is that the same reaction you would have had in the past?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2-b.VD2_3_meme_raction_que_dans_passe')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 133
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD2_4_raison_changement_attitude'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What is the reason for your change in attitude?'),
+      field('ampi__Response_Type__c', 'Qualitative'),
+      field('ampi__Text_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2-b.VD2_4_raison_changement_attitude')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 136
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD6_proportion_comm_battre_enfant'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' In your opinion, how many people in your community today beat their children from time to time? ** (***Check answers that are closest to what the respondent said: ***)'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2.VD6_proportion_comm_battre_enfant')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 137
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD7_attitude_mbre_communaute'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, what would be the attitude of other community members if they knew you were going to beat one of your children in order to discipline them ** *'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2.VD7_attitude_mbre_communaute')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 138
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD8_consequence_battre_enfant'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Do you know the consequences related to the fact of beating a child even for discipline?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2.VD8_consequence_battre_enfant')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 139
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'VD8x1_liste_consequences'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What consequences do you know of?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.pratiques_nefastes.violence_domestique_2.VD8x1_liste_consequences')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 141
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MARx1_mariage_garcon'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'How many of your sons are married?'),
+      field('ampi__Response_Type__c', 'Number'),
+      field('ampi__Number_Response__c', dataValue('form.sante.CEE8_mariage_enfant.MARx1_mariage_garcon')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 142
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR2_mariage_fille'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'How many of your daughters are married?'),
+      field('ampi__Response_Type__c', 'Number'),
+      field('ampi__Number_Response__c', dataValue('form.sante.CEE8_mariage_enfant.MAR2_mariage_fille')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 143
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR3_mariage_garcon_avant_16'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'How many of your sons were married before the age of 16?'),
+      field('ampi__Response_Type__c', 'Number'),
+      field('ampi__Number_Response__c', dataValue('form.sante.CEE8_mariage_enfant.MAR3_mariage_garcon_avant_16')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 144
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR4_mariage_fille_avant_16'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'How many of your daughters were married before the age of 16?'),
+      field('ampi__Response_Type__c', 'Number'),
+      field('ampi__Number_Response__c', dataValue('form.sante.CEE8_mariage_enfant.MAR4_mariage_fille_avant_16')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 145
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR5_decision_mariage_avt_16'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Imagine that a girl you know decided to get married before the age of 16. How would you appreciate her decision?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.CEE8_mariage_enfant.MAR5_decision_mariage_avt_16')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 146
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR6_meme_appreciation'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Is this the same appreciation that you would have had 12 months ago?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.CEE8_mariage_enfant.MAR6_meme_appreciation')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 147
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR6x1_raison_changement'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What is the main reason for the change in your attitude?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.CEE8_mariage_enfant.MAR6x1_raison_changement')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 149
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR7_proportion_mariage_avt_16'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' In your opinion, what is the proportion of girls in your community who now get married before the age of 16'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.mariage_des_enfants_2.MAR7_proportion_mariage_avt_16')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 150
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR8_attitude_famille_mar_16'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, what would be the attitude of ** your family members **  if they knew that your daughter was getting married before the age of 16?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.mariage_des_enfants_2.MAR8_attitude_famille_mar_16')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 151
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR9_attitude_communaute_mar_16'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, what would be the attitude of ** other community members ** if they knew that your daughter was getting married before the age of 16?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.mariage_des_enfants_2.MAR9_attitude_communaute_mar_16')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 152
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MAR10_consequences_mariage'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Do you know the consequences of having a girl married off before the age of 16?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.mariage_des_enfants_2.MAR10_consequences_mariage')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 153
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'MARb10x1_liste_consequences'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What are the consequences that you know of? (** Do not read the answers **)'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.mariage_des_enfants_2.MARb10x1_liste_consequences')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 157
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC1_excision_personnel_12_derniers_mois'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' In the last 12 months have you had your daughter cut?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision.EXC1_excision_personnel_12_derniers_mois')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 158
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC2_excision_famille_12_derniers_mois'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In the past 12 months, have any of your family members had their daughters cut?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision.EXC2_excision_famille_12_derniers_mois')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 159
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC3_decision_personnelle_excision'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Imagine that someone you know intends to cut their daughter, how will you feel about his/her decision?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision.EXC3_decision_personnelle_excision')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 160
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC4_meme_apreciation'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Is this the same appreciation that you would have had 12 months ago?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision.EXC4_meme_apreciation')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 161
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC4x1_raison_changement'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What is the **main** reason for the change in your assessment? (**Do not read answers**)'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision.EXC4x1_raison_changement')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 162
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC4x2_preciser_autre_raison'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What is the **main** reason for the change in your assessment? (**Do not read answers**)'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision.EXC4x2_preciser_autre_raison')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 164
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC5_possibilite_arreter'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What is the **main** reason for the change in your assessment? (**Do not read answers**)'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision_2.EXC5_possibilite_arreter')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 165
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC6_continueriez_vous_pratique'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' If everyone gave up FGC, would you continue to practice it?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision_2.EXC6_continueriez_vous_pratique')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 166
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC7_proportion_comm_exciser'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, what is the proportion of people in your community who, today, have their daughters cut?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision_2.EXC7_proportion_comm_exciser')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 167
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC8_attitute_mbre_famille'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, what would be the attitude of your family members if they knew you were going to cut your daughter?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision_2.EXC8_attitute_mbre_famille')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 168
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC9_attitude_mbre_communaute'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'In your opinion, what would be the attitude of other community members if they knew you were going to cut your daughter?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision_2.EXC9_attitude_mbre_communaute')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 169
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC10_connait_consequences_excision'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Do you know of the consequences of FGC?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision_2.EXC10_connait_consequences_excision')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 170
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'EXC10x1_liste_consequences'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What are the consequences of FGC that you know of? (**Do not read answers**)'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.excision_2.EXC10x1_liste_consequences')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 173
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ENV1_existence_latrine'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Do you have latrines in the house?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.environnement.environnement.ENV1_existence_latrine')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 174
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ENV2_attitude_face_defecation'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What would be your reaction to a person who goes to the bathroom in the outdoors?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.environnement.environnement.ENV2_attitude_face_defecation')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 175
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ENV3_participation_nettoyage'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Have you been involved in any of the villages cleaning sessions in the past two months?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.environnement.environnement.ENV3_participation_nettoyage')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 178
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ECO1_pratique_agr'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Do you practice an Income Generating Activity (IGA)?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.economie.Activites_GR.ECO1_pratique_agr')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 179
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ECO2_type_activite_exerce'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What kind of activities do you do?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.economie.Activites_GR.ECO2_type_activite_exerce')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 181
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ECO3_activite_hors_foyer'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Do you work outside the matrimonial home?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.economie.Activites_GR.ECO3_activite_hors_foyer')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 182
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ECO3x1_type_activite_exerce'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What type of activity are you running?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.economie.Activites_GR.ECO3x1_type_activite_exerce')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 186
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'CGC1_niveau_de_satisfaction'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What is your level of satisfaction with the CMCs work?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.cgc.classe_et_cgc.CGC1_niveau_de_satisfaction')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 187
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'CGC_satisfaire_besoins_com'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' There are community members who say that CMC activities have helped meet the needs of the community. Others say otherwise. What are you saying?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.cgc.classe_et_cgc.CGC_satisfaire_besoins_com')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 188
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'la_mise_en_oeuvre_du_plan_daction'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' Are you involve in the implementation of CMC action plan?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.cgc.classe_et_cgc.posez_la_question_etes_vous_impliqus_dans_la_mise_en_oeuvre_du_plan_daction')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 191
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ADP1_adoption_augmente_connaissance'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'From your perspective, did adoption contribute to your knowledge?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.adoption.ADP1_adoption_augmente_connaissance')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 192
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'ADP1x1_comment'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'How?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.sante.adoption.ADP1x1_comment')),
       relationship('RecordType', 'Name', 'Answer')
     ))
 )
