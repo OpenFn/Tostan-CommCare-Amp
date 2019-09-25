@@ -1,4 +1,10 @@
 {
+  "configuration": {
+    "loginUrl": "https://tostan--openfn.cs67.my.salesforce.com",
+    "username":"aleksa@openfn.org.openfn",
+    "password":"opendata2019",
+    "securityToken": "QmcLvBN9aIrnwLhRNfXYM603I"
+  },
   "data":{
     "version": "3437",
     "uiversion": "1",
