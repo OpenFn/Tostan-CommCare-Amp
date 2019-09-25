@@ -1,0 +1,165 @@
+{
+  "configuration": {
+    "loginUrl": "https://tostan--openfn.cs67.my.salesforce.com",
+    "username":"aleksa@openfn.org.openfn",
+    "password":"opendata2019",
+    "securityToken": "QmcLvBN9aIrnwLhRNfXYM603I"
+  },
+  "data":{
+      "version": "3406",
+      "uiversion": "1",
+      "type": "data",
+      "server_modified_on": "2019-09-13T12:39:11.866826Z",
+      "resource_uri": "",
+      "received_on": "2019-09-13T12:39:11.791345Z",
+      "problem": null,
+      "metadata": {
+        "username": "gueyefatoumata",
+        "userID": "f59a4258dca642489d8d6baa5d1fcfbe",
+        "timeStart": "2019-09-13T12:32:01.993000Z",
+        "timeEnd": "2019-09-13T12:39:09.381000Z",
+        "location": null,
+        "instanceID": "dfa0c5ed-7df3-4a8a-8dc6-b1969749c4eb",
+        "geo_point": null,
+        "drift": "0",
+        "deviceID": "359218099115409",
+        "commcare_version": "2.47.3",
+        "app_build_version": 3478,
+        "appVersion": "CommCare ODK, version \"2.47.3\"(459153). App v3478. CommCare Version 2.47. Build 459153, Dévelopé le : 2019-08-27"
+      },
+      "is_phone_submission": true,
+      "initial_processing_complete": true,
+      "indexed_on": "2019-09-13T12:39:12.237270",
+      "id": "dfa0c5ed-7df3-4a8a-8dc6-b1969749c4eb",
+      "form": {
+        "statut_du_rpondant": "chef_de_villagesecteur",
+        "profil_demographique": {
+          "question4": {
+            "preciser_les_ethnies": [
+              {
+                "donner_le_nom_de_chaque_thnie": "mandingue"
+              },
+              {
+                "donner_le_nom_de_chaque_thnie": "soninke"
+              },
+              {
+                "donner_le_nom_de_chaque_thnie": "pular"
+              }
+            ],
+            "nombre_groupes_ethniques": "3",
+            "DEM2_nombre_de_concessions": "80",
+            "DEM1_population_totale": "270"
+          }
+        },
+        "presence_de_partenaires_au_developpement_ong": {
+          "partenaires_prsents": {
+            "informations_sur_programmes": {
+              "la_date_de_dmarrage_du_projet": "2019-09-13",
+              "PPD7x2_domaine_activite": "gouvernace education sante environnement renforcement_conomique",
+              "PPD7x1_nom_ONG": "tostan"
+            },
+            "PPD7_nombre_de_programme": "1",
+            "PPD6_programme_en_cours": "oui"
+          },
+          "partenaire": {
+            "PPD1-presence_partenaire": "non"
+          }
+        },
+        "meta": {
+          "username": "gueyefatoumata",
+          "userID": "f59a4258dca642489d8d6baa5d1fcfbe",
+          "timeStart": "2019-09-13T12:32:01.993000Z",
+          "timeEnd": "2019-09-13T12:39:09.381000Z",
+          "instanceID": "dfa0c5ed-7df3-4a8a-8dc6-b1969749c4eb",
+          "geo_point": null,
+          "drift": "0",
+          "deviceID": "359218099115409",
+          "commcare_version": "2.47.3",
+          "app_build_version": 3478,
+          "appVersion": "CommCare ODK, version \"2.47.3\"(459153). App v3478. CommCare Version 2.47. Build 459153, Dévelopé le : 2019-08-27",
+          "@xmlns": "http://openrosa.org/jr/xforms"
+        },
+        "interactions_avec_les_communautes_voisines": {
+          "reseau_communautaire": {
+            "ICV4_decision_majeure": "sssssss",
+            "ICV3_liens_de_parente": "yyyyyyyyyy",
+            "ICV2_centre_coutumier_reference": "ttttttttttt",
+            "ICV1_centre_religieux_reference": "rrrrtrtr"
+          }
+        },
+        "fixture_localization": {
+          "village": "tankanto_escale_vil",
+          "departement": "kolda_dep",
+          "commune": "tankanto_escale_com"
+        },
+        "decision_activtes_communautaires": {
+          "dcision_et_activits_communautaires": {
+            "PDA2_activites_communautaires": "assainissement reboisement etat_civil",
+            "PDA1_prise_de_decision": "les_hommes_ages"
+          }
+        },
+        "coordonnes_gps": "14.7663024 -16.9163511 0.0 23.96",
+        "activites_economiques_eau_electricite": {
+          "economie_eau_et_lectricit": {
+            "ACE4_existence_electricite": "non",
+            "ACE3_principal_combustible": "bois",
+            "ACE2_sources_appro_eau": "puits_avec_pompe",
+            "ACE1_3_principaux_secteurs": "petit_commerce agriculture elevage"
+          }
+        },
+        "Inf_et_Service": {
+          "infrastructures_socit_civile": {
+            "INFocb2_preciser_la_ou_lesquelles": "foyer_des_femmes association_religieuse",
+            "INFocb1_existence_infrastructure": "oui"
+          },
+          "infrastructures_sanitaires": {
+            "INFsan2_preciser_infrastructure": "case_de_sant",
+            "INFsan1_existence_infrastructure_sanitaire": "oui"
+          },
+          "infrastructures_financires": {
+            "INFfin6_caisse_communautaire": "oui",
+            "INFfin5_acces_credit": "non",
+            "INFfin3_distance": "0",
+            "INFfin1_existence_infrastructure_financiere": "non",
+            "INFedu6x1_liste_caisse_com": "tontine_femmes"
+          },
+          "infrastructures_et_services": {
+            "nbre_structures_educatives": "2",
+            "infedu5_program_alpha": "oui",
+            "INFedu5x1_lister_programme": "prcc",
+            "INFedu2_infrastructure": "primaire secondaire",
+            "INFedu1_existence_structure_educative": "oui"
+          },
+          "infrastructures_de_communication": {
+            "INFcom2_preciser_la_ou_lesquelles": "radio_communautaire",
+            "INFcom1_existence_infra_communication": "oui"
+          },
+          "infrastructures_conomiques": {
+            "INFfin1_existence_infrastructure_economique": "oui",
+            "INF2_preciser_infrstructure_economique": "boutique"
+          }
+        },
+        "@xmlns": "http://openrosa.org/formdesigner/55769F22-413D-4D74-B66A-0BA512BB20AE",
+        "@version": "3406",
+        "@uiVersion": "1",
+        "@name": "Questionnaire étude de milieu",
+        "#type": "data"
+      },
+      "edited_on": null,
+      "edited_by_user_id": null,
+      "domain": "seratostan",
+      "build_id": "08455f64808e4726a762880af93839d6",
+      "attachments": {
+        "form.xml": {
+          "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/dfa0c5ed-7df3-4a8a-8dc6-b1969749c4eb/form.xml",
+          "length": 5137,
+          "content_type": "text/xml"
+        }
+      },
+      "archived": false,
+      "app_id": "15e23528b0c6952405bda524d0a66b27",
+      "__query_params": {
+        "app_id": "15e23528b0c6952405bda524d0a66b27"
+      }
+    }
+}
