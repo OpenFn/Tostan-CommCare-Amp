@@ -690,7 +690,7 @@ steps(
         return state.data.id + 'VD2_insulte_enfant'
       }),
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', ' Imagine that one of your children disrespected your mother. You've explained it to him a few times before, but he's still doing it. This time, when you tell him not to, he insults you. What would be your reaction to discipline him?'),
+      field('ampi__Description__c', ' Imagine that one of your children disrespected your mother. Youve explained it to him a few times before, but hes still doing it. This time, when you tell him not to, he insults you. What would be your reaction to discipline him?'),
       field('ampi__Response_Type__c', 'Picklist'),
       field('ampi__Picklist_Response__c', dataValue('form.sante.violence_domestique_1.VD2_insulte_enfant')),
       relationship('RecordType', 'Name', 'Answer')
