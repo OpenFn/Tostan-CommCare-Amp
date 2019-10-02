@@ -1,11 +1,11 @@
-// M&E Tools Questionnaire etude fr milieu
+// M&E Tools Questionnaire etude de milieu
 steps(
   upsert('ampi__Submission__c', 'Submission_ID__c', fields(
       field('ampi__Description__c', dataValue('form.@name')),
       field('Submission_ID__c', dataValue('id')),
-      field('Location__c', dataValue('form.coordonnes_gps')), //FIELD DOES NOT EXIST
-      relationship('Project__r', 'Project_ID__c', (state)=>{ //FIELD DOES NOT EXIST
-        const projID = state.data.id + state.data.form.fixture_localization.village //confirm format of ID
+      field('Location__c', dataValue('form.coordonnes_gps')),
+      relationship('Project__r', 'Project_ID__c', (state)=>{ //TEST
+        const projID = state.data.id + "-"+ state.data.form.fixture_localization.village //confirm format of ID
         return projID;
       })
     )),
