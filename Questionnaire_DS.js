@@ -1,14 +1,25 @@
 // Questionnaire DS RPP
+//UNABLE TO MAP CREATED DATE
 steps(
   upsert('ampi__Submission__c', 'Submission_ID__c', fields(
       field('ampi__Description__c', dataValue('form.@name')),
       field('Submission_ID__c', dataValue('id')),
-      field('Location__c', dataValue('form.coordonnes_gps')),
-      relationship('Project__r', 'Project_ID__c', (state)=>{ //TEST
-        const projID = state.data.id + "-"+ state.data.form.fixture_localization.village //confirm format of ID
-        return projID;
+      field('Location__latitude__s', (state)=>{
+        var lat = state.data.form.coordonnes_gps;
+        lat = (lat!==undefined ? lat.substring(0, lat.indexOf(" ")) : null);
+        return lat;
       }),
-      field('CreatedDate', dataValue('form.var.date_interview')) //can we edit CreatedDate?
+      field('Location__longitude__s', (state)=>{
+        var long = state.data.form.coordonnes_gps;
+        long = (long!==undefined ? long.substring(long.indexOf(" ")+1, long.indexOf(" ")+7) : null);
+        return long;
+      }),
+      relationship('Project__r', 'Project_ID__c', (state)=>{
+        var village = state.data.form.identification.fixture_localization.village
+        var projID = village + "-Post CEP"
+        return projID;
+      })
+      //field('CreatedDate', dataValue('form.var.date_interview')) //can we edit CreatedDate?
     )),
   //HARDCODED QUESTIONS FOR THIS SUBMISSION
     //Row 11
@@ -319,17 +330,6 @@ steps(
       field('ampi__Picklist_Response__c', dataValue('form.tranches_ages.total_enfant_plus_de_trois_ans')),
       relationship('RecordType', 'Name', 'Answer')
     )),
-    //Row 50
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'enfants_scolarises'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'Child schooling'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.tranches_ages.enfants_scolarises')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
     //Row 51
     upsert('ampi__Question__c', 'Question_ID__c', fields(
       field('Question_ID__c', (state)=>{
@@ -380,7 +380,7 @@ steps(
         return state.data.id + 'responsable_scolarite_autre'
       }),
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'Please specify who was responsible for the child's schooling'),
+      field('ampi__Description__c', 'Please specify who was responsible for the childs schooling'),
       field('ampi__Response_Type__c', 'Qualitative'),
       field('ampi__Text_Response__c', dataValue('form.tranches_ages.responsable_scolarite_autre')),
       relationship('RecordType', 'Name', 'Answer')
@@ -448,7 +448,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'What does the child do at the moment of observation?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text__Response__c', dataValue('form.observation_enfant.qu_fait_enfant_observation')),
+      field('ampi__Text_Response__c', dataValue('form.observation_enfant.qu_fait_enfant_observation')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 65
@@ -459,7 +459,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text__Response__c', dataValue('form.observation_enfant.prciser_autre')),
+      field('ampi__Text_Response__c', dataValue('form.observation_enfant.prciser_autre')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 67
@@ -470,7 +470,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Can you tell me what you do when you breastfeed?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text__Response__c', dataValue('form.dispensateurs_de_soin.fait_pendant_allaitement')),
+      field('ampi__Text_Response__c', dataValue('form.dispensateurs_de_soin.fait_pendant_allaitement')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 68
@@ -481,7 +481,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text__Response__c', dataValue('form.dispensateurs_de_soin.prciser_autre')),
+      field('ampi__Text_Response__c', dataValue('form.dispensateurs_de_soin.prciser_autre')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 69
@@ -492,7 +492,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Can you show me how you are doing to help your child learn to count?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text__Response__c', dataValue('form.counting.q6_pouvez-vous_me_montrer_comment_vous_faites_pour_aider_votre_enfant__apprend')),
+      field('ampi__Text_Response__c', dataValue('form.counting.q6_pouvez-vous_me_montrer_comment_vous_faites_pour_aider_votre_enfant__apprend')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 73
@@ -503,7 +503,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'There are many ways a mom communicates with a child. Can you explain to me how you communicate with your child?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text__Response__c', dataValue('form.communication.communication_mere_enfant.communication_mere_enfant')),
+      field('ampi__Text_Response__c', dataValue('form.communication.communication_mere_enfant.communication_mere_enfant')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 74
@@ -514,7 +514,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text__Response__c', dataValue('form.communication.communication_mere_enfant.prciser_autre')),
+      field('ampi__Text_Response__c', dataValue('form.communication.communication_mere_enfant.prciser_autre')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 76
@@ -525,7 +525,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Where does your child spend most of the night?'),
       field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c__Response__c', dataValue('form.dormir_enfant.q8_ou_dort_enfant')),
+      field('ampi__Picklist_Response__c', dataValue('form.dormir_enfant.q8_ou_dort_enfant')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 77
@@ -536,7 +536,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.dormir_enfant.prciser_ailleurs')),
+      field('ampi__Text_Response__c', dataValue('form.dormir_enfant.prciser_ailleurs')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 78
@@ -547,7 +547,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Does he sleep under mosquito net?'),
       field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c__Response__c', dataValue('form.dormir_enfant.q9_moustiquaire')),
+      field('ampi__Picklist_Response__c', dataValue('form.dormir_enfant.q9_moustiquaire')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 81
@@ -558,7 +558,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'From your point of view, are there things that the child can learn or discover from the objects that are around him?'),
       field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q10_decouvrir_objets')),
+      field('ampi__Picklist_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q10_decouvrir_objets')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 82
@@ -569,7 +569,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'If yes, what?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q10x1_si_oui_quoi')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q10x1_si_oui_quoi')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 83
@@ -580,7 +580,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.autre_preciser')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.autre_preciser')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 84
@@ -591,7 +591,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Can you show me how you are doing to help your child discover the objects ** (present 3 pots of different colors to the respondent) **?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q11_decouvrir_objets')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q11_decouvrir_objets')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 85
@@ -602,7 +602,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.autre_preciser')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.autre_preciser')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 86
@@ -613,7 +613,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Can you show me how you are doing to help your child name the objects ** (present 3 pots of different colors to the respondent **?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q12_nommer_objets')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q12_nommer_objets')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 87
@@ -624,7 +624,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q12_autre_preciser')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q12_autre_preciser')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 88
@@ -635,7 +635,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Can you show me how you are helping your child to categorize the items ** (present 3 pots of different colors to the respondent) **?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q13_categoriser_objets')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q13_categoriser_objets')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 89
@@ -646,7 +646,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q13_autre_preciser')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q13_autre_preciser')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 90
@@ -657,7 +657,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Speaking of discovering objects and the world, we can take the example of the face. Have you tried to tell your child about facial features?'),
       field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q14_question_visage')),
+      field('ampi__Picklist_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q14_question_visage')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 91
@@ -668,7 +668,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'What did you do?'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q14x1_que_fait_visage')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q14x1_que_fait_visage')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 92
@@ -679,7 +679,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Specify other'),
       field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c__Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q14x1_autre_preciser')),
+      field('ampi__Text_Response__c', dataValue('form.application_bonnes_pratiques2.decouverte.q14x1_autre_preciser')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 94
@@ -690,7 +690,7 @@ steps(
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
       field('ampi__Description__c', 'Do you have any books shared by Tostans RPP program?'),
       field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c__Response__c', dataValue('form.Reading.q15_livres_rpp')),
+      field('ampi__Picklist_Response__c', dataValue('form.Reading.q15_livres_rpp')),
       relationship('RecordType', 'Name', 'Answer')
     )),
     //Row 95
@@ -842,7 +842,7 @@ steps(
         return state.data.id + 'q22_participation_rencontre'
       }),
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'Finally, have you had at least once during the last 6 months, participated in a community awareness meeting (social mobilization activity, RIV Inter Village Meeting) on ​​the 15 essential practices or participated in a teacher exchange day? / communities on practices related to schooling, coaching / coaching.'),
+      field('ampi__Description__c', 'Have you participated in a community awareness meeting on ​​the 15 essential practices or participated in a teacher exchange day?'),
       field('ampi__Response_Type__c', 'Picklist'),
       field('ampi__Picklist_Response__c', dataValue('form.moyens_pour_apprendre_aux_enfants__bien_se_comporter_ou_pour_traiter_des_pr.q22_participation_rencontre')),
       relationship('RecordType', 'Name', 'Answer')
