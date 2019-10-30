@@ -46,12 +46,12 @@ steps(
     //Row 11
     upsert('ampi__Question__c', 'Question_ID__c', fields(
       field('Question_ID__c', (state)=>{
-        return state.data.id + 'type_evaluation'
+        return state.data.id + "type_evaluation"
       }),
       relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'Evaluation type'),
+      field('ampi__Description__c', "Evaluation type"),
       field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.type_evaluation')),
+      field('ampi__Picklist_Response__c', dataValue("form.type_evaluation")),
       relationship('RecordType', 'Name', 'Answer')
     )),
 
