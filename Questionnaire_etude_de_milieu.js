@@ -1,11 +1,33 @@
 // M&E Tools Questionnaire etude de milieu
+alterState((state) =>{
+  const informations_sur_programmes=state.data.form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes;
+  if(!Array.isArray(informations_sur_programmes)){
+    state.data.form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes=[informations_sur_programmes];
+  }
+  const question3=state.data.form.presence_de_partenaires_au_developpement_ong.partenaire.question3;
+  if(!Array.isArray(question3)){
+    state.data.form.presence_de_partenaires_au_developpement_ong.partenaire.question3=[question3];
+  }
+  return state;
+});
+
 steps(
   upsert('ampi__Submission__c', 'Submission_ID__c', fields(
       field('ampi__Description__c', dataValue('form.@name')),
       field('Submission_ID__c', dataValue('id')),
-      field('Location__c', dataValue('form.coordonnes_gps')),
-      relationship('Project__r', 'Project_ID__c', (state)=>{ //TEST
-        const projID = state.data.id + "-"+ state.data.form.fixture_localization.village //confirm format of ID
+      field('Location__latitude__s', (state)=>{
+        var lat = state.data.form.coordonnes_gps;
+        lat = (lat!==undefined ? lat.substring(0, lat.indexOf(" ")) : null);
+        return lat;
+      }),
+      field('Location__longitude__s', (state)=>{
+        var long = state.data.form.coordonnes_gps;
+        long = (long!==undefined ? long.substring(long.indexOf(" ")+1, long.indexOf(" ")+7) : null);
+        return long;
+      }),
+      relationship('Project__r', 'Project_ID__c', (state)=>{
+        var village = state.data.form.fixture_localization.village
+        var projID = village + "-CEP"
         return projID;
       })
     )),
@@ -538,73 +560,7 @@ steps(
       field('ampi__Number_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaire.nombre_ONG')),
       relationship('RecordType', 'Name', 'Answer')
     )),
-    //*** Repeat Group - question3 ***//
-    //Row 72
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD3_cibles_partenaires'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', ' What were their target populations?'),
-      field('ampi__Response_Type__c', 'Number'),
-      field('ampi__Number_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.PPD3_cibles_partenaires')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 73
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD3x1prciser_autre'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'Specify other'),
-      field('ampi__Response_Type__c', 'Qualitative'),
-      field('ampi__Text_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.PPD3x1prciser_autre')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 74
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD4_domaine_intervention'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'What was their area (s) of intervention?'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.PPD4_domaine_intervention')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 75
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD5x1_date_debut'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', ' What was the start date of activities of the NGO or Partner Organization?'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.PPD5x1_date_debut')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 76
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD5x2_date_fin'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'What was the date of the end of the NGOs or Partner Organizations activities?'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.PPD5x2_date_fin')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 77
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'Duree_mise_en_oeuvre'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'Duree_mise_en_oeuvre'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.Duree_mise_en_oeuvre')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
+    //REPEAT GROUP #1 of questions here --> Mappings below
     //Row 80
     upsert('ampi__Question__c', 'Question_ID__c', fields(
       field('Question_ID__c', (state)=>{
@@ -627,51 +583,7 @@ steps(
       field('ampi__Number_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.PPD7_nombre_de_programme')),
       relationship('RecordType', 'Name', 'Answer')
     )),
-    //Row 83
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD7x1_nom_ONG'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', ' What are the NGOs or Development Organizations?'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes.PPD7x1_nom_ONG')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 84
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD7x2_domaine_activite'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', 'What is its field of activity?'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes.PPD7x2_domaine_activite')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 85
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'PPD7x3_cibles_partenaires_actuels'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', ' What is its target population?'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes.PPD7x3_cibles_partenaires_actuels')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //Row 86
-    upsert('ampi__Question__c', 'Question_ID__c', fields(
-      field('Question_ID__c', (state)=>{
-        return state.data.id + 'la_date_de_dmarrage_du_projet'
-      }),
-      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
-      field('ampi__Description__c', ' What is the starting date of the project?'),
-      field('ampi__Response_Type__c', 'Picklist'),
-      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes.la_date_de_dmarrage_du_projet')),
-      relationship('RecordType', 'Name', 'Answer')
-    )),
-    //***** END of Repeat Group *****//
+    //REPEAT GROUP #2 of questions here --> Mappings below
     //Row 89
     upsert('ampi__Question__c', 'Question_ID__c', fields(
       field('Question_ID__c', (state)=>{
@@ -747,6 +659,119 @@ steps(
       field('ampi__Description__c', 'Specify other activities'),
       field('ampi__Response_Type__c', 'Qualitative'),
       field('ampi__Text_Response__c', dataValue('form.decision_activtes_communautaires.dcision_et_activits_communautaires.PDA3_autre_activite')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //REPEAT GROUPS
+    //Row 72
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'PPD3_cibles_partenaires'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What were their target populations?'),
+      field('ampi__Response_Type__c', 'Qualitative'),
+      field('ampi__Text_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaire.question3[0].PPD3_cibles_partenaires')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 73
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'PPD3x1prciser_autre'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Specify other'),
+      field('ampi__Response_Type__c', 'Qualitative'),
+      field('ampi__Text_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaire.question3[0].PPD3x1prciser_autre')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 74
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id +'PPD4_domaine_intervention'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What was their area (s) of intervention?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaire.question3[0].PPD4_domaine_intervention')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 75
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'PPD5x1_date_debut'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What was the start date of activities of the NGO or Partner Organization?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaire.question3[0].PPD5x1_date_debut')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 76
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'PPD5x2_date_fin'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What was the date of the end of the NGOs or Partner Organizations activities?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaire.question3[0].PPD5x2_date_fin')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 77
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'Duree_mise_en_oeuvre'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'Duree_mise_en_oeuvre'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaire.question3[0].Duree_mise_en_oeuvre')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //REPEAT GROUP 2
+    //Row 83
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        var id = state.data.id
+        return id + 'PPD7x1_nom_ONG'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What are the NGOs or Development Organizations?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes[0].PPD7x1_nom_ONG')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 84
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'PPD7x2_domaine_activite'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', 'What is its field of activity?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes[0].PPD7x2_domaine_activite')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 85
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'PPD7x3_cibles_partenaires_actuels'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What is its target population?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes[0].PPD7x3_cibles_partenaires_actuels')),
+      relationship('RecordType', 'Name', 'Answer')
+    )),
+    //Row 86
+    upsert('ampi__Question__c', 'Question_ID__c', fields(
+      field('Question_ID__c', (state)=>{
+        return state.data.id + 'la_date_de_dmarrage_du_projet'
+      }),
+      relationship('ampi__Submission__r', 'Submission_ID__c', dataValue('id')),
+      field('ampi__Description__c', ' What is the starting date of the project?'),
+      field('ampi__Response_Type__c', 'Picklist'),
+      field('ampi__Picklist_Response__c', dataValue('form.presence_de_partenaires_au_developpement_ong.partenaires_prsents.informations_sur_programmes[0].la_date_de_dmarrage_du_projet')),
       relationship('RecordType', 'Name', 'Answer')
     ))
 )
