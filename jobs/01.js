@@ -18,6 +18,7 @@ upsert(
 alterState(state => {
   const pId = state.data.id;
   const { form } = state.data;
+  
   function makeSet(a, b, c) {
     return {
       Question_ID__c: `${pId}-${a}`,
@@ -26,6 +27,7 @@ alterState(state => {
       c,
     };
   }
+
   state.fieldSets = [
     makeSet(
       'departement',
@@ -39,17 +41,17 @@ alterState(state => {
     ),
     makeSet(
       'commune',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.fixture_localization['commune']
     ),
     makeSet(
       'village',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.fixture_localization['village']
     ),
     // {
     //   ampi__Description__c: 'pays',
-    //    'ampi__Picklist_Response__c ',
+    //    'ampi__Picklist_Response__c',
     //    form.XX['pays'],
     // },
     makeSet(
@@ -64,12 +66,12 @@ alterState(state => {
     ),
     makeSet(
       'mois-collecte',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form['mois-collecte']
     ),
     makeSet(
       'module_en_cours',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form['module_en_cours']
     ),
     makeSet(
@@ -84,12 +86,12 @@ alterState(state => {
     ),
     makeSet(
       'plus_dune_cohorte_dans_classe',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form['plus_dune_cohorte_dans_classe']
     ),
     makeSet(
       'type_de_cohorte',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form['type_de_cohorte']
     ),
     makeSet(
@@ -161,32 +163,32 @@ alterState(state => {
     ),
     makeSet(
       'STAND-QUAL-05',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question2['STAND-QUAL-05']
     ),
     makeSet(
       'STAND-QUAL-06',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question2['STAND-QUAL-06']
     ),
     makeSet(
       'STAND-QUAL-07',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question2['STAND-QUAL-07']
     ),
     makeSet(
       'STAND-QUAL-08',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question2['STAND-QUAL-08']
     ),
     makeSet(
       'STAND-QUAL-09',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question2['STAND-QUAL-09']
     ),
     makeSet(
       'STAND-QUAL-10',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question2['STAND-QUAL-10']
     ),
     makeSet(
@@ -201,17 +203,17 @@ alterState(state => {
     ),
     makeSet(
       'STAND-QUAL-13',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question1['STAND-QUAL-13']
     ),
     makeSet(
       'STAND-QUAL-14',
-      'ampi__Picklist_Response__c ',
+      'ampi__Picklist_Response__c',
       form.Standard_qualite.question1['STAND-QUAL-14']
     ),
     // makeSet(
     //   'les_participants_manifestent_de_lintrt_pour_le_contenu_de_la_sance',
-    //   'ampi__Picklist_Response__c ',
+    //   'ampi__Picklist_Response__c',
     //   form.XX[
     //     'les_participants_manifestent_de_lintrt_pour_le_contenu_de_la_sance'
     //   ]
