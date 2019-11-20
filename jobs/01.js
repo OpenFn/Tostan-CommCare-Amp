@@ -18,14 +18,14 @@ upsert(
 alterState(state => {
   const pId = state.data.id;
   const { form } = state.data;
-  
+
   function makeSet(a, b, c) {
-    return {
+    let obj = {
       Question_ID__c: `${pId}-${a}`,
-      ampi__Description__c: a,
-      b,
-      c,
+      ampi__Description__c: a
     };
+    obj[b] = c;
+    return obj
   }
 
   state.fieldSets = [
@@ -49,11 +49,7 @@ alterState(state => {
       'ampi__Picklist_Response__c',
       form.fixture_localization['village']
     ),
-    // {
-    //   ampi__Description__c: 'pays',
-    //    'ampi__Picklist_Response__c',
-    //    form.XX['pays'],
-    // },
+    // makeSet('pays', 'ampi__Picklist_Response__c', form.XX['pays']),
     makeSet(
       'coordonnes_gps',
       'ampi__Submisison__c.Location__c',
