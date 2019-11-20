@@ -1,0 +1,32 @@
+{
+  "name": "tostan-openfn",
+  "version": "1.0.0",
+  "description": "tostan integration",
+  "scripts": {
+    "test": "mocha --require babel-core/register"
+  },
+  "author": "myAgro",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OpenFn/Tostan-CommCare-Amp.git"
+  },
+  "dependencies": {
+    "core": "github:openfn/core",
+    "language-salesforce": "github:openfn/language-salesforce#v1.0.3"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "mocha": "^2.3.3",
+    "sinon": "^7.5.0"
+  }
+}

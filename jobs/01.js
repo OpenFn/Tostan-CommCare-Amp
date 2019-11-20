@@ -20,24 +20,24 @@ alterState(state => {
   const { form } = state.data;
 
   function makeSet(a, b, c) {
-    let fieldSet = {
+    const fieldSet = {
       Question_ID__c: `${pId}-${a}`,
-      ampi__Description__c: a
+      ampi__Description__c: a,
     };
 
     switch (b) {
       case 'ampi__Picklist_Response__c':
-        fieldSet.ampi__Response__Type__c = 'Picklist'
+        fieldSet.ampi__Response__Type__c = 'Picklist';
         break;
 
       case 'ampi__Number_Response__c':
-        fieldSet.ampi__Response__Type__c = 'Number'
+        fieldSet.ampi__Response__Type__c = 'Number';
         break;
 
       case 'ampi__Text__Response__c':
-        fieldSet.ampi__Response__Type__c = 'Qualitative'
+        fieldSet.ampi__Response__Type__c = 'Qualitative';
         break;
-    
+
       default:
         break;
     }
