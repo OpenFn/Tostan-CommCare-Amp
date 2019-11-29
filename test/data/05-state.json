@@ -1,0 +1,211 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "60839bd4211ed423c4019815ab752e72"
+    },
+    "app_id": "60839bd4211ed423c4019815ab752e72",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 4076,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/8d160292-b694-489c-9a46-9871b6bfacc4/form.xml"
+      }
+    },
+    "build_id": "0d13d9de11f246f79739bd9fbc653059",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Analyse situationnelle CGC",
+      "@uiVersion": "1",
+      "@version": "286",
+      "@xmlns": "http://openrosa.org/formdesigner/3775CE50-30D6-4904-AE7F-7D57A808945C",
+      "Q1": "2019-10-10T08:16:00.000000Z",
+      "Q12": "2017",
+      "Q2": "5",
+      "Q3": "5",
+      "Q8": {
+        "Q8_9A": "oui",
+        "Q9_11B": "oui",
+        "Q9_10A": "oui",
+        "Q8_6B": "oui",
+        "Q9_11A": "oui",
+        "Q8_7A": "oui",
+        "Q9_12A": "oui",
+        "select_option": "",
+        "Q8_2B": "oui",
+        "Q9_17B": "oui",
+        "Q9_10B": "oui",
+        "Q9_9B": "oui",
+        "Q9_12B": "oui",
+        "Q8_8A": "oui",
+        "Q8_2A": "oui",
+        "Q9_15A": "oui",
+        "Q9_17A": "oui",
+        "Q8_3A": "oui",
+        "Q9_16B": "oui",
+        "Q9_13B": "oui",
+        "Q8_8B": "oui",
+        "Q9_15B": "oui",
+        "Q9_14B": "oui",
+        "Q8_5A": "oui",
+        "Q8_5B": "non",
+        "Q9_14A": "oui",
+        "Q8_3B": "oui",
+        "Q8_7B": "oui",
+        "Q8_1B": "oui",
+        "Q8_6A": "oui",
+        "Q9_13A": "oui",
+        "Q9_16A": "oui",
+        "Q8_1A": "oui",
+        "Q8_4B": "oui",
+        "Q8_4A": "oui"
+      },
+      "caracteristiques_du_cgc": {
+        "Q4": "unicef_senegal",
+        "Q5": "2",
+        "Q6": "rles_et_responsabilits",
+        "Q7_1A": "2",
+        "Q7_1B": "62"
+      },
+      "circonstances_du_village_ou_du_quartier": {
+        "Q45": "maraichage levage",
+        "Q46": "oui",
+        "Q47": "oui",
+        "Q48": "financier",
+        "Q48_2": "test",
+        "Q49": "2",
+        "Q50": "oui",
+        "Q51": "2017",
+        "Q52": "test"
+      },
+      "comit_de_gestion_des_adolescents_sil_existe": {
+        "Q11": {
+          "Q11_1A": "oui",
+          "Q11_1B": "oui",
+          "Q11_2A": "oui",
+          "Q11_2B": "oui",
+          "Q11_3A": "oui",
+          "Q11_3B": "oui",
+          "select_option2": ""
+        },
+        "q10_": "oui"
+      },
+      "communication_et_collaboration_avec_le_conseil_municipal": {
+        "Q65": "",
+        "Q66": "",
+        "Q67": "",
+        "Q68": "",
+        "Q69": "",
+        "Q70": "",
+        "Q71": ""
+      },
+      "fixture_localization": {
+        "commune": "baja_kunda_com",
+        "department": "wuli_east_dep",
+        "village": "sutukoba_vil"
+      },
+      "informations_de_base_sur_le_cgc": {
+        "Q13": "2017",
+        "Q14": "2017",
+        "Q15": "5",
+        "Q16": "1",
+        "Q17": "1",
+        "Q18": "1",
+        "Q19": "par_an",
+        "Q20": "1",
+        "Q40": "oui",
+        "Q41": "oui",
+        "Q42": "voir_le_maire",
+        "Q43": "partage_de_plan_daction_du_cgc",
+        "Q44": "appui_financier appui_dans_le_diagnostic_du_budget_participatif",
+        "TOTAL_MEMBRES_CGC": "OK",
+        "fonctionnement_cgc": {
+          "Q28": "oui",
+          "Q29": "banque",
+          "Q30": "1",
+          "Q31": "1",
+          "Q32": "oui",
+          "Q33": "oui",
+          "Q34": "oui"
+        },
+        "nombre_dhommes_dans_le_cgc_qui_savent_lire_et_crire": "1",
+        "plan_daction_cgc": {
+          "Q35": "oui",
+          "Q37": "autorits_locales autres_personnes_dans_la_communaut",
+          "Q39": "oui"
+        },
+        "total_membre_CGC": "8",
+        "vision_cgc": {
+          "Q22": "oui",
+          "Q23": "test",
+          "Q24": "oui",
+          "Q25": "1",
+          "Q26": "plaidoyers",
+          "Q27": "oui"
+        }
+      },
+      "la_capacit_du_cgc__collecter_des_donnes_communautaires": {
+        "Q64_1": "5",
+        "Q64_2": "5",
+        "q53_disposez-vous_des_donnes_communautaires_suivantes_et_quelles_autres": "nombre_total_dhommes_30_ans_et_plus nombre_total_de_femmes_30_ans_et_plus"
+      },
+      "les_fdrations": {
+        "Q53": "oui",
+        "Q54": "test",
+        "Q55": "2017",
+        "Q56": "en_cours_dobtention",
+        "Q58": "oui",
+        "Q59": "2",
+        "Q60": "oui",
+        "Q61": "microcrdit",
+        "Q62": "oui",
+        "Q63": "plaidoyers"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v286. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 286,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "8d160292-b694-489c-9a46-9871b6bfacc4",
+        "timeEnd": "2019-10-10T08:20:20.161000Z",
+        "timeStart": "2019-10-10T08:15:48.575000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "position_gps": "-33.927206461858404 18.43460263268893 55.12 4.9",
+      "type_devaluation": "1"
+    },
+    "id": "8d160292-b694-489c-9a46-9871b6bfacc4",
+    "indexed_on": "2019-10-10T08:20:22.468893",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v286. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 286,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "8d160292-b694-489c-9a46-9871b6bfacc4",
+      "location": null,
+      "timeEnd": "2019-10-10T08:20:20.161000Z",
+      "timeStart": "2019-10-10T08:15:48.575000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-10T08:20:22.166373Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-10T08:20:22.234659Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "286"
+  }
+}

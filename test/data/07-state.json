@@ -1,0 +1,167 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "60839bd4211ed423c4019815ab752e72"
+    },
+    "app_id": "60839bd4211ed423c4019815ab752e72",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 3466,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/489c60f1-f9a8-431a-afcb-ecc22ea19406/form.xml"
+      }
+    },
+    "build_id": "06bd8a54d2814738af5e0afd56fceeef",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Suivi CGC (ECDD)",
+      "@uiVersion": "1",
+      "@version": "266",
+      "@xmlns": "http://openrosa.org/formdesigner/1967EFCE-8BC5-4A6D-B359-12DCB64D011E",
+      "MOIS_DE_COLLECTE": "mars",
+      "economie": {
+        "PRETS_INDIVIDUELS_ACCORDES": {
+          "Q35": "1",
+          "Q35_1": "1",
+          "Q36": "2",
+          "Q36_1": "2",
+          "Q37": "2",
+          "Q37_1": "1",
+          "Q38": "2",
+          "Q38_1": "1",
+          "le_montant_total_du_fad_donn_en_prts_individuels__des_femmes_et_jeunes_fill": "OK",
+          "le_montant_total_du_fad_donn_en_prts_individuels_est_de__question67": "OK",
+          "le_nombre_total_de_prets_individuels_accordes": "OK",
+          "montant_total_FAD_pret_individuel": "5",
+          "montant_total_FAD_pret_individuel_femmes": "3",
+          "nbre_total_de_prets_individuel": "7"
+        },
+        "Q33": "oui",
+        "Q34": "2019-10-03",
+        "question61": {
+          "Q43": "1",
+          "Q43_1": "2",
+          "Q44": "2",
+          "Q44_1": "1",
+          "Q45": "2",
+          "Q45_1": "1",
+          "le_montant_total_du_fad_donn_en_prt_pour_projets_collectifs_est_de__questio": "OK",
+          "le_nombre_total_de_projets_collectifs_financs_par_le_fad_est_de__question4": "OK",
+          "montant_total_FAD_donne_en_prets_projet_collectifs": "4",
+          "nbre_total_projets_collectifs_finances_par_cgc": "5"
+        }
+      },
+      "education": {
+        "activits_cgc": {
+          "Q16": "1",
+          "Q17": "1",
+          "Q18": "oui",
+          "Q19": "1",
+          "Q20": "oui",
+          "Q21": "1",
+          "Q22": "1"
+        }
+      },
+      "environnement": {
+        "activits_cgc_environnement": {
+          "Q29": "oui",
+          "Q30": "1",
+          "Q31": "oui",
+          "Q32": "1"
+        }
+      },
+      "fixture_localization": {
+        "commune": "gambisara_com",
+        "department": "jimara_dep",
+        "village": "sotumasainykandeh_vil"
+      },
+      "gouvernance": {
+        "actions_directes_gesee": {
+          "Q10": "11",
+          "Q6": "1",
+          "Q7": "1",
+          "Q8": "1",
+          "Q9": "1",
+          "total_action_directe": "15",
+          "total_actions_directes": "OK"
+        },
+        "actions_plaidoyer": {
+          "Q11": "1",
+          "Q12": "1"
+        },
+        "reunions_et_rencontres": {
+          "Q1": "1",
+          "Q2": "1",
+          "Q3": "1",
+          "Q4": "1",
+          "Q5": "oui"
+        },
+        "sensibilisation": {
+          "Q13": "1",
+          "Q14": "1",
+          "Q15": "1"
+        }
+      },
+      "intro1": {
+        "intro_1": "OK",
+        "intro_2": "OK",
+        "intro_3": "OK"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v266. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 266,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "489c60f1-f9a8-431a-afcb-ecc22ea19406",
+        "timeEnd": "2019-10-03T08:57:30.423000Z",
+        "timeStart": "2019-10-03T08:55:33.112000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "position_gps": "-33.918504563094366 18.389387240290727 74.79 87.85",
+      "sante": {
+        "question48": {
+          "Q23": "oui",
+          "Q24": "1",
+          "Q25": "1",
+          "Q26": "oui",
+          "Q27": "1",
+          "Q28": "1"
+        }
+      }
+    },
+    "id": "489c60f1-f9a8-431a-afcb-ecc22ea19406",
+    "indexed_on": "2019-10-03T08:57:32.941017",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v266. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 266,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "489c60f1-f9a8-431a-afcb-ecc22ea19406",
+      "location": null,
+      "timeEnd": "2019-10-03T08:57:30.423000Z",
+      "timeStart": "2019-10-03T08:55:33.112000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-03T08:57:32.667345Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-03T08:57:32.736856Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "266"
+  }
+}

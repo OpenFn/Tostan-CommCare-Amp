@@ -1,0 +1,161 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "15e23528b0c6952405bda524d0a66b27"
+    },
+    "app_id": "15e23528b0c6952405bda524d0a66b27",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 4539,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/c1f70cdf-0d4c-4467-8d17-3580f940c592/form.xml"
+      }
+    },
+    "build_id": "08455f64808e4726a762880af93839d6",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "suivi CGC BG new",
+      "@uiVersion": "1",
+      "@version": "3474",
+      "@xmlns": "http://openrosa.org/formdesigner/2F4A1477-E94E-4916-80B9-E56A121D847B",
+      "fixture_localization": {
+        "commune": "foday_kunda_com",
+        "department": "wuli_east_dep",
+        "village": "saremudujawo_vil"
+      },
+      "gestion_du_cgc": {
+        "action_plan": {
+          "actions_entreprises_par_le_cgc": {
+            "actions_au_cours_des_3_derniers_mois": {
+              "Action_enfant_inscrit_etat_civil": "2",
+              "Action_filles_echappe_excision": "2",
+              "Action_mariage_enfant_evite": "2",
+              "Action_reunion_ecole": "2",
+              "Action_reunions_associations": "2",
+              "Action_village_sensibilise": "2"
+            },
+            "actions_gesee": {
+              "Action_economie": "2",
+              "Action_education": "2",
+              "Action_environnement": "2",
+              "Action_gouvernance": "2",
+              "Action_sante": "2",
+              "fin_de_linterview_noubliez_pas_de_remercier_les_membres_du_cgc_pour_leur_te": "OK",
+              "nombre_action_GESEE": "10"
+            },
+            "renforcement_conomique": {
+              "FAD": "oui",
+              "FAD_montant_recu": "1",
+              "FAD_utilisation": "petit_commerce elevage_communautaire champ_collectif"
+            }
+          },
+          "formation_cgc": {
+            "CGC_forme": "oui",
+            "FCGCx1_roles_responsabilites": "non",
+            "FCGCx2_protection_enfant": "oui",
+            "FCGCx3_mobilisation_sociale": "non",
+            "FCGCx4_gestion_agr": "oui",
+            "FCGCx5_decentralisation": "non",
+            "FCGCx6_microcredit": "oui",
+            "formations_CGC_suivants": ""
+          },
+          "merci": "OK",
+          "partage_plan_daction": {
+            "PPAx1_partage_progres": "oui",
+            "PPAx2_partage_structure_sanitaire": "oui",
+            "PPAx3_partage_structure_educative": "oui",
+            "PPAx4_partage_leaders_religieux": "oui",
+            "PPAx5_partage_chef_village": "oui",
+            "PPAx6_partage_elus_locaux": "oui",
+            "PPAx7_nbre_partage_plan_action": "1"
+          },
+          "plan_action": {
+            "PA_changements": "test",
+            "PAx1confirm_action_plan": "oui",
+            "changement_plan_action": "oui",
+            "plan_action": "oui"
+          },
+          "question9": {
+            "compte_bancaire": "",
+            "gestion_financire": {
+              "GFCCx1_partage_caisse_membres_cgc": "oui",
+              "GFCCx2_partage-participants_classe": "oui",
+              "GFCCx3_montant_caisse": "1",
+              "GFCCx4_hommes_cotise": "1",
+              "GFCCx5_femmes_cotise": "2"
+            }
+          }
+        },
+        "reunion_pv": {
+          "RCPV1_reunions": "oui",
+          "RCPV2_moyenne_reunions_par_mois": "2"
+        },
+        "vu_documents": {
+          "EDD_autre": "existe_vu",
+          "EDDca_cachet": "existe_vu",
+          "EDDcgf_cahier_gestion_financiere": "existe_vu",
+          "EDDdcb_document_bancaire": "existe_vu",
+          "EDDpa_plan_action": "pas_existe",
+          "EDDpv_cahier_pv": "pas_existe",
+          "EDDri_reglement_interieur": "existe_pas_vu",
+          "EDDsj_statut_juridique": "existe_pas_vu",
+          "EDDvc_vision_communaute": "existe_pas_vu",
+          "preciser_autre": "test"
+        }
+      },
+      "intro1": {
+        "intro_1": "OK",
+        "intro_2": "OK",
+        "intro_3": "OK"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v3478. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 3478,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "c1f70cdf-0d4c-4467-8d17-3580f940c592",
+        "timeEnd": "2019-10-03T07:56:11.884000Z",
+        "timeStart": "2019-10-03T07:53:40.381000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "mois_de_collecte": "avril",
+      "pays": "gambie",
+      "position_gps": "-33.9185658662184 18.389499577530476 42.5 92.2",
+      "projet": "SI"
+    },
+    "id": "c1f70cdf-0d4c-4467-8d17-3580f940c592",
+    "indexed_on": "2019-10-03T07:56:14.651756",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v3478. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 3478,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "c1f70cdf-0d4c-4467-8d17-3580f940c592",
+      "location": null,
+      "timeEnd": "2019-10-03T07:56:11.884000Z",
+      "timeStart": "2019-10-03T07:53:40.381000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-03T07:56:14.274666Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-03T07:56:14.383079Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "3474"
+  }
+}

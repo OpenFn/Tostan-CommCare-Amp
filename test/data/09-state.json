@@ -1,0 +1,140 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "37aaedcb00a92b87a936bda23001742b"
+    },
+    "app_id": "37aaedcb00a92b87a936bda23001742b",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 3782,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/c71987fd-13b4-4f86-97f5-5d6a176d945e/form.xml"
+      }
+    },
+    "build_id": "7d4857917aca4819820a564013fc6a0f",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": " Connaissances des adoptés",
+      "@uiVersion": "1",
+      "@version": "620",
+      "@xmlns": "http://openrosa.org/formdesigner/577B32CD-6398-41D5-844A-8C18D35E2B5A",
+      "GPS": "-33.92742143324031 18.43476860267817 65.37 4.9",
+      "comment_parler_aux_enfants": {
+        "communication_types_group": {
+          "communication_types": "raconter_histoires lire_livres"
+        }
+      },
+      "dev_cerveau": {
+        "bebe_apprentissage": "5mois_apres_grossesse",
+        "periode_critique_dev_cerveau_group": {
+          "periode_critique_dev_cerveau": "avant_5ans"
+        }
+      },
+      "dossier_droits_enfant": {
+        "droits_enfant_connus": "nom_famille_nationalite sante"
+      },
+      "formes_d_intelligence": {
+        "intelligence_emotionnelle_group": {
+          "intelligence_emotionnelle": "reconnaitre_emotions facilite_vivre_communaute"
+        },
+        "types_d_intelligence_group": {
+          "types_d_intelligence": "intel_sociale intel_psychomotrice"
+        }
+      },
+      "identification": {
+        "fixture_localization": {
+          "commune": "baja_kunda_com",
+          "departement": "wuli_east_dep",
+          "village": "boromodibanniu_vil"
+        },
+        "langue_group": {
+          "langue_interview": "francais"
+        }
+      },
+      "importance_parler_aux_enfants": {
+        "pourquoi_parler_aux_enfants_group": {
+          "pourquoi_parler_aux_enfants": "prepare_cerveau prepare_apprentissage"
+        }
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v621. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 621,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "c71987fd-13b4-4f86-97f5-5d6a176d945e",
+        "timeEnd": "2019-11-11T08:28:26.974000Z",
+        "timeStart": "2019-11-11T08:27:33.112000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "pratiques_familiales": {
+        "participant_attitude_group": {
+          "accompagner_enfant_jeu": "mal_apprecie",
+          "aider_decouverte_objets": "mal_apprecie",
+          "decouvrir_traits_visage": "bien_apprecie",
+          "dormir_sous_un_moustiquaire": "mal_apprecie",
+          "feliciter_action_positive": "indifferent",
+          "ne_pas_frapper": "indifferent",
+          "parler_enfant_1an_apres": "bien_apprecie",
+          "parler_enfant_2mois_apres_naissance": "lam_apprecier",
+          "parler_enfant_durant_grossesse": "bien_apprecie",
+          "participant_attitude": "OK",
+          "patticipant_attitude_blank": "",
+          "raisonner_enfant": "indifferent",
+          "regarder_enfant_dans_les_yeux": "mal_apprecie",
+          "utiliser_livres_interaction": "mal_apprecie"
+        },
+        "remercier_personne": "OK"
+      },
+      "role_pere": {
+        "dev_enfant_group": {
+          "dev_enfant": "se_consacrer_aux_enfants lire_des_livres"
+        }
+      },
+      "suivi_scolaire": {
+        "bebe_djinns_group": {
+          "bebe_djinns": "enfants_malnourris"
+        },
+        "importance_suivi_scolaire_group": {
+          "importance_suivi_scolaire": "verifier_ponctualite echanger_avec_enseignant"
+        },
+        "suivi_domicile_group": {
+          "suivi_domicile": "aider_avec_devoirs donner_des_excercices"
+        }
+      }
+    },
+    "id": "c71987fd-13b4-4f86-97f5-5d6a176d945e",
+    "indexed_on": "2019-11-11T08:28:28.401768",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v621. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 621,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "c71987fd-13b4-4f86-97f5-5d6a176d945e",
+      "location": null,
+      "timeEnd": "2019-11-11T08:28:26.974000Z",
+      "timeStart": "2019-11-11T08:27:33.112000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-11-11T08:28:28.078407Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-11-11T08:28:28.139906Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "620"
+  }
+}

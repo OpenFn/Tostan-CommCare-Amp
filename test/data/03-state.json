@@ -1,0 +1,141 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "dfa151b7562ccc68ed707d2d9fcee6af"
+    },
+    "app_id": "dfa151b7562ccc68ed707d2d9fcee6af",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 5121,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/8ad465ad-aa8c-4cf5-b501-94055c8b7a20/form.xml"
+      }
+    },
+    "build_id": "71f44eac9cba4103aeb6d8c47da5fa39",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Questionnaire Individuel V2",
+      "@uiVersion": "1",
+      "@version": "632",
+      "@xmlns": "http://openrosa.org/formdesigner/7EC69FA5-F3C3-4C52-B6D8-F223B0DC1121",
+      "Intro": {
+        "consigne_enqueteur": "OK",
+        "consigne_enqueteur2": "OK",
+        "presentation": "OK",
+        "presentation2": "OK",
+        "presentation3": "OK"
+      },
+      "community_action_HR_promotion": {
+        "community_led_activity": "yes",
+        "sensitize_author_HR": "yes",
+        "sensitize_community_HR": "yes",
+        "what_have_they_done": "test",
+        "what_have_they_done2": "test",
+        "what_have_they_done3": "test"
+      },
+      "conflict_prevention_and_management": {
+        "ask_the_question_do_you_know_strategies_to_prevent_the_escalation_of_confli": "yes",
+        "change_in_conflict": "yes",
+        "learned_any_new_strategies": "yes",
+        "reasons_of_changes": "actions_of_the_peace_committee",
+        "strategies-known": "good_communication_skills",
+        "sufficiently_trained": "yes",
+        "what_is_the_change": "conflict_has_decreased"
+      },
+      "conflict_resolution": {
+        "ask_the_question_can_you_define_mediation": "interviewee_can_define_mediation",
+        "mediation_is_the_third-party_facilitation_of_a_negotiation_process_between_": "OK",
+        "need_additionnal_knowledge": "yes",
+        "need_of_additional_knowledge": "additional_training_in_mediation_techniques",
+        "type_of_conflict": "conflict_between_herders_and_farmers",
+        "used_mediation_to_resolve": "yes"
+      },
+      "copy-1-of-fin_de_linterview_noubliez_pas_de_remercier_lenquete_pour_sa_partcipation_f": "OK",
+      "fixture_localization": {
+        "commune": "foday_kunda_com",
+        "departement": "wuli_east_dep",
+        "village": "sare-gubu_vil"
+      },
+      "gps_coordinate": "-33.92754856990901 18.43514978725778 109.38 62.75",
+      "human_security": {
+        "ask_the_question_in_the_past_12_months_have_you_taken_any_actions_to_improv": "yes",
+        "dimensions_of_human_sec": "food_security",
+        "heard_about_human_security": "yes",
+        "what_were_they_select_all_answers_given_by_the_interviewee": "improved_environment"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v660. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 660,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "8ad465ad-aa8c-4cf5-b501-94055c8b7a20",
+        "timeEnd": "2019-11-11T10:00:54.554000Z",
+        "timeStart": "2019-11-11T09:59:14.772000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "peace_and_trafficking_knowledge_of_peace": {
+        "appreciate_peace_culture": "better",
+        "existence_peace_culture": "yes",
+        "threats_to_peace": "conflicts"
+      },
+      "reflections_on_the_project": {
+        "activities_contribute_to_culture_of_peace": "peace_and_security_initiative",
+        "ask_the_questionare_there_other_activities_you_would_like_to_propose_to_imp": "yes",
+        "notice_any_change_in_conflict_community": "yes",
+        "which_other_activities": "test",
+        "wich_changes": "more_conflicts"
+      },
+      "socio-demographic_characteristics": {
+        "have_you_participate": "yes",
+        "observe_1_sex_of_the_interviewee": "female",
+        "what_is_your_age_group": "15_to_18",
+        "witch_of_the_project_activity": "impact_of_trafficking_on_peace"
+      },
+      "statut_repondant": "adopte",
+      "trafficking_in_goods_and_persons": {
+        "know_types_of_illegal_trafficking": "yes",
+        "sensitization_effect-trafficking_on_peace": "",
+        "types_illegal_trafficking": "cattle_theft"
+      },
+      "type_evaluation": "etude_base",
+      "women_peace_and_security": {
+        "main_roles_of_women_in_conflict_resolution": "mediation_of_conflits",
+        "particpation_in_conflict_resolution_process": "men_only"
+      }
+    },
+    "id": "8ad465ad-aa8c-4cf5-b501-94055c8b7a20",
+    "indexed_on": "2019-11-11T10:00:57.378380",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v660. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 660,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "8ad465ad-aa8c-4cf5-b501-94055c8b7a20",
+      "location": null,
+      "timeEnd": "2019-11-11T10:00:54.554000Z",
+      "timeStart": "2019-11-11T09:59:14.772000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-11-11T10:00:56.924297Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-11-11T10:00:56.979100Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "632"
+  }
+}

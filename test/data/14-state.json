@@ -1,0 +1,171 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "37aaedcb00a92b87a936bda23001742b"
+    },
+    "app_id": "37aaedcb00a92b87a936bda23001742b",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 5408,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/00f627d4-aa67-43f6-b281-4a66df651ad4/form.xml"
+      }
+    },
+    "build_id": "32c6409e28594771827470965c11b7f2",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Tableau de bord CGC",
+      "@uiVersion": "1",
+      "@version": "614",
+      "@xmlns": "http://openrosa.org/formdesigner/412246C3-3FD2-462A-B538-11ADBD9B9F35",
+      "GPS": "-33.91859166819638 18.389914110525226 61.55 4.9",
+      "cas_de_violences": {
+        "excision": {
+          "femmes": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK"
+        },
+        "mariages": {
+          "filles_mariees": "1",
+          "mariage_15": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK"
+        },
+        "violence_2": {
+          "filles_phys": "1",
+          "garons_phy": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK"
+        },
+        "violence_3": {
+          "filles_phys": "4",
+          "garons_phy": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK"
+        },
+        "violence_4": {
+          "filles_phys": "1",
+          "garons_phy": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK"
+        },
+        "violence_5": {
+          "filles_phys": "1",
+          "garons_phy": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK"
+        },
+        "violences": {
+          "filles_vic": "1",
+          "garons_vic": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK",
+          "viols": "1"
+        },
+        "violences_6_": {
+          "femmes": "1",
+          "femmes_viols": "1",
+          "nombre_de_cas_rfrs_dans_les_72h_vers_un_service_de_sant": "1",
+          "nombre_de_cas_rfrs_vers_un_service_social": "1",
+          "nombre_de_cas_signal__la_policegendarmerie": "1",
+          "prciser": "OK"
+        }
+      },
+      "commission_protection": "oui",
+      "fixture_localization": {
+        "commune": "baja_kunda_com",
+        "departement": "wuli_east_dep",
+        "village": "sutukoba_vil"
+      },
+      "mcanismes_communautaires_existants_pour_prvenir_ou_rpondre__ces_situations_": "1",
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v614. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 614,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "geo_point": null,
+        "instanceID": "00f627d4-aa67-43f6-b281-4a66df651ad4",
+        "timeEnd": "2019-10-03T09:43:14.509000Z",
+        "timeStart": "2019-10-03T09:41:15.683000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "naissance_et_enregistrement": {
+        "naissance_et_enregistrement": {
+          "filles_18_non_enr": "1",
+          "filles_enr": "1",
+          "filles_nees": "1",
+          "filles_non_enr": "1",
+          "garons_18_non_enr": "1",
+          "garons_enr": "1",
+          "garons_nes": "1",
+          "garons_non_enr": "1"
+        }
+      },
+      "nombre_denfants_qui_frquentent_les_structures_ducatives_au_cours_des_12_der": {
+        "frquentation_structures_ducatives": {
+          "filles_coll": "1",
+          "filles_presc": "1",
+          "filles_prim": "2",
+          "garons_coll": "1",
+          "garons_prec": "1",
+          "garons_prim": "2"
+        }
+      },
+      "nombre_total_denfants_dans_le_village": {
+        "enfants_dans_le_village": {
+          "filles_0_5": "1",
+          "filles_13_18": "4",
+          "filles_6_12": "1",
+          "garons_0_5": "4",
+          "garons_13_18": "1",
+          "garons_6_12": "4"
+        }
+      }
+    },
+    "id": "00f627d4-aa67-43f6-b281-4a66df651ad4",
+    "indexed_on": "2019-10-03T09:43:17.084878",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v614. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 614,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "geo_point": null,
+      "instanceID": "00f627d4-aa67-43f6-b281-4a66df651ad4",
+      "location": null,
+      "timeEnd": "2019-10-03T09:43:14.509000Z",
+      "timeStart": "2019-10-03T09:41:15.683000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-03T09:43:16.780788Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-03T09:43:16.860271Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "614"
+  }
+}

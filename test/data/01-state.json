@@ -1,0 +1,329 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "15e23528b0c6952405bda524d0a66b27"
+    },
+    "app_id": "15e23528b0c6952405bda524d0a66b27",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 9048,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/bfb79916-e153-410c-a382-f6185dd47dbe/form.xml"
+      }
+    },
+    "build_id": "08455f64808e4726a762880af93839d6",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "droits_humains": {
+        "connait_droit_humains": {
+          "connait_droits_humains": "non"
+        },
+        "intro8": "OK"
+      },
+      "month": "Oct",
+      "count": {
+        "participant_count": "1",
+        "previous_adopted_count": "",
+        "previous_othermember_count": "",
+        "previous_participant_count": "",
+        "previous_village": "",
+        "previous_village_name": ""
+      },
+      "year": "2019",
+      "intro": {
+        "consigne_enqueteur": "OK",
+        "intro0": "OK",
+        "intro_1": "OK",
+        "intro_2": "OK",
+        "intro_3": "OK"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v3478. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 3478,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "bfb79916-e153-410c-a382-f6185dd47dbe",
+        "timeEnd": "2019-10-02T15:11:34.692000Z",
+        "timeStart": "2019-10-02T15:05:08.878000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "type_evaluation": "etude_base",
+      "Fin": {
+        "conclusion": "facile",
+        "dernier_chose_ajouter": "test",
+        "difficulte_parler": "ne_sait_pas",
+        "participant_count_end": "OK",
+        "remercier": "OK"
+      },
+      "hygiene_environnement": {
+        "existence_latrine": {
+          "latrines": "oui",
+          "type_latrines": "latrine_sans_fosse",
+          "utilisation_latrines": "oui"
+        },
+        "intro4": "OK",
+        "lavage_mains": {
+          "lavage_main": "oui",
+          "quand_lavage_mains": "apres_toilet avant_manger apres_manger avant_cuisine"
+        },
+        "microbes": {
+          "transmission_microbes": "oui",
+          "voies_transmission": "nourriture eau_sale plaie voie_sexuelle"
+        },
+        "nettoyage": {
+          "nbre_seance_nettoyage": "1",
+          "seances_nettoyage": "oui"
+        }
+      },
+      "coordonnes_gps": "-33.9273709 18.4348972 44.19 20.58",
+      "fixture_localization": {
+        "commune": "foday_kunda_com",
+        "departement": "wuli_east_dep",
+        "village": "sare_sandigi_vil"
+      },
+      "interviewer": "participant",
+      "@uiVersion": "1",
+      "lecture_ecriture": {
+        "association_image": {
+          "image": "oui",
+          "intro9": "OK",
+          "nbre_association_enquete": "2"
+        },
+        "ecriture_nom": {
+          "capable_ecrire_village": "oui",
+          "ecrire_nom_village": "oui"
+        },
+        "ecriture_nom_enquete": {
+          "ecrire_nom_enquete": "ne_repond_pas"
+        }
+      },
+      "pratiques_sociales": {
+        "appreciation_mariage": {
+          "appreciation_personnelle": "apprecie_mal",
+          "meme_appreciation": "non",
+          "raison_changement": "travail_cgc"
+        },
+        "attitude_autres_membres": {
+          "Baptiser": "changer_avis",
+          "avoir_enfant": "changer_avis",
+          "battre_enfant_eduquer": "indifférents",
+          "exciser_fille": "changer_avis",
+          "marrier_fille_14": "indifférents",
+          "nourrir_viande": "changer_avis",
+          "visite_enfant": "indifférents",
+          "vous_marrier": "changer_avis"
+        },
+        "consequences_battre_enfant": {
+          "connait_consequence_battre": "oui",
+          "consequences_battre": "traumatisme_psychologiques blessure_corporelles",
+          "discipliner_enfant": "isoler"
+        },
+        "consequences_mariage": {
+          "connait_consequence_mariage": "non"
+        },
+        "intro6": "OK",
+        "proportion_communaute": {
+          "battent_enfant": "plus_moitie",
+          "celebre_mariage": "plus_moitie",
+          "champ_individuel": "presk_tous",
+          "exciser_leurs_filles": "moins_moitie",
+          "fille_mariage_avt18": "ne_sait_pas",
+          "ont_des_enfants": "presk_tous",
+          "ont_voiture": "moins_moitie",
+          "sont_maries": "presk_tous"
+        }
+      },
+      "espacement_naissance": {
+        "intro2": "OK",
+        "pratique_espacement": {
+          "decision_espacer": "oui",
+          "decision_planification": "En_couple"
+        },
+        "risque_grossesse": {
+          "quels_risques": "fragilisent_sante empecher_bon_development temps_parents",
+          "risques_grossesses": "oui"
+        }
+      },
+      "allaitement": {
+        "avantage_ame": "oui",
+        "avantages_allaitement": "fournit_calories favorise_developpement protege_enfant disponible_mere"
+      },
+      "ethnie": [
+        {
+          "ethnique": {
+            "question1": "test"
+          }
+        },
+        {
+          "ethnique": {
+            "question1": "test1"
+          }
+        }
+      ],
+      "commcare_usercase": {
+        "case": {
+          "@case_id": "5ebcb3d4a94048248f1bd5c7b97becb0",
+          "@date_modified": "2019-10-02T15:11:34.692000Z",
+          "@user_id": "fd2f1bfbb45c42b685f68b93695faf39",
+          "@xmlns": "http://commcarehq.org/case/transaction/v2",
+          "update": {
+            "nom_village": "sare_sandigi_vil",
+            "participant_count": "1",
+            "pays": "gambie",
+            "previous_adopted_count": "",
+            "previous_othermember_count": "",
+            "previous_participant_count": "",
+            "previous_village": "",
+            "previous_village_name": "",
+            "village": "sare_sandigi_vil"
+          }
+        }
+      },
+      "nbre_groupe_ethnique": "2",
+      "today": "2019-10-02",
+      "prise_de_decision": {
+        "intro5": "OK",
+        "prend_decision": {
+          "batir_ecole": "jeunes tous_hommes",
+          "convoquer_reunion": "jeunes hommes_ages",
+          "programme_ong": "jeunes hommes_ages",
+          "tontine": "jeunes hommes_ages"
+        },
+        "prise_decision_familial": {
+          "enfant_aller_ecole": "epouse",
+          "femme_membre_CGC": "epoux",
+          "femme_participer_reunion_com": "autre",
+          "mariage_enfants": "ne_sait_pas",
+          "pratique_planification_familiale": "epoux_epouse",
+          "travail_femme_hors_maison": "epoux_epouse",
+          "travail_mari_hors_maison": "epouse"
+        },
+        "rencontre_villageoise": {
+          "changements_role": "oui",
+          "nbre_rencontre_villageoises": "2",
+          "niveau_confiance": "peu_confiant",
+          "partage_idee": "oui"
+        }
+      },
+      "@xmlns": "http://openrosa.org/formdesigner/A51DC501-48C1-486A-A938-4987AA56749D",
+      "nom_village": "sare_sandigi_vil",
+      "pays": "gambie",
+      "sro": {
+        "connait_SRO": "oui",
+        "reconstituer_sro": "sait_pas_reconstituer"
+      },
+      "@version": "3386",
+      "carateristiques_enfants": {
+        "acte_naissance_fille": "acte_vu",
+        "avez_enfants": "oui",
+        "education_enfant": {
+          "moins_un_enfant_ecole": "oui",
+          "moins_un_enfant_retrait": "oui",
+          "moins_une_fille_ecole": "oui",
+          "moins_une_fille_retrait": "oui",
+          "retrait_fille_ecole": "1",
+          "scolarisation_fille": "1"
+        },
+        "intro1": "OK",
+        "mariage_enfant": {
+          "age_mariage_fille": "1",
+          "mariage_fille": "1"
+        },
+        "nbre_acte_vu_fille": "1",
+        "nbre_fille": "1",
+        "nbre_fille_enregistre": "1",
+        "nbre_garcon": "99",
+        "tranche_age_fille": {
+          "de_11_et_15": "0",
+          "de_16_a_18": "0",
+          "de_5_et_10": "0",
+          "moins_de_5": "1",
+          "plus_de_18": "0",
+          "total_fille_age": "1"
+        }
+      },
+      "excision": {
+        "consequence_excision": {
+          "connait_conseq_excision": "non"
+        },
+        "intro_excision": {
+          "intro70": "OK",
+          "intro71": "OK",
+          "intro72": "OK"
+        },
+        "pratique_excision": {
+          "a_excise_sa_fille": "ne_reponds_pas",
+          "arret_excision": "non",
+          "continue_pratique": "non"
+        }
+      },
+      "diarrhee": {
+        "enfant_diarrhee": "non",
+        "traiter_diarrhee_prochain": "ne_repond_pas"
+      },
+      "@name": "Individual Questionnaire",
+      "caracteristiques_demographiques": {
+        "agr": {
+          "autre_agr": "test",
+          "pratique_agr": "oui",
+          "type_agr": "petit_commerce peche elevage prestataire autre_agr"
+        },
+        "caracteristiques_enquete": {
+          "age_enquete": {
+            "age_si_oui": "18",
+            "categorie_age": "moins_30",
+            "connait_age": "oui"
+          },
+          "etat_matrimonial": "monogame",
+          "groupe_ethnique": "soninke",
+          "sexe": "masculin"
+        },
+        "intro1": "OK",
+        "niveau_etude_enquete": {
+          "freq_ecole": "oui",
+          "nbre_annees_etudes": "1",
+          "niveau_etude": "primaire"
+        },
+        "poste_occupe": {
+          "poste": "coordo_cgc responsable_ocb maire autre_poste",
+          "specifier_autre_post": "test"
+        }
+      },
+      "quarter": "Q1"
+    },
+    "id": "bfb79916-e153-410c-a382-f6185dd47dbe",
+    "indexed_on": "2019-10-02T15:11:38.169510",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v3478. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 3478,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "bfb79916-e153-410c-a382-f6185dd47dbe",
+      "location": null,
+      "timeEnd": "2019-10-02T15:11:34.692000Z",
+      "timeStart": "2019-10-02T15:05:08.878000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-02T15:11:37.820568Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-02T15:11:37.919030Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "3386"
+  }
+}

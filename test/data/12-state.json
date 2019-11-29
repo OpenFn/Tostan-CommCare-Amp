@@ -1,0 +1,1767 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "37aaedcb00a92b87a936bda23001742b"
+    },
+    "app_id": "37aaedcb00a92b87a936bda23001742b",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 50520,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/53ddb81b-b11c-4995-8fba-8b067b6e4594/form.xml"
+      }
+    },
+    "build_id": "7d4857917aca4819820a564013fc6a0f",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Outil de Suivi Trimestriel",
+      "@uiVersion": "1",
+      "@version": "620",
+      "@xmlns": "http://openrosa.org/formdesigner/E99C4AD7-183A-4309-8E1C-C68DDDCB6E36",
+      "GPS": "-33.92774441793798 18.43440593548379 133.4 24.31",
+      "identification": {
+        "fixture_localization": {
+          "commune": "baja_kunda_com",
+          "departement": "wuli_east_dep",
+          "village": "boromodibanniu_vil"
+        },
+        "langue_interview": "francais"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v621. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 621,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "53ddb81b-b11c-4995-8fba-8b067b6e4594",
+        "timeEnd": "2019-11-11T09:49:53.310000Z",
+        "timeStart": "2019-11-11T09:34:28.678000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "protection_communautaire": {
+        "pc_enfants_maries": {
+          "cas_mariages_empeches": "18",
+          "cas_mariages_enfants": "12",
+          "details_mariages_enfants": [
+            {
+              "age": "12"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "15"
+            },
+            {
+              "age": "16"
+            },
+            {
+              "age": "16"
+            },
+            {
+              "age": "16"
+            },
+            {
+              "age": "16"
+            },
+            {
+              "age": "13"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "18"
+            }
+          ]
+        },
+        "pc_enfants_non_inscrits": {
+          "details_enfants_non_inscrits": [
+            {
+              "age": "5",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ],
+          "enfants_non_inscrits": "12",
+          "label_enfants_non_inscrits": "OK"
+        },
+        "pc_enfants_non_inscrits_traites": {
+          "details_enfants_non_inscrits": [
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ],
+          "enfants_non_inscrits_traites": "2",
+          "label_enfants_non_inscrits_traites": "OK"
+        },
+        "pc_enregistre_etat_civil": {
+          "details_enfants_etat_civil": [
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ],
+          "enfants_etats_civil": "12",
+          "label_etat_civil": "OK"
+        },
+        "pc_enregistre_etat_civil_traites": {
+          "details_enfants_etat_civil_traites": [
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "16",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ],
+          "enfants_etats_civil_traites": "12",
+          "label_etat_civil_traites": "OK"
+        },
+        "pc_malnourris": {
+          "cas_enfants_malnourris": "12",
+          "details_enfants_malnourris": [
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ],
+          "label_enfants_nourris": "OK",
+          "malnourris_traites": "test"
+        },
+        "pc_non_vaccines": {
+          "details_non_vaccines": [
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ],
+          "label_non_vaccines": "OK",
+          "non_vaccines": "2"
+        },
+        "pc_non_vaccines_traites": {
+          "details_non_vaccines": {
+            "age": "12",
+            "count_if_female": "0",
+            "count_if_male": "1",
+            "gender": "masculin"
+          },
+          "label_non_vaccines_traites": "OK",
+          "non_vaccines_traites": "1"
+        },
+        "pc_violence_physique": {
+          "cas_violence_physique": "25",
+          "details_violence_physique": [
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "35",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "35",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "35",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "35",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "35",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "35",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "0",
+              "gender": "masculin",
+              "referred": "non"
+            },
+            {
+              "age": "35",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "gender": "masculin",
+              "referred": "oui"
+            }
+          ],
+          "label_violence_physique": "OK"
+        },
+        "pc_violence_physique_traites": {
+          "cas_violence_physique_traites": "15",
+          "details_violence_physique_traites": {
+            "age": "25",
+            "count_if_female": "0",
+            "count_if_male": "1",
+            "count_referred_filles": "0",
+            "count_referred_garcons": "1",
+            "gender": "masculin",
+            "referred": "oui"
+          },
+          "label_violence_physique_traites": "OK"
+        },
+        "pc_violence_sexuelles": {
+          "cas_violence_sexuelles": "25",
+          "details_cas_violence_sexuelles": [
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ]
+        },
+        "pc_violence_sexuelles_traites": {
+          "cas_violences_sexuelles_traitees": "12",
+          "details_cas_violence_sexuelles": [
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ]
+        }
+      },
+      "structures_locales": {
+        "enfants_maries": {
+          "cas_mariages_empeches": "2",
+          "cas_mariages_enfants": "12",
+          "details_mariages_enfants": [
+            {
+              "age": "12"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "12"
+            },
+            {
+              "age": "42"
+            },
+            {
+              "age": "4"
+            },
+            {
+              "age": "5"
+            },
+            {
+              "age": "5"
+            },
+            {
+              "age": "8"
+            },
+            {
+              "age": "8"
+            },
+            {
+              "age": "8"
+            }
+          ]
+        },
+        "enfants_non_inscrits": {
+          "details_enfants_non_inscrits": [
+            {
+              "age": "17",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "48",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "22",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ],
+          "enfants_non_inscrits": "15",
+          "label_enfants_non_inscrits": "OK"
+        },
+        "enfants_non_inscrits_traites": {
+          "details_enfants_non_inscrits": [
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ],
+          "enfants_non_inscrits_traites": "15",
+          "label_enfants_non_inscrits_traites": "OK"
+        },
+        "enregistre_etat_civil": {
+          "details_enfants_etat_civil": [
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ],
+          "enfants_etats_civil": "12",
+          "label_etat_civil": "OK"
+        },
+        "enregistre_etat_civil_traites": {
+          "details_enfants_etat_civil_traites": [
+            {
+              "age": "48",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "59",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "59",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "17",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "68",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ],
+          "enfants_etats_civil_traites": "15",
+          "label_etat_civil_traites": "OK"
+        },
+        "malnourris": {
+          "cas_enfants_malnourris": "8",
+          "details_enfants_malnourris": [
+            {
+              "age": "8",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "19",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ],
+          "label_enfants_nourris": "OK",
+          "malnourris_traites": "test"
+        },
+        "non_vaccines": {
+          "details_non_vaccines": [
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "36",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "36",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "17",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "14",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ],
+          "label_non_vaccines": "OK",
+          "non_vaccines": "15"
+        },
+        "non_vaccines_traites": {
+          "details_non_vaccines": [
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "15",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "19",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "18",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "-9",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "12",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "38",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "age": "25",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            }
+          ],
+          "label_non_vaccines_traites": "OK",
+          "non_vaccines_traites": "12"
+        },
+        "violence_physique_group": {
+          "label_violence_physique": "OK",
+          "violence_physique_list": {
+            "cas_violence_physique": "1",
+            "details_violence_physique": {
+              "age": "12",
+              "child_label": "OK",
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "count_referred_filles": "0",
+              "count_referred_garcons": "1",
+              "end_of_group": "OK",
+              "gender": "masculin",
+              "referred": "oui"
+            }
+          }
+        },
+        "violence_physique_traites": {
+          "cas_violence_physique_traites": "1",
+          "details_violence_physique_traites": {
+            "age": "12",
+            "count_if_female": "0",
+            "count_if_male": "1",
+            "count_referred_filles": "0",
+            "count_referred_garcons": "1",
+            "gender": "masculin",
+            "referred": "oui"
+          },
+          "label_violence_physique_traites": "OK"
+        },
+        "violence_sexuelles": {
+          "cas_violence_sexuelles": "12",
+          "details_cas_violence_sexuelles": [
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ]
+        },
+        "violence_sexuelles_traites": {
+          "cas_violences_sexuelles_traitees": "12",
+          "details_cas_violence_sexuelles": [
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            },
+            {
+              "count_if_female": "0",
+              "count_if_male": "1",
+              "gender": "masculin"
+            },
+            {
+              "count_if_female": "1",
+              "count_if_male": "0",
+              "gender": "feminin"
+            }
+          ]
+        }
+      },
+      "var": {
+        "var_protection_communautaire": {
+          "sum_etat_civil_filles": "4",
+          "sum_etat_civil_garcons": "8",
+          "sum_etat_civil_traites_filles": "4",
+          "sum_etat_civil_traites_garcons": "8",
+          "sum_mal_nourris_filles": "2",
+          "sum_mal_nourris_garcons": "10",
+          "sum_non_inscrits_filles": "0",
+          "sum_non_inscrits_garcons": "12",
+          "sum_non_inscrits_traites_filles": "0",
+          "sum_non_inscrits_traites_garcons": "2",
+          "sum_non_vaccines_filles": "0",
+          "sum_non_vaccines_garcons": "2",
+          "sum_nv_traites_filles": "0",
+          "sum_nv_traites_garcons": "1",
+          "sum_prot_vp_filles": "0",
+          "sum_prot_vp_filles_ref": "0",
+          "sum_prot_vp_garcons": "25",
+          "sum_prot_vp_garcons_ref": "24",
+          "sum_vp_traites_filles": "0",
+          "sum_vp_traites_filles_ref": "0",
+          "sum_vp_traites_garcons": "1",
+          "sum_vp_traites_garcons_ref": "1"
+        },
+        "var_structures_locales": {
+          "sum_enfants_malnourris_filles": "4",
+          "sum_enfants_malnourris_garcon": "4",
+          "sum_enfants_non_inscrit_filles": "3",
+          "sum_enfants_non_inscrit_garcons": "12",
+          "sum_enfants_non_inscrits_traites_filles": "1",
+          "sum_enfants_non_inscrits_traites_garcons": "14",
+          "sum_etat_civil_filles": "5",
+          "sum_etat_civil_garcons": "7",
+          "sum_etat_civil_traites_filles": "5",
+          "sum_etat_civil_traites_garcons": "10",
+          "sum_non_vaccines_filles": "3",
+          "sum_non_vaccines_garcons": "12",
+          "sum_non_vaccines_traites_filles": "0",
+          "sum_non_vaccines_traites_garcons": "12",
+          "sum_violence_filles": "0",
+          "sum_violence_filles_refer": "0",
+          "sum_violence_garcons": "1",
+          "sum_violence_garcons_refer": "1",
+          "sum_violence_traites_filles": "0",
+          "sum_violence_traites_garcons": "1",
+          "sum_vtfilles_refer": "0",
+          "sum_vtgarcons_refer": "1"
+        }
+      }
+    },
+    "id": "53ddb81b-b11c-4995-8fba-8b067b6e4594",
+    "indexed_on": "2019-11-11T09:49:58.185422",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v621. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 621,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "53ddb81b-b11c-4995-8fba-8b067b6e4594",
+      "location": null,
+      "timeEnd": "2019-11-11T09:49:53.310000Z",
+      "timeStart": "2019-11-11T09:34:28.678000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-11-11T09:49:56.536562Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-11-11T09:49:56.689647Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "620"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "37aaedcb00a92b87a936bda23001742b"
+    },
+    "app_id": "37aaedcb00a92b87a936bda23001742b",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 6743,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/64162ae6-520c-4457-99d9-c0574392b6e7/form.xml"
+      }
+    },
+    "build_id": "32c6409e28594771827470965c11b7f2",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Tableau de bord CL",
+      "@uiVersion": "1",
+      "@version": "585",
+      "@xmlns": "http://openrosa.org/formdesigner/55D556BF-A7CF-4290-BE85-F1974CBDF173",
+      "GPS": "-33.91863238679887 18.38952916184395 65.62 78.98",
+      "Nombre_total_de_travailleurs_dans_ces_services_sociaux": {
+        "travailleurs_ds_les_services": {
+          "aemo_action_educative_en_milieu_ouvert": "2",
+          "commissariats_brigades_de_gendarmerie": "2",
+          "cprs_centre_de_promotion_et_de_rinsertion_sociale": "2",
+          "sdas_service_dpartemental_de_laction": "2",
+          "sddc_service_dpartemental_de_dveloppeme": "2"
+        }
+      },
+      "clae": {
+        "CL_a-t-elle_ete_soutenue": "oui",
+        "consulta": "oui",
+        "la_cl_a-t-elle_organis_une_session_dorientation_incluant_les_enfants_et_les": "oui",
+        "la_cl_dispose-t-elle_dun_budget_incluant_une_prise_en_charge_des_enfants_du": "oui",
+        "la_cl_dispose-t-elle_dune_instance_pour_les_enfants_conseil_municipal_des_e": "oui",
+        "nombre_dlus_locaux_forms_sur_le_budget_participatif_au_cours_des_12_dernier": "1",
+        "par_qui": "tesy",
+        "si_oui_lexcution_de_ce_budget_fait-elle_lobjet_dun_bilan": "oui"
+      },
+      "fixture_localization": {
+        "commune": "foday_kunda_com",
+        "departement": "wuli_east_dep"
+      },
+      "le_pdc_prend-il_en_compte_les_besoins_des_enfants_dans_les_domaines_suivant": {
+        "besoins": {
+          "aband": "oui",
+          "education": "oui",
+          "enreg": "oui",
+          "petite_enf": "oui",
+          "prot": "oui",
+          "protection_sociale": "oui",
+          "sante_nutri": "oui",
+          "violence": "non"
+        }
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v614. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 614,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "geo_point": null,
+        "instanceID": "64162ae6-520c-4457-99d9-c0574392b6e7",
+        "timeEnd": "2019-10-03T09:40:06.229000Z",
+        "timeStart": "2019-10-03T09:38:15.099000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "nombre_de_services_sociaux_fonctionnels_dans_la_cl_dans_un_rayon_de_15km": {
+        "services_sociaux_et_travailleurs": {
+          "aemo_action_educative_en_milieu_ouvert": "2",
+          "commissariats_brigades_de_gendarmerie": "2",
+          "cprs_centre_de_promotion_et_de_rinsertion_sociale": "2",
+          "sdas_service_dpartemental_de_laction_sociale": "2",
+          "sddc_service_dpartemental_de_dveloppement_communautaire": "2"
+        }
+      },
+      "nombre_de_structures_ducatives_fonctionnelles_dans_la_cl_dans_un_rayon_de_5": {
+        "educative": {
+          "collges": "2",
+          "ecoles_primaires": "2",
+          "lyces": "2",
+          "structures_denseignement_professionnel": "2",
+          "structures_pour_la_petite_enfance": "2"
+        }
+      },
+      "nombre_de_structures_sanitaires_fonctionnelles_dans_la_cl_dans_un_rayon_de_": {
+        "sanitaires": {
+          "cases": "2",
+          "cases_personnes": "2",
+          "nombre_de_personnes_formes_sur_lexcision__sur_la_prise_en_charge_des_violen": "2",
+          "nombre_dhopitaux_dans_un_rayon_de_5km": "2",
+          "personnes": "2",
+          "poste": "2"
+        }
+      },
+      "nombre_de_travailleurs_formes_en_protection_de_lenfant": {
+        "formation": {
+          "aemo_action_educative_en_milieu_ouvert": "1",
+          "commissariats_brigades_de_gendarmerie": "1",
+          "cprs_centre_de_promotion_et_de_rinsertion_sociale": "1",
+          "sdas_service_dpartemental_de_laction_sociale": "1",
+          "sddc_service_dpartemental_de_dveloppement_communautaire": "1"
+        }
+      },
+      "nombre_de_travailleurs_formes_sur_lexcision": {
+        "formation_trav": {
+          "aemo_action_educative_en_milieu_ouvert": "2",
+          "commissariats_brigades_de_gendarmerie": "2",
+          "cprs_centre_de_promotion_et_de_rinsertion_sociale": "1",
+          "sdas_service_dpartemental_de_laction_sociale": "2",
+          "sddc_service_dpartemental_de_dveloppement_communautaire": "2"
+        }
+      },
+      "nombre_denfants_qui_frquentent_les_structures_ducatives_au_cours_des_12_der": {
+        "frquentation_structures_ducatives": {
+          "filles_college": "1",
+          "filles_presc": "1",
+          "filles_primaire": "1",
+          "garons_college": "1",
+          "garons_prescolaire": "1",
+          "garons_primaire": "1"
+        }
+      },
+      "nombre_total_denfants_dans_la_cl": {
+        "enfants_dans_la_cl": {
+          "filles_0_4": "1",
+          "filles_12_17": "1",
+          "filles_5_11": "1",
+          "garons_05_11_ans": "1",
+          "garons_0_4": "1",
+          "garons_12_17": "1"
+        }
+      },
+      "plan_de_dveloppement_communal": {
+        "pdc": "oui",
+        "plan_de_dveloppement_local": "OK",
+        "vu_pdc": "vu"
+      },
+      "protection": {
+        "filles_enr": "1",
+        "filles_nees": "1",
+        "filles_non_enr": "1",
+        "filles_vac": "1",
+        "garons_enr": "1",
+        "garons_nes": "1",
+        "garons_non_enr": "1",
+        "garons_vac": "1"
+      }
+    },
+    "id": "64162ae6-520c-4457-99d9-c0574392b6e7",
+    "indexed_on": "2019-10-03T09:40:07.825124",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v614. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 614,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "geo_point": null,
+      "instanceID": "64162ae6-520c-4457-99d9-c0574392b6e7",
+      "location": null,
+      "timeEnd": "2019-10-03T09:40:06.229000Z",
+      "timeStart": "2019-10-03T09:38:15.099000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-03T09:40:07.506153Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-03T09:40:07.571962Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "585"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "dfa151b7562ccc68ed707d2d9fcee6af"
+    },
+    "app_id": "dfa151b7562ccc68ed707d2d9fcee6af",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 8279,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/453dceee-1b7b-4f44-b97a-eacbca4dd7d7/form.xml"
+      }
+    },
+    "build_id": "71f44eac9cba4103aeb6d8c47da5fa39",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "FEDERATION_CGC": {
+        "Federation_CGC": "Oui",
+        "Nom_federation": "1"
+      },
+      "Reunion_avec_associations": "1",
+      "#type": "data",
+      "Existence_comite_paix": "OUI",
+      "month": "",
+      "departement": "Wuli_West",
+      "year": "",
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v660. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 660,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "453dceee-1b7b-4f44-b97a-eacbca4dd7d7",
+        "timeEnd": "2019-11-19T11:54:07.647000Z",
+        "timeStart": "2019-11-19T11:50:02.240000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "code_pays": "GAM",
+      "type_evaluation": "etude_base",
+      "DOCUMENTS_CGC": {
+        "Cahier_de_PV": "Vu",
+        "Cahier_gestion_financiere": "Vu",
+        "Niveau_Remplissage_Cahier_PV": "Incomplet",
+        "Niveau_Remplissage_Cahier_gestion_financiere": "Complet",
+        "Niveau_Remplissage_Plan_action": "",
+        "Plan_action": "Vu"
+      },
+      "Activites_plaidoyer_lobbying": "1",
+      "Activites_Securite_humaine": {
+        "Activite_securite_personnelle": "1",
+        "Activite_securite_sanitaire": "1",
+        "Activites_securite_alimentaire": "1",
+        "Activites_securite_communautaire": "1",
+        "Activites_securite_economique": "1",
+        "Activites_securite_environnementale": "1",
+        "Activites_securite_politique": "1",
+        "Types_Activites_securite_politique": "1",
+        "Types_activites_securite_alimentaire": "test",
+        "Types_activites_securite_communautaire": "trst",
+        "Types_activites_securite_economique": "1",
+        "Types_activites_securite_environnementale": "test",
+        "Types_activites_securite_personnelle": "test",
+        "Types_activites_securite_sanitaire": "test"
+      },
+      "fixture_localization": {
+        "commune": "baja_kunda_com",
+        "departement": "wuli_east_dep",
+        "village": "sutukoba_vil"
+      },
+      "Partage_Plans_Actions_GESEE": {
+        "Partage_plan_action_Economie": "1",
+        "Partage_plan_action_Education": "1",
+        "Partage_plan_action_Environnement": "1",
+        "Partage_plan_action_Gouvernance": "1",
+        "Partage_plan_action_Sante": "1",
+        "nbre_partage_plan_action": "5",
+        "nbre_partage_plans_action": "OK",
+        "question4": "1"
+      },
+      "@uiVersion": "1",
+      "Prevention_transmission_germes_malaies": "Oui",
+      "Plaidoyers_CGC": {
+        "Action_3_plaidoyer_CGC": "1",
+        "Actions_1_Plaidoyer_CGC": "1",
+        "Actions_2_plaidoyer_CGC": "1",
+        "Actions_4_plaidoyer_CGC": "1"
+      },
+      "Partage_plans_action": {
+        "Nombre_PA_partage_CGC": "1",
+        "Nombre_PA_partage_Commission_AGR": "1",
+        "Nombre_PA_partage_Commission_Environnement": "1",
+        "Nombre_PA_partage_Commission_Mobilisation": "1",
+        "Nombre_PA_partage_Commission_Protection_Enfant": "1",
+        "Nombre_PA_partage_Commission_Sante": "1",
+        "Nombre_PA_partage_Commission_education": "1",
+        "Number_AP_shared_peace_P": "1"
+      },
+      "Promotion_Paix": {
+        "Rencontre_autres_communautes_promotion_paix": "1",
+        "Rencontre_promotion_paix": "1",
+        "Rencontres_communautes_etrangeres_promotion_paix": "1",
+        "Type_activites_promotion_paix": "1"
+      },
+      "Autres_Actions_GESEE": {
+        "Autres_actions_Economie": "1",
+        "Autres_actions_Education": "1",
+        "Autres_actions_Environnement": "1",
+        "Autres_actions_Gouvernance": "1",
+        "Autres_actions_Sante": "1",
+        "Preciser_Edu": "test",
+        "Preciser_Env": "test",
+        "Preciser_Gouv": "test",
+        "Preciser_Sante_": "test",
+        "Preciser_economie": "1"
+      },
+      "Types_activites_securite_personnelle": "test",
+      "Mediation_types_de_conflit": {
+        "Conflits_plus_frequents": "conflit_conjugual_fra",
+        "Mediations_realisees": "1",
+        "Mediations_reussies": "1"
+      },
+      "region": "unknown",
+      "today": "",
+      "@xmlns": "http://openrosa.org/formdesigner/07175C87-BAA6-4CB7-850A-73A239D73C64",
+      "Activites_paildoyers_GESEE": {
+        "Activite_plaidoyer_Gouvernance": "1",
+        "Activites_plaidoyer_Economie": "1",
+        "Activites_plaidoyer_Education": "1",
+        "Activites_plaidoyer_Environnement": "1",
+        "Activites_plaidoyer_Sante": "1",
+        "nbre_plaidoyer_gesee": "OK",
+        "nbre_plaidoyers_gesee": "5"
+      },
+      "pays": "The Gambia",
+      "Adoption_Sensibilisation": {
+        "Villages_Adoptes": "1",
+        "Villages_Sensibilises": "1"
+      },
+      "GPS": "-33.9187077 18.3895839 0.0 21.66",
+      "Statut_Juridique_Compte_bancaire_Cachet": {
+        "Compte_bancaire": "Oui",
+        "Possession_cachet": "Oui",
+        "Statut_juridique": "Oui"
+      },
+      "REUNION_CGC_COMMISSIONS": {
+        "Nombre_reunion_CGC": "1",
+        "Nombre_reunion_CGC_Commissions": "9",
+        "Nombre_reunion_Commission_AGR": "1",
+        "Nombre_reunion_Commission_Education": "1",
+        "Nombre_reunion_Commission_Environnement": "1",
+        "Nombre_reunion_Commission_Protection_enfant": "1",
+        "Nombre_reunion_Commission_Sante": "1",
+        "Nombre_reunion_Mobilisation": "1",
+        "Number_Reunion_com_paix": "1",
+        "Reunion_CGC_Comm": "OK",
+        "number_reunion_gouv": "1"
+      },
+      "Reunion_CGC_domaines_GESEE": {
+        "Nombre_reunion_Education": "1",
+        "Nombre_reunions_Economie": "1",
+        "Nombre_reunions_Environnement": "1",
+        "Nombre_reunions_Gouvernance": "1",
+        "Nombre_reunions_Sante": "1",
+        "nbre_reunion_gesee": "5",
+        "nbre_reunions_gesee": "OK",
+        "question3": "1"
+      },
+      "@version": "647",
+      "Activites_partenaires_etatique_prive": {
+        "Activites_mises_en_oeuvre_etatique": "1",
+        "Activites_mises_en_oeuvre_prives": "1",
+        "Activites_partenaires_etatiques": "1",
+        "Activites_partenaires_prives": "1",
+        "Protocoles_partenaires_prives": "1",
+        "Protocoles_signes_partenaires_etatiques": "1"
+      },
+      "@name": "Analyse Situationnelle CGC",
+      "Prevention_gestion_conflit": {
+        "Actions_consolidation_paix": "test",
+        "Actions_gestion_conflit": "test",
+        "Actions_prevention_conflit": "test"
+      },
+      "projet": "QS",
+      "quarter": "Q1"
+    },
+    "id": "453dceee-1b7b-4f44-b97a-eacbca4dd7d7",
+    "indexed_on": "2019-11-19T11:54:38.261240",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v660. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 660,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "453dceee-1b7b-4f44-b97a-eacbca4dd7d7",
+      "location": null,
+      "timeEnd": "2019-11-19T11:54:07.647000Z",
+      "timeStart": "2019-11-19T11:50:02.240000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-11-19T11:54:14.893358Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-11-19T11:54:15.742441Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "647"
+  }
+}

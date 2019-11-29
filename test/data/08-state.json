@@ -1,0 +1,106 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "dfa151b7562ccc68ed707d2d9fcee6af"
+    },
+    "app_id": "dfa151b7562ccc68ed707d2d9fcee6af",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 2665,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/ba4bb08f-b900-4fd5-aadd-bb7f164a794f/form.xml"
+      }
+    },
+    "build_id": "2f8aa58fc44f4f1ea77fe70f1ddf8289",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Suivi Comité de Paix",
+      "@uiVersion": "1",
+      "@version": "632",
+      "@xmlns": "http://openrosa.org/formdesigner/A1F02700-442A-42B4-AF08-C4F3BEA67843",
+      "Coordonnees_GPS": "-33.927543698273176 18.434928018828064 59.66 19.0",
+      "Mois_Collecte": "MARS",
+      "SUIVI_MENSUEL": {
+        "GOUVERNANCE": {
+          "Activites_Realisees_CP": {
+            "Nombre_Activites_Consolidation_Paix": "12",
+            "Nombre_Activites_Gestion__Resolution_conflits": "12",
+            "Nombre_Activites_Prevention_conflits": "2",
+            "Nombre_Autres_Activites_CP": "12",
+            "Nombre_Mediations_Reussies_CP": "12",
+            "Nombre_Mediations_realisees": "12",
+            "Type_activite_Prevention_conflits": "test",
+            "Type_activites_Gestion_Resolution_Conflits": "test",
+            "Types_Activites_Consolidation_Paix": "test",
+            "Types_autres_activites": "test",
+            "Types_conflits_mediations_realisees": "test",
+            "Types_conflits_mediations_reussies": "12",
+            "nbre_de_femmes_touchees": "12",
+            "nbre_homm_touches": "12"
+          },
+          "FORMATION_CP": {
+            "Module_en_cours": "Module_PS",
+            "Nombre_Adolescentes": "2",
+            "Nombre_Adolescents": "2",
+            "Nombre_femmes": "1",
+            "Nombre_hommes": "1",
+            "Participation_module": "OUI",
+            "Total_Participants_CP": "6"
+          },
+          "Nombre_activites_non_realisees": "2",
+          "Nombre_activites_realisees": "2",
+          "Plan_action_prevention_conflit": "OUI"
+        }
+      },
+      "fixture_localization": {
+        "commune": "baja_kunda_com",
+        "departement": "wuli_east_dep",
+        "village": "sutukoba_vil"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v655. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 655,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "ba4bb08f-b900-4fd5-aadd-bb7f164a794f",
+        "timeEnd": "2019-10-10T08:38:36.289000Z",
+        "timeStart": "2019-10-10T08:36:17.265000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      }
+    },
+    "id": "ba4bb08f-b900-4fd5-aadd-bb7f164a794f",
+    "indexed_on": "2019-10-10T08:38:38.805875",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v655. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 655,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "ba4bb08f-b900-4fd5-aadd-bb7f164a794f",
+      "location": null,
+      "timeEnd": "2019-10-10T08:38:36.289000Z",
+      "timeStart": "2019-10-10T08:36:17.265000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-10T08:38:38.549078Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-10T08:38:38.614036Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "632"
+  }
+}

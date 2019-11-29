@@ -1,0 +1,166 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "37aaedcb00a92b87a936bda23001742b"
+    },
+    "app_id": "37aaedcb00a92b87a936bda23001742b",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 3715,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/37264803-b195-473f-9fd1-8735449d029e/form.xml"
+      }
+    },
+    "build_id": "7d4857917aca4819820a564013fc6a0f",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Outil Suivi Mensuel",
+      "@uiVersion": "1",
+      "@version": "620",
+      "@xmlns": "http://openrosa.org/formdesigner/501B7C33-67D8-499C-8212-EE571B7169F4",
+      "GPS": "-33.927677419609275 18.434952081323377 84.76 19.0",
+      "activites_bienetre_enfants": {
+        "number_exchanges": {
+          "echange_accompagnement": "1",
+          "echange_encadrement": "1",
+          "echange_scolarisation": "1"
+        },
+        "sensibilisation_communautaire_label": {
+          "accompagner_enfant": "1",
+          "action_negative": "1",
+          "action_positive": "1",
+          "decouvrir_objets": "1",
+          "dormir_moustiquaire": "1",
+          "livres_images": "1",
+          "parler_comme_adulte1": "1",
+          "parler_comme_adulte2": "1",
+          "parler_grossesse": "1",
+          "raissonner_avec_enfant": "1",
+          "regarder_dans_yeux": "1",
+          "traits_visage": "1"
+        },
+        "sensibilisation_inter_villageoise": {
+          "accompagner_enfant": "1",
+          "action_negative": "1",
+          "action_positive": "1",
+          "decouvrir_objets": "1",
+          "dormir_moustiquaire": "1",
+          "livres_images": "1",
+          "parler_comme_adulte1": "1",
+          "parler_comme_adulte2": "1",
+          "parler_grossesse": "1",
+          "raissonner_avec_enfant": "1",
+          "regarder_dans_yeux": "1",
+          "traits_visage": "1"
+        }
+      },
+      "activites_mobilisations_sociales": {
+        "education_enfant": {
+          "liste_activites": "test"
+        },
+        "protection_enfant": {
+          "liste_activites": "test"
+        },
+        "sante_enfant": {
+          "liste_activites": "test"
+        }
+      },
+      "identification": {
+        "fixture_localization": {
+          "commune": "baja_kunda_com",
+          "departement": "wuli_east_dep",
+          "village": "boromodibanniu_vil"
+        },
+        "langue_interview": "francais"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v621. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 621,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "37264803-b195-473f-9fd1-8735449d029e",
+        "timeEnd": "2019-11-11T09:32:58.981000Z",
+        "timeStart": "2019-11-11T09:31:20.121000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "remercier": "OK",
+      "situation_enfants": {
+        "cas_excision": {
+          "filles": "1"
+        },
+        "enfants_etat_civil": {
+          "filles": "1",
+          "garcons": "1"
+        },
+        "enfants_malnourris": {
+          "filles": "1",
+          "garcons": "1"
+        },
+        "enfants_vaccines": {
+          "filles": "1",
+          "garcons": "1"
+        },
+        "mariage_enfants": {
+          "filles": "1",
+          "garcons": "1"
+        },
+        "nombre_total_enfants": {
+          "filles": "1",
+          "garcons": "1"
+        },
+        "violences_physiques": {
+          "filles": "1",
+          "garcons": "1"
+        },
+        "violences_sexuelles": {
+          "filles": "1",
+          "garcons": "1"
+        }
+      },
+      "var": {
+        "total_enfants": "2",
+        "total_enfants_vaccines": "2",
+        "total_etats_civil": "2",
+        "total_excision": "",
+        "total_malnourris": "2",
+        "total_mariages": "2",
+        "total_violences_physique": "2",
+        "total_violences_sexuelles": "2"
+      }
+    },
+    "id": "37264803-b195-473f-9fd1-8735449d029e",
+    "indexed_on": "2019-11-11T09:33:03.222048",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v621. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 621,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "37264803-b195-473f-9fd1-8735449d029e",
+      "location": null,
+      "timeEnd": "2019-11-11T09:32:58.981000Z",
+      "timeStart": "2019-11-11T09:31:20.121000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-11-11T09:33:02.211242Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-11-11T09:33:02.290265Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "620"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "dfa151b7562ccc68ed707d2d9fcee6af"
+    },
+    "app_id": "dfa151b7562ccc68ed707d2d9fcee6af",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 4136,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/a89215b7-64e2-4ce0-abec-f1e0fbc7e8cf/form.xml"
+      }
+    },
+    "build_id": "71f44eac9cba4103aeb6d8c47da5fa39",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Questionnaire Comité de Paix",
+      "@uiVersion": "1",
+      "@version": "460",
+      "@xmlns": "http://openrosa.org/formdesigner/1BAF8C7D-2C4F-4155-A577-1B4B49B1DA63",
+      "activite_CP": {
+        "activite_CP_formation": {
+          "combien_membre_CP_forme": "1",
+          "forme_sur_gestion_resolution_conflit": "oui",
+          "thematiques_abordees": "importance_paix"
+        },
+        "activite_cp_resolution": {
+          "comment_procedez_vous": "protagonistes_demander_pardon",
+          "informe_existence_conflit": "oui",
+          "que_faites_vous": "intervenir",
+          "qui_vous_informe": "chef_village CGC"
+        },
+        "activites_CP_mediation": {
+          "Total_mediations_menees": "6",
+          "Total_mediations_reussies": "6",
+          "exemple_mediation_marquante": "test",
+          "mediation_menee_conflit_agriculteur_eleveur": "1",
+          "mediation_menee_conflit_conjugal": "1",
+          "mediation_menee_conflit_ethnique": "1",
+          "mediation_menee_conflit_familial": "1",
+          "mediation_menee_conflit_intercomm": "1",
+          "mediation_menee_conflit_religieux": "1",
+          "mediation_reussi_conflit_agriculteur_eleveur": "1",
+          "mediation_reussi_conflit_ethnique": "1",
+          "mediation_reussi_conflit_familial": "1",
+          "mediation_reussi_conflit_religieux": "1",
+          "mediation_reussie_conflit_conjugaux": "1",
+          "mediation_reussie_conflit_intercomm": "1",
+          "menee_mediations": "oui",
+          "nombre_mediation_reussie": "OK",
+          "reussi_mediation": "oui",
+          "total_mediation_menee": "OK"
+        },
+        "plan_action_CP": {
+          "plan_action": "oui",
+          "thematique_plan_action": "prevention gestion_conflit"
+        }
+      },
+      "code_pays": "GAM",
+      "departement": "Wuli_West",
+      "fixture_localization": {
+        "commune": "baja_kunda_com",
+        "departement": "wuli_east_dep",
+        "village": "boromodibanniu_vil"
+      },
+      "identification_comite_de_paix": {
+        "identification_com_paix": {
+          "composition": "oui",
+          "composition_CP": "autorites_locales autorite_coutumière",
+          "nombre_de_mbres_du_Comite_paix": {
+            "nbre_de_femmes": "1",
+            "nbre_de_jeune_femmes": "1",
+            "nbre_de_jeunes_hommes": "1",
+            "nbre_homme": "1",
+            "nombre_de_membre_du_comite_de_paix": "4",
+            "total_membre_comite": "OK"
+          },
+          "question4": "choice2"
+        }
+      },
+      "intro": {
+        "intro1": "OK",
+        "intro2": "OK"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v660. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 660,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "drift": "0",
+        "geo_point": null,
+        "instanceID": "a89215b7-64e2-4ce0-abec-f1e0fbc7e8cf",
+        "timeEnd": "2019-11-11T07:55:32.320000Z",
+        "timeStart": "2019-11-11T07:53:56.281000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "month": "",
+      "pays": "The Gambia",
+      "projet": "QS",
+      "quarter": "Q1",
+      "region": "unknown",
+      "reseau_comite_paix": {
+        "reseau_CP": {
+          "fait_partie_reseau_CP": "oui",
+          "nombre_action_avec_reseau_ss_regional": "1",
+          "nombre_actions_menee_avec_reseau_CP": "1",
+          "reseau_sous_regional": "oui"
+        }
+      },
+      "today": "",
+      "type_evaluation": "etude_base",
+      "year": ""
+    },
+    "id": "a89215b7-64e2-4ce0-abec-f1e0fbc7e8cf",
+    "indexed_on": "2019-11-11T07:55:33.691132",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v660. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 660,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "drift": "0",
+      "geo_point": null,
+      "instanceID": "a89215b7-64e2-4ce0-abec-f1e0fbc7e8cf",
+      "location": null,
+      "timeEnd": "2019-11-11T07:55:32.320000Z",
+      "timeStart": "2019-11-11T07:53:56.281000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-11-11T07:55:33.084443Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-11-11T07:55:33.169662Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "460"
+  }
+}

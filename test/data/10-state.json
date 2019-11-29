@@ -1,0 +1,381 @@
+{
+  "configuration": {},
+  "data": {
+    "__query_params": {
+      "app_id": "37aaedcb00a92b87a936bda23001742b"
+    },
+    "app_id": "37aaedcb00a92b87a936bda23001742b",
+    "archived": false,
+    "attachments": {
+      "form.xml": {
+        "content_type": "text/xml",
+        "length": 22371,
+        "url": "https://www.commcarehq.org/a/seratostan/api/form/attachment/4b1a6ac2-b56d-40df-a6f3-b2e822f85e4e/form.xml"
+      }
+    },
+    "build_id": "32c6409e28594771827470965c11b7f2",
+    "domain": "seratostan",
+    "edited_by_user_id": null,
+    "edited_on": null,
+    "form": {
+      "#type": "data",
+      "@name": "Questionnaire Individuel",
+      "@uiVersion": "1",
+      "@version": "585",
+      "@xmlns": "http://openrosa.org/formdesigner/A9762791-6A88-4330-A2BE-A324251577F8",
+      "GPS": "-33.918761497850404 18.38938862345385 63.64 19.0",
+      "connaissances": {
+        "question_droits_humains": {
+          "cc_01_connaissance_droits_humains": "oui",
+          "cc_01x1_droits_humains_connus": "nom_famille_nationalite"
+        },
+        "questions_sante": {
+          "attitudes_et_pratiques": {
+            "attitude_personnelle": {
+              "CC83_votre_attitude_ou_position_si_vous_voyiez_un_membre_de_votre_famille": "",
+              "CC83a_marier_sa_fille_avant_age_18ans": "apprcierait_bien",
+              "CC83b_denoncer_un_cas_de_viol__la_police": "apprcierait_mal",
+              "CC83c_exciser_sa_fille": "apprcierait_mal",
+              "CC83d_frapper_son_enfant_pour_eduquer": "interviendrait_pour_le_convaincre_darreter",
+              "CC83e_parler_enfant_pendant_grossesse_5-6_mois_de_grossesse": "interviendrait_pour_le_convaincre_darreter",
+              "CC83f_parler_enfant_2_mois_aprs_la_naissance_comme_un_adulte": "interviendrait_pour_le_convaincre_darreter",
+              "CC83g_parler_enfant_1_an_aprs_la_naissance_comme_un_adulte": "interviendrait_pour_le_convaincre_darreter",
+              "CC83h_regarder_enfant_dans_les_yeux_pendant_longtemps": "apprcierait_mal",
+              "CC83i_accompagner_son_enfant_dans_le_jeu": "serait_indiffrent",
+              "CC83j_utiliser_livres_images_comme_support_dinteraction_avec_enfant": "serait_indiffrent",
+              "CC83k_aider_enfant__decouvrir_les_traits_du_visage": "serait_indiffrent",
+              "CC83l_aider_enfant__decouvrir_objets_en_lui_expliquant_taille_couleur_forme": "serait_indiffrent",
+              "CC83m_homme_pere_qui_simplique_dans_education_enfant": "serait_indiffrent",
+              "CC83n_pere_qui_joue_avec_son_enfant": "serait_indiffrent",
+              "CC83o_pere_qui_simplique_dans_la_nutrition_de_son_enfant": "serait_indiffrent",
+              "CC83p_membres_communaut_qui_simpliquent_dans_les_cas_maltraitance": "apprcierait_mal",
+              "CC83q_faire_toujours_dormir_enfant_sous_moustiquaire_impregne": "serait_indiffrent",
+              "CC83r_feliciter_enfant_avec_enthousiasme_quand_il_fait_une_action_positive": "serait_indiffrent",
+              "CC83s_ne_pas_frapper_enfant_meme_sil_fait_une_action_ngative": "serait_indiffrent",
+              "CC83t_discuter_avec_enfant_pour_le_raisonner_meme_sil_fait_une_action_negative": "serait_indiffrent"
+            },
+            "lavage_des_mains": {
+              "CC89_connaissez-vous_moments_critiques_lavage_des_mains": "aprs_un_rassemblement",
+              "CC90_quels_moments_membres_menage_se_lavent_le_plus_souvent_mains": "avant_de_soccuper_des_enfants"
+            },
+            "methodes_de_correction_utilisee": {
+              "CC84_methodes_utilises_pour_apprendre_enfants_bien_comporter": "",
+              "CC84a_retirer_des_privileges": "oui",
+              "CC84b_expliquer_le_mauvais_comportement": "non",
+              "CC84c_le_la_secouer": "non",
+              "CC84d_hurler_lui_crier_dessus": "non",
+              "CC84e_donner_quelque_chose_dautre__faire": "non",
+              "CC84f_donner_fesse_frapper_taper_sur_les_fesses_avec_mains_nues": "non",
+              "CC84g_frapper_avec_ceinture_brosse_baton_autres_objets_durs": "non",
+              "CC84h_traiter_idiot_paresseux_ou_dautres_noms": "non",
+              "CC84i_frapper_gifler_sur_le_visage_la_tete_ou_les_oreilles": "non",
+              "CC84j_frapper_taper_sur_les_mains_bras_ou_jambes": "non",
+              "CC84k_battre_frapper_encore_et_encore_aussi_fort_que_possible": "non",
+              "CC85_pensez-vous_que_elever_eduquer_correctement_un_enfant_necessaire_puni_physiquement": "oui"
+            },
+            "traitement_diarrh": {
+              "CC86_pendant_que_votre_enfant_avait_diarrhe_recu_boire_moins_que_habitude": "un_peu_moins",
+              "CC87_avez-vous_recherche_des_conseils_traitement_contre_diarrhe_de_nimporte_source": "oui"
+            }
+          },
+          "developpement_cerveau": {
+            "Developpement__cerveau__impact_violence": {
+              "CC70_Periode_critique_pour_developpement_cerveau": "0-7_ans",
+              "CC71_periode_grossesse_commence_apprentissage_bebe": "au_debut_de_la_grossese",
+              "CC72_impact_violence_survie_developpement_enfant": "",
+              "CC72a_la_violence_inhibe_sa_croissance": "mentionne",
+              "CC72b_la_violence_cre_un_sentiment_de_frustration": "non_mentionne",
+              "CC72c_la_violence_cree_un_caractre_colereux": "non_mentionne",
+              "CC72d_la_violence_amene_des_traumatismes": "mentionne",
+              "CC72e_la_violence_bloque_la_rflexion": "non_mentionne",
+              "CC72f_la_violence_cre_un_manque_de_confiance_en_soi": "non_mentionne",
+              "CC72g_la_violence_cre_dautres_impacts": "non_mentionne"
+            },
+            "signes_de_souffrance": {
+              "CC73__signes_de_souffrance_chez_un_enfant_qui_a_subi_une_violence": "",
+              "CC73a_ne_sait_pas": "mentionne",
+              "CC73b_isolement": "non_mentionne",
+              "CC73b_ne_mange_pas": "mentionn",
+              "CC73c_cauchemars": "non_mentionn",
+              "CC73d_uriner_au_lit": "non_mentionn",
+              "CC73e_avoir_peur": "non_mentionn",
+              "CC73f_resultats_scolaires_faibles": "non_mentionne",
+              "CC73g_maux_de_ventre": "non_mentionn",
+              "CC73h_frustration": "non_mentionn",
+              "CC73i_manque_de_confiance_en_soi": "non_mentionn",
+              "CC73j_traumatisme": "non_mentionn",
+              "CC73k_autres": "non_mentionn",
+              "CC74_causes_baisse_facultes_apprentissage_intellectuelles": "test"
+            }
+          },
+          "le_role_des_peres_dans_le_developpement_lenfant": {
+            "CC77_que_peut_faire_un_pere_pour_mieux_simpliquer_dveloppement_enfant": "",
+            "CC77a_lire_des_livres_aux_enfants": "mentionn",
+            "CC77b_jouer_avec_ses_enfants": "non_mentionn",
+            "CC77c_raconter_des_histoires_ou_leurs_propres_expriences__ses_enfants": "non_mentionn",
+            "CC77d_etablir_club_des_peres_pour_encourager_les_bonnes_pratiques_educatives": "non_mentionn",
+            "CC77e_mieux_suivre_education_de_ses_enfants_ecole": "non_mentionn",
+            "CC77f_amener_ses_enfants__participer_dans_des_activites_decouverte_du_milieu": "non_mentionn",
+            "CC77g_assurer_une_bonne_alimentation_de_son_enfant": "non_mentionn",
+            "CC77h_autres": "non_mentionn"
+          },
+          "les_differentes_formes_dintelligence": {
+            "formes_et_importance_de_lintelligence": {
+              "CC81_Pouvez-vous_citer_les_differentes_formes_intelligence": "",
+              "CC81a_intelligence_emotionnelle": "mentionn",
+              "CC81b_intelligence_sociale": "non_mentionn",
+              "CC81c_intelligence_psychomotrice": "non_mentionn",
+              "CC81d_intelligence_langagire": "non_mentionn",
+              "CC81e_intelligence_logico-mathematique": "non_mentionn",
+              "CC81f_autres": "non_mentionn",
+              "CC82_quelle_est_limportance_lintelligence_emotionnelle": "",
+              "CC82a_permet_enfant_dvelopper_empathie_capacite_de_se_mettre_place_autre": "non_mentionn",
+              "CC82b_permet_enfant_reconnatre_ses_emotions_et_les_gerer": "non_mentionn",
+              "CC82c_permet_enfant_vivre_en_communaute_plus_facilement": "non_mentionn",
+              "CC82d_elle_est_la_mere_de_toutes_les_formes_dintelligence": "non_mentionn",
+              "CC82e_autres": "non_mentionn"
+            }
+          },
+          "limportance_de_parler_aux_bebes_et_aux_jeunes_enfants": {
+            "comment_parler_au_bb_et_au_jeune_enfant": {
+              "CC76_pouvez_vous_citer_diffrentes_facons_dont_vous_pouvez_communiquer_avec_enfants": "",
+              "CC76a_raconter_des_contes_des_histoires_et_des_expriences": "mentionn",
+              "CC76b_lire_des_livres_livrets_poser_des_questions_sur_dessins_et_contenus": "non_mentionn",
+              "CC76c_leur_chanter_des_chansons": "mentionn",
+              "CC76d_leur_poser_des_devinettes": "non_mentionn",
+              "CC76e_jouer_avec_eux": "mentionn",
+              "CC76f_leur_demander_raconter_des_contes_journe_voyage_exprience": "non_mentionn",
+              "CC76g_les_ecouter_et_les_encourager__parler": "mentionn",
+              "CC76h_autres": "non_mentionn"
+            },
+            "parler_aux_bbs_et_aux_jeunes_enfants": {
+              "CC75_selon_vous_pourquoi__important__parler__bbs__aux_jeunes_enfant": "",
+              "CC75a_parler_permet_aux_adultes_de_commencer__remplir_correctement": "non_mentionn",
+              "CC75b_prepare_enfant_pour_ecole_et__toutes_formes_apprentissages": "mentionn",
+              "CC75c_developpe_son_cerveau_et_diffrentes_formes_intelligence": "non_mentionn",
+              "CC75d_enrichit_son_vocabulaire": "mentionn",
+              "CC75e_autres": "non_mentionn"
+            }
+          },
+          "questions_etat_civil": {
+            "etat_civil": {
+              "CC09_avantages_inscription_etat_civil": "identite_officielle",
+              "CC11_delai_enregistrement_normal": "choice8",
+              "CC12_delai_declaration_supplementaire": "moins_dun_an_apres_naissance",
+              "CC13_si_delai_depasse_enregistrement": "oui",
+              "CC13x1_ou_et_comment": "justice",
+              "CC14femme_declarer_seule": "oui",
+              "CC15_un_tiers_declarer_enfant": "oui",
+              "CC16_documents_pour_declarer": "piece_identite",
+              "CC17_si_document_manuquant": "oui",
+              "CC17x1_quelles_conditions": "avec_un_tmoin",
+              "activite_etat_civil": "1",
+              "lieu_declare_enfant": "centre_etat_civil"
+            }
+          },
+          "questions_normes_sociales": {
+            "normes_sociales": {
+              "CC18_sanction_des_autres": "oui",
+              "CC19_mariage_enfant_moins_18_prescription": "oui",
+              "CC20_signaux_enfant_victime_violence": "isolement",
+              "CC21_delai_refere_victime_viol": "72h_apres_viol"
+            },
+            "normes_sociales_2": {
+              "CC22_viol_enfant_police_gendar-justice": "oui",
+              "CC23_sanctionner_si_signaler_viol": "oui",
+              "CC24_excision_refere_police": "oui",
+              "CC25_sanction_si_signaler_excision": "oui",
+              "CC26_mariage_moins_de16_signaler_police": "oui",
+              "CC27sanction_si_signaler_mariage_moins_de16": "oui"
+            },
+            "normes_sociales_3": {
+              "CC28_contacter_commission_protection": "oui",
+              "CC29_quel_service_si_violence_sexuelle": "sante",
+              "CC30_quel_service_si_viol": "sante",
+              "CC31_quel_service_si_violence_physique": "sante",
+              "CC32_pret_signaler_viol_a_lexterieur": "oui",
+              "CC32x1_quel_service": "sante",
+              "CC33_pret_signaler_victime_negligence_exterieur": "oui",
+              "CC33x1_quel_service_si_negligence": "sante",
+              "CC34_pret_signaler_victime_violence_physique_exterieur": "oui",
+              "CC34x1_quels_sevices": "sante",
+              "CC35_pret_signaler_victime_negligence_exterieur": "oui",
+              "CC35x1_quels_services": "sante",
+              "CC36_pret_signaler_victime_traite_exterieur": "oui",
+              "CC36x1_quels_services": "sante",
+              "CC37_pret_signaler_victime_exploitation_exterieur": "oui",
+              "CC37x1_quels_services": "sante",
+              "CC38_pret_signaler_victime_excision": "oui",
+              "CC38x1_quels_services": "service_social",
+              "CC39_pret_signaler_victime_mariage_enfant_exterieur": "oui",
+              "CC39x1_quels_services": "sante police_gendarmerie tribunal"
+            },
+            "normes_sociales_4_excision": {
+              "CC48_pour_ou_contre_excision": "pour",
+              "CC49_excision_maitenue_ou_disparaitre": "maintenue",
+              "CC49x1_pourquoi": "test",
+              "CC50_connait_consequences_excision": "oui",
+              "CC51_consequences_connues": "infections frigidite",
+              "CC52_dire_sentiment": "",
+              "CC52a_sentiment_majoriite_com_fait_excision": "ni_daccord_ni_en_desaccord",
+              "CC53_femme_non_excisee_pas_mari": "ni_daccord_ni_en_desaccord",
+              "CC54_femme_non_excisee_mal_vue": "ni_daccord_ni_en_desaccord",
+              "CC55_explication_excision": "religion"
+            },
+            "normes_sociales_5_mariage_des_enfants": {
+              "CC56_pour_ou_contre_mariage_enfant": "pour",
+              "CC57_connait_consequence_mariage_enfant": "oui",
+              "CC58_consequence_mariage_connues": "isolement_jeune_mariee",
+              "CC60_plus_jeune_age_acceptable_mariage_fille": "1",
+              "CC61_plus_jeune_age_acceptable_mariage_garcon": "1",
+              "CC62_nbre_fille_marie_avant_18ans": "moins_de_la_moitie",
+              "CC63_fille_marie_contre_volonte": "plus_de_la_moitie",
+              "CC67_garcon_difficulte_mariage_apres_18an": "ni_d'acord_",
+              "CC69_justification_mariage_fille_avant_18ans": "religion",
+              "active_normes_sociales": "1",
+              "pourquoi": "test",
+              "qui__votre_avis_peut_influencer_une_famille_pour_quelle_ne_donne_pas_sa_fil": "test"
+            }
+          },
+          "questions_relatives_au_suivi-scolaire": {
+            "importance_suivi_scolaire": {
+              "CC78_selon_vous_pourquoi_est-il_important_de_suivre_la_scolarite_enfant": "",
+              "CC78a_le_suivi_scolaire_permet_parents_verifier_ponctualit_assiduite": "mentionn",
+              "CC78b_le_suivi_scolaire_permet_parents_echanger_enseignants_sur_les-performances": "non_mentionn",
+              "CC78c_le_suivi_scolaire_permet_parents_aider_enfant__ameliorer_perforrmances": "choice1",
+              "CC78d_le_suivi_scolaire_permet_parents_de_senquerir_problemes_ecole": "non_mentionn",
+              "CC78e_autres": "mentionn",
+              "preciser_autre": "1"
+            },
+            "suivi__domicile": {
+              "CC79_comment_suivre_son_enfant__domicile": "",
+              "CC79a_verifier_tous_ses_devoirs": "mentionn",
+              "CC79b_appuyer_enfant_sur_ses_devoirs": "non_mentionn",
+              "CC79c_lui_donner_des_exercices__faire": "mentionn",
+              "CC79d_lui_trouver_un_repetiteur": "non_mentionn",
+              "CC79e_donner_enfant_tout_materiel_necessaire_pour_sa_reussite": "mentionn",
+              "CC79f_encourager_mettre_en_confiance": "non_mentionn",
+              "CC79g_autres": "mentionn",
+              "CC80_quelles_explications_scientifiques_donnez-vous_ceux_surnomme_bbs_djinn": "",
+              "CC80a_ce_sont_des_enfants_mal_nourris": "non_mentionn",
+              "CC80b_ce_sont_des_enfants_nes_avec_des_malformations": "mentionn",
+              "CC80c_ce_sont_des_enfants_avec_dautres_maladies": "non_mentionn",
+              "CC80d_autres": "non_mentionn",
+              "activite_education": "2",
+              "preciser_autres": "6"
+            }
+          },
+          "questions_relatives_sante": {
+            "sante": {
+              "CC02_soutien_mari_pdt_grssesse": "test",
+              "CC03_soutien_mari_apres_accouchement": "test",
+              "CC05_pas_deau_enfants_moins_de_6mois": "test",
+              "CC05_temps_debut_allaitement": "test",
+              "CC06_avantages_colostrum": "test",
+              "CC07_femme_enceinte_aller_consultation": "test",
+              "CC08_signaux_alarme_grossesse": "test",
+              "activite_sante": "2"
+            }
+          }
+        }
+      },
+      "demographiques": {
+        "Autres_education": {
+          "dem_06_ecole_coranique": "oui",
+          "dem_07_classes_prcc": "oui"
+        },
+        "demographiques_qlist": {
+          "dem-02_groupe_ethnique": "pulaar",
+          "dem-03_age_group": "choice1",
+          "dem_01_sexe": "masculin"
+        },
+        "education_qlist1": {
+          "dem05x1_niveau_atteint": "primaire",
+          "dem05x2_arrete_scolarite": "oui",
+          "dem_05_ecole_formelle": "oui",
+          "raisons": {
+            "dem05x3_raisons_arrete": "responsabilites_familiales"
+          }
+        },
+        "situation_matrimoniale": {
+          "dem_04_etat_matrimonial": "marié_polygame"
+        },
+        "tranches_ages": {
+          "dem_08_avez-vous_des_enfants": "oui",
+          "enfant_0-12_mois": "1",
+          "enfant_13_24_mois": "1",
+          "enfant_25_36_mois": "1",
+          "enfant_37_60_mois": "1",
+          "enfant_61_72_mois": "1",
+          "enfant_zero_trois_ans": "OK",
+          "enfants_plus_trois_ans": "OK",
+          "enfants_scolarises": {
+            "dem_10_enfants_scolarises": "1",
+            "dem_13_enfants_non_scolarises": "oui",
+            "prciser_les_raisons": "test"
+          },
+          "total_enfant_plus_de_trois_ans": "2",
+          "total_enfant_zero_trois_ans": "3"
+        }
+      },
+      "identification": {
+        "fixture_localization": {
+          "commune": "boghe_com",
+          "departement": "boghe_dep",
+          "village": "wabounde_vil"
+        },
+        "indentification_enquete": "adopte",
+        "langue_interview": "wolof"
+      },
+      "introduction": {
+        "consentement": "OK",
+        "intro_fin": "OK",
+        "intro_suite": "OK",
+        "intro_suite_deux": "OK",
+        "reponse_consentement": "oui"
+      },
+      "meta": {
+        "@xmlns": "http://openrosa.org/jr/xforms",
+        "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v614. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+        "app_build_version": 614,
+        "commcare_version": "2.47.4",
+        "deviceID": "869012038941949",
+        "geo_point": null,
+        "instanceID": "4b1a6ac2-b56d-40df-a6f3-b2e822f85e4e",
+        "timeEnd": "2019-10-03T09:34:31.301000Z",
+        "timeStart": "2019-10-03T09:28:50.295000Z",
+        "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+        "username": "simone.peinke"
+      },
+      "remercier": "OK",
+      "var": {
+        "date_interview": "2019-10-03",
+        "non_consentement": "0"
+      }
+    },
+    "id": "4b1a6ac2-b56d-40df-a6f3-b2e822f85e4e",
+    "indexed_on": "2019-10-03T09:34:33.157219",
+    "initial_processing_complete": true,
+    "is_phone_submission": true,
+    "metadata": {
+      "appVersion": "CommCare Android, version \"2.47.4\"(459158). App v614. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+      "app_build_version": 614,
+      "commcare_version": "2.47.4",
+      "deviceID": "869012038941949",
+      "geo_point": null,
+      "instanceID": "4b1a6ac2-b56d-40df-a6f3-b2e822f85e4e",
+      "location": null,
+      "timeEnd": "2019-10-03T09:34:31.301000Z",
+      "timeStart": "2019-10-03T09:28:50.295000Z",
+      "userID": "fd2f1bfbb45c42b685f68b93695faf39",
+      "username": "simone.peinke"
+    },
+    "problem": null,
+    "received_on": "2019-10-03T09:34:32.796841Z",
+    "resource_uri": "",
+    "server_modified_on": "2019-10-03T09:34:32.881275Z",
+    "type": "data",
+    "uiversion": "1",
+    "version": "585"
+  }
+}
