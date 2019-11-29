@@ -19,21 +19,6 @@ upsert(
 alterState(state => {
   const pId = state.data.id;
 
-  function makeNest(path) {
-    return makeSet(path)
-  }
-
-  function repeatGroup(path, mapping) {
-    const array = dataValue(path)(state);
-    console.log(array);
-
-    return array.forEach(i => {
-      mapping.forEach(f => {
-        return f(i);
-      });
-    });
-  }
-
   function makeSet(a, b, c) {
     const fieldSet = {
       Question_ID__c: `${pId}-${a}`,
@@ -60,6 +45,43 @@ alterState(state => {
     fieldSet[b] = dataValue(c)(state);
 
     return fieldSet;
+  }
+
+  function repeatSet(a, b, i, c) {
+    const fieldSet = {
+      Question_ID__c: `${pId}-${a}-${i}`,
+      ampi__Description__c: a,
+    };
+
+    switch (b) {
+      case 'ampi__Picklist_Response__c':
+        fieldSet.ampi__Response__Type__c = 'Picklist';
+        break;
+
+      case 'ampi__Number_Response__c':
+        fieldSet.ampi__Response__Type__c = 'Number';
+        break;
+
+      case 'ampi__Text__Response__c':
+        fieldSet.ampi__Response__Type__c = 'Qualitative';
+        break;
+
+      default:
+        break;
+    }
+
+    fieldSet[b] = c;
+
+    return fieldSet;
+  }
+
+  function makeRepeat(desc, dest, pathToArray, key) {
+    const array = dataValue(pathToArray)(state);
+    return array.map((x, i) => {
+      const value = x[`${key}`];
+      console.log(value);
+      return repeatSet(desc, dest, i, value);
+    });
   }
 
   state.fieldSets = [
@@ -398,58 +420,58 @@ alterState(state => {
     //   'ampi__Number_Response__c',
     //   'form.structures_locales.violence_sexuelles.cas_violence_sexuelles'
     // ),
-    repeatGroup(
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
       'form.structures_locales.violence_sexuelles.details_cas_violence_sexuelles',
-      [
-        makeNest('sex', 'ampi__Picklist_Response__c', ['gender']),
-        makeNest(
-          'count if female',
-          'ampi__Number_Response__c',
-          'count_if_female'
-        ),
-        makeNest('count if male', 'ampi__Number_Response__c', 'count_if_male'),
-      ]
+      'gender'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.structures_locales.violence_sexuelles.details_cas_violence_sexuelles',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.structures_locales.violence_sexuelles.details_cas_violence_sexuelles',
+      'count_if_male'
     ),
     // makeSet(
     //   'Number of sexual abuse cases registered and treated children',
     //   'ampi__Number_Response__c',
     //   'form.structures_locales.violence_sexuelles_traites.cas_violences_sexuelles_traitees'
     // ),
-    // makeSet(
-    //   'Give details for each case identified',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.structures_locales.violence_sexuelles_traites.details_cas_violence_sexuelles'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.structures_locales.violence_sexuelles_traites.details_cas_violence_sexuelles.gender'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.violence_sexuelles_traites.details_cas_violence_sexuelles.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.violence_sexuelles_traites.details_cas_violence_sexuelles.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.structures_locales.violence_sexuelles_traites.details_cas_violence_sexuelles',
+      'gender'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.structures_locales.violence_sexuelles_traites.details_cas_violence_sexuelles',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.structures_locales.violence_sexuelles_traites.details_cas_violence_sexuelles',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of registered child marriage cases',
     //   'ampi__Number_Response__c',
     //   'form.structures_locales.enfants_maries.cas_mariages_enfants'
     // ),
-    // makeSet(
-    //   'Give the age of the child for each registered marriage case',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.structures_locales.enfants_maries.details_mariages_enfants'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.enfants_maries.details_mariages_enfants.age'
-    // ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.structures_locales.enfants_maries.details_mariages_enfants',
+      'age'
+    ),
     // makeSet(
     //   'Number of child marriage cases prevented',
     //   'ampi__Number_Response__c',
@@ -460,31 +482,30 @@ alterState(state => {
     //   'ampi__Number_Response__c',
     //   'form.structures_locales.malnourris.cas_enfants_malnourris'
     // ),
-    // makeSet(
-    //   'Give details for each case identified',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.structures_locales.malnourris.details_enfants_malnourris'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.structures_locales.malnourris.details_enfants_malnourris.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.malnourris.details_enfants_malnourris.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.malnourris.details_enfants_malnourris.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.malnourris.details_enfants_malnourris.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.structures_locales.malnourris.details_enfants_malnourris',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.structures_locales.malnourris.details_enfants_malnourris',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.structures_locales.malnourris.details_enfants_malnourris',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.structures_locales.malnourris.details_enfants_malnourris',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of malnourished children treated',
     //   'ampi__Number_Response__c',
@@ -1038,6 +1059,7 @@ alterState(state => {
   ];
 
   state.questionArray = state.fieldSets.map(x => {
+    console.log(x);
     x.RecordType = { Name: 'Answer' };
     x.ampi__Submission__r = { Submission_ID__c: state.data.id };
     return x;
@@ -1053,7 +1075,7 @@ bulk(
   'upsert',
   { extIdField: 'Question_ID__c', failOnError: true, allowNoOp: true },
   state => {
-    return state.questionArray;
+    return state.questionArray.reduce((acc, val) => acc.concat(val), []);
   }
 );
 // =============================================================================
