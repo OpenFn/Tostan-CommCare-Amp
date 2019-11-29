@@ -4,6 +4,7 @@ upsert(
   'Submission_ID__c',
   fields(
     field('ampi__Description__c', dataValue('form.@name')),
+    field('Location__c', dataValue('form.coordonnes_gps')),
     field('Submission_ID__c', dataValue('id')),
     relationship(
       'Project__r',
@@ -17,7 +18,6 @@ upsert(
 // BUILD ARRAY OF QUESTIONS FOR BULK UPSERT ====================================
 alterState(state => {
   const pId = state.data.id;
-  const { form } = state.data;
 
   function makeSet(a, b, c) {
     const fieldSet = {
@@ -42,206 +42,178 @@ alterState(state => {
         break;
     }
 
-    fieldSet[b] = c;
+    fieldSet[b] = dataValue(c)(state);
 
     return fieldSet;
   }
 
   state.fieldSets = [
     makeSet(
-      'departement',
-      'ampi__Picklist_Response__c',
-      form.fixture_localization.departement
-    ),
-    makeSet(
-      'departement',
-      'ampi__Picklist_Response__c',
-      form.fixture_localization.departement
-    ),
-    makeSet(
       'commune',
       'ampi__Picklist_Response__c',
-      form.fixture_localization['commune']
+      'form.fixture_localization.commune'
     ),
     makeSet(
       'village',
       'ampi__Picklist_Response__c',
-      form.fixture_localization['village']
+      'form.fixture_localization.village'
     ),
-    // makeSet('pays', 'ampi__Picklist_Response__c', form.XX['pays']),
+    makeSet('pays', 'ampi__Picklist_Response__c', 'form.copy-1-of-pays'),
+    makeSet('Months', 'ampi__Picklist_Response__c', 'form.mois-collecte'),
     makeSet(
-      'coordonnes_gps',
-      'ampi__Submisison__c.Location__c',
-      form['coordonnes_gps']
-    ),
-    makeSet(
-      'date_de_lenregistrement',
-      'ampi__Submission__c.CreatedDate',
-      form['date_de_lenregistrement']
-    ),
-    makeSet(
-      'mois-collecte',
+      'Module en cours',
       'ampi__Picklist_Response__c',
-      form['mois-collecte']
+      'form.module_en_cours'
     ),
     makeSet(
-      'module_en_cours',
+      'Number of scheduled sessions',
+      'ampi__Number_Response__c',
+      'form.nombre_de_sances_prvues'
+    ),
+    makeSet(
+      'Number of completed sessions',
+      'ampi__Number_Response__c',
+      'form.nombre_senaces_realisees'
+    ),
+    makeSet(
+      'Is there more than one cohort in this class?',
       'ampi__Picklist_Response__c',
-      form['module_en_cours']
+      'form.plus_dune_cohorte_dans_classe'
     ),
     makeSet(
-      'nombre_de_sances_prvues',
-      'ampi__Number_Response__c',
-      form['nombre_de_sances_prvues']
-    ),
-    makeSet(
-      'nombre_senaces_realisees',
-      'ampi__Number_Response__c',
-      form['nombre_senaces_realisees']
-    ),
-    makeSet(
-      'plus_dune_cohorte_dans_classe',
+      'Type of cohort',
       'ampi__Picklist_Response__c',
-      form['plus_dune_cohorte_dans_classe']
+      'form.type_de_cohorte'
     ),
     makeSet(
-      'type_de_cohorte',
-      'ampi__Picklist_Response__c',
-      form['type_de_cohorte']
-    ),
-    makeSet(
-      'PRES-HOM-01x1',
+      'Number of men in the class',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-01']['PRES-HOM-01x1']
+      'form.Situation_demographique.FS-FACIL-01.PRES-HOM-01x1'
     ),
     makeSet(
-      'PRES-FEM-01x2',
+      'Number of women in class',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-01']['PRES-FEM-01x2']
+      'form.Situation_demographique.FS-FACIL-01.PRES-FEM-01x2'
     ),
     makeSet(
-      'PRES-FILL-01x3',
+      'Number of girls in class',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-01']['PRES-FILL-01x3']
+      'form.Situation_demographique.FS-FACIL-01.PRES-FILL-01x3'
     ),
     makeSet(
-      'PRES-GAR-01x4',
+      'Number of boys in class',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-01']['PRES-GAR-01x4']
+      'form.Situation_demographique.FS-FACIL-01.PRES-GAR-01x4'
     ),
     makeSet(
       'Total_participants',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-01']['Total_participants']
+      'form.Situation_demographique.FS-FACIL-01.le_nombre_total_de_participants_est_de_total_participants'
     ),
-    // makeSet(
-    //   'Number_of_men_who_have_been_away_for_the_entirety_of_the_last_month',
-    //   'ampi__Number_Response__c',
-    //   form.XX[
-    //     'Number_of_men_who_have_been_away_for_the_entirety_of_the_last_month'
-    //   ]
-    // ),
     makeSet(
-      'ABS-FEM-02x2',
+      'Number of men who have been away for the entirety of the last month',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-02']['ABS-FEM-02x2']
+      'form.Situation_demographique.FS-FACIL-02.ABS-HOM-02x1'
     ),
     makeSet(
-      'ABS-FILL-02x3',
+      'Number of women who have been absent for the entirety of the last month',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-02']['ABS-FILL-02x3']
+      'form.Situation_demographique.FS-FACIL-02.ABS-FEM-02x2'
     ),
     makeSet(
-      'ABS-GAR-02x4',
+      'Number of girls who have been absent for the entirety of the last month',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-02']['ABS-GAR-02x4']
+      'form.Situation_demographique.FS-FACIL-02.ABS-FILL-02x3'
     ),
     makeSet(
-      'Total_absences',
+      'Number of boys who have been absent for the entirety of the last month',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-02']['Total_absences']
+      'form.Situation_demographique.FS-FACIL-02.ABS-GAR-02x4'
     ),
     makeSet(
-      'ABND-03x1',
+      'Total absences',
       'ampi__Number_Response__c',
-      form.Situation_demographique['FS-FACIL-03']['ABND-03x1']
+      'form.Situation_demographique.FS-FACIL-02.Total_absences'
     ),
     makeSet(
-      'ABND-rais-03x2',
-      'ampi__Text__Response__c',
-      form.Situation_demographique['FS-FACIL-03']['ABND-rais-03x2']
-    ),
-    makeSet(
-      'ADPT-04',
+      'Number of participants who dropped out last month',
       'ampi__Number_Response__c',
-      form.Situation_demographique['adoption_des_participants']['ADPT-04']
+      'form.Situation_demographique.FS-FACIL-03.ABND-03x1'
     ),
     makeSet(
-      'STAND-QUAL-05',
-      'ampi__Picklist_Response__c',
-      form.Standard_qualite.question2['STAND-QUAL-05']
+      'What is the main reason for abandonment (the most common reason for abandonment)',
+      'ampi__Text_Response__c',
+      'form.Situation_demographique.FS-FACIL-03.ABND-rais-03x2'
     ),
     makeSet(
-      'STAND-QUAL-06',
-      'ampi__Picklist_Response__c',
-      form.Standard_qualite.question2['STAND-QUAL-06']
-    ),
-    makeSet(
-      'STAND-QUAL-07',
-      'ampi__Picklist_Response__c',
-      form.Standard_qualite.question2['STAND-QUAL-07']
-    ),
-    makeSet(
-      'STAND-QUAL-08',
-      'ampi__Picklist_Response__c',
-      form.Standard_qualite.question2['STAND-QUAL-08']
-    ),
-    makeSet(
-      'STAND-QUAL-09',
-      'ampi__Picklist_Response__c',
-      form.Standard_qualite.question2['STAND-QUAL-09']
-    ),
-    makeSet(
-      'STAND-QUAL-10',
-      'ampi__Picklist_Response__c',
-      form.Standard_qualite.question2['STAND-QUAL-10']
-    ),
-    makeSet(
-      'STAND-QUAL-11',
+      'Total number of people adopted by participants (cumulative)',
       'ampi__Number_Response__c',
-      form.Standard_qualite.question1['STAND-QUAL-11']
+      'form.Situation_demographique.adoption_des_participants.ADPT-04'
     ),
     makeSet(
-      'STAND-QUAL-12',
+      'Are the participants sitting in a semi-circle?',
+      'ampi__Picklist_Response__c',
+      'form.Standard_qualite.question2.STAND-QUAL-05'
+    ),
+    makeSet(
+      "Is the drawing that represents the participants' vision for their community displayed?",
+      'ampi__Picklist_Response__c',
+      'form.Standard_qualite.question2.STAND-QUAL-06'
+    ),
+    makeSet(
+      'Is the participant list displayed?',
+      'ampi__Picklist_Response__c',
+      'form.Standard_qualite.question2.STAND-QUAL-07'
+    ),
+    makeSet(
+      'Is the schedule posted?',
+      'ampi__Picklist_Response__c',
+      'form.Standard_qualite.question2.STAND-QUAL-08'
+    ),
+    makeSet(
+      'Is the list of CMC members with their position displayed?',
+      'ampi__Picklist_Response__c',
+      'form.Standard_qualite.question2.STAND-QUAL-09'
+    ),
+    makeSet(
+      'Did the participants respect the class schedule?',
+      'ampi__Picklist_Response__c',
+      'form.Standard_qualite.question2.STAND-QUAL-10'
+    ),
+    makeSet(
+      'Number of sessions attended by the supervisor',
       'ampi__Number_Response__c',
-      form.Standard_qualite.question1['STAND-QUAL-12']
+      'form.Standard_qualite.question1.STAND-QUAL-11'
     ),
     makeSet(
-      'STAND-QUAL-13',
+      'Number of women participants holding leadership positions in their communities',
+      'ampi__Number_Response__c',
+      'form.Standard_qualite.question1.STAND-QUAL-12'
+    ),
+    makeSet(
+      'Does the majority of men take part in the discussions?',
       'ampi__Picklist_Response__c',
-      form.Standard_qualite.question1['STAND-QUAL-13']
+      'form.Standard_qualite.question1.STAND-QUAL-13'
     ),
     makeSet(
-      'STAND-QUAL-14',
+      'Does the majority of women take part in the discussions?',
       'ampi__Picklist_Response__c',
-      form.Standard_qualite.question1['STAND-QUAL-14']
-    ),
-    // makeSet(
-    //   'les_participants_manifestent_de_lintrt_pour_le_contenu_de_la_sance',
-    //   'ampi__Picklist_Response__c',
-    //   form.XX[
-    //     'les_participants_manifestent_de_lintrt_pour_le_contenu_de_la_sance'
-    //   ]
-    // ),
-    makeSet(
-      'CONTR-FAC-16',
-      'ampi__Text__Response__c',
-      form.points_fort_contraintes_facilitateur['CONTR-FAC-16']
+      'form.Standard_qualite.question1.STAND-QUAL-14'
     ),
     makeSet(
-      'points_forts',
-      'ampi__Text__Response__c',
-      form.points_fort_contraintes_facilitateur['points_forts']
+      'Do participants show interest in the content of the session?',
+      'ampi__Picklist_Response__c',
+      'form.Standard_qualite.question1.STAND-QUAL-15'
+    ),
+    makeSet(
+      'Major constraint encountered by the facilitator in implementing the program',
+      'ampi__Text_Response__c',
+      'form.points_fort_contraintes_facilitateur.CONTR-FAC-16'
+    ),
+    makeSet(
+      'What are the strengths noted during this month?',
+      'ampi__Text_Response__c',
+      'form.points_fort_contraintes_facilitateur.points_forts'
     ),
   ];
 

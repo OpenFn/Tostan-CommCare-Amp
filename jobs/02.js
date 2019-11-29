@@ -4,6 +4,7 @@ upsert(
   'Submission_ID__c',
   fields(
     field('ampi__Description__c', dataValue('form.@name')),
+    field('Location__c', dataValue('form.coordonnes_gps')),
     field('Submission_ID__c', dataValue('id')),
     relationship(
       'Project__r',
@@ -17,7 +18,6 @@ upsert(
 // BUILD ARRAY OF QUESTIONS FOR BULK UPSERT ====================================
 alterState(state => {
   const pId = state.data.id;
-  const { form } = state.data;
 
   function makeSet(a, b, c) {
     const fieldSet = {
@@ -42,429 +42,438 @@ alterState(state => {
         break;
     }
 
-    fieldSet[b] = c;
+    fieldSet[b] = dataValue(c)(state);
 
     return fieldSet;
   }
 
   state.fieldSets = [
     makeSet(
-      'type_evaluation',
+      'Evaluation Type',
       'ampi__Picklist_Response__c',
-      form['type_evaluation']
+      'form.type_evaluation'
     ),
-    // makeSet('projet', 'ampi__Picklist_Response__c', form['projet']),
+    makeSet('Project', 'ampi__Picklist_Response__c', 'form.projet'),
     makeSet(
-      'coordonnes_gps',
-      'ampi__Submisison__c.Location__c',
-      form['coordonnes_gps']
-    ),
-    // makeSet(
-    //   'statut_repondant',
-    //   'ampi__Picklist_Response__c',
-    //   form.XOX['statut_repondant']
-    // ),
-    makeSet(
-      'sexe',
+      'Respondent status',
       'ampi__Picklist_Response__c',
-      form.caracteristiques_demographiques.caracteristiques_enquete['sexe']
+      'form.statut_repondant'
     ),
-    // makeSet('ethnie', 'ampi__Picklist_Response__c', form.XOX['ethnie']),
     makeSet(
-      'connait_age',
+      'Observe Gender of the Respondent',
       'ampi__Picklist_Response__c',
-      form.caracteristiques_demographiques.caracteristiques_enquete.age_enquete[
-        'connait_age'
-      ]
+      'form.demographie.caracteristiques_enquete.sexe'
     ),
     makeSet(
-      'age_exact',
+      'What is your ethnic group?',
+      'ampi__Picklist_Response__c',
+      'form.demographie.caracteristiques_enquete.ethnie'
+    ),
+    makeSet(
+      'Do you know your age?',
+      'ampi__Picklist_Response__c',
+      'form.demographie.age_enquete.connait_age'
+    ),
+    makeSet(
+      'How old are you?',
       'ampi__Number_Response__c',
-      form.caracteristiques_demographiques.caracteristiques_enquete.age_enquete[
-        'age_exact'
-      ]
+      'form.demographie.age_enquete.age_exact'
     ),
     makeSet(
-      'tranche_age',
+      'What is your age group?',
       'ampi__Picklist_Response__c',
-      form.caracteristiques_demographiques.caracteristiques_enquete.age_enquete[
-        'tranche_age'
-      ]
+      'form.demographie.age_enquete.tranche_age'
     ),
     makeSet(
-      'etat_matrimonial',
+      'What is your marital status?',
       'ampi__Picklist_Response__c',
-      form.caracteristiques_demographiques['etat_matrimonial']
+      'form.demographie.etat_matrimonial'
     ),
     makeSet(
-      'frequente_ecole',
+      'Have you been to school?',
       'ampi__Picklist_Response__c',
-      form.caracteristiques_demographiques.niveau_etude_enquete[
-        'freq_ecole'
-      ]
+      'form.demographie.education.frequente_ecole'
     ),
-    makeSet('niveau', 'ampi__Picklist_Response__c', form.XOX['niveau']),
     makeSet(
-      'participant_prcc',
+      'What is your highest level of education?',
       'ampi__Picklist_Response__c',
-      form.XOX['participant_prcc']
+      'form.demographie.education.niveau'
     ),
-    makeSet('adopte', 'ampi__Picklist_Response__c', form.XOX['adopte']),
     makeSet(
-      'Cnce_instruments_J-I',
+      'Ask the‏‏‎ question Have you ever participated in Tostan CEP?',
       'ampi__Picklist_Response__c',
-      form.XOX['Cnce_instruments_J-I']
+      'form.demographie.identification.participant_prcc'
     ),
     makeSet(
-      'instruments_cites',
-      'ampi__Text__Response__c',
-      form.XOX['instruments_cites']
+      'Ask the‏‏‎ question Have you been adopted during the program?',
+      'ampi__Picklist_Response__c',
+      'form.demographie.identification.adopte'
     ),
     makeSet(
-      'Nombre_instruments_cites',
+      'Do not read out the requirements Do you know international legal instruments on human rights?',
+      'ampi__Picklist_Response__c',
+      'form.democratie.critere_democratie.Cnce_instruments_J-I'
+    ),
+    makeSet(
+      'List the legal instruments on human rights you know? Do not read out the requirements (Tick off the instruments listed by the Respondent)',
+      'ampi__Text_Response__c',
+      'form.democratie.critere_democratie.instruments_cites'
+    ),
+    makeSet(
+      "Nombre d'instruments cites",
       'ampi__Number_Response__c',
-      form.XOX['Nombre_instruments_cites']
+      'form.democratie.critere_democratie.Nombre_instruments_cites'
     ),
     makeSet(
-      'promotion_instruments',
+      'Do you think that advocacy for some legal instruments on human rights can help establish peace and security?',
       'ampi__Picklist_Response__c',
-      form.XOX['promotion_instruments']
+      'form.democratie.action_promotion_Instruments.promotion_instruments'
     ),
     makeSet(
-      'posez_la_question_de_quels_instruments_juridiques_internationaux_des_droits',
-      'ampi__Text__Response__c',
-      form.XOX[
-        'posez_la_question_de_quels_instruments_juridiques_internationaux_des_droits'
-      ]
+      'Which are those instruments? Do not read out the requirements',
+      'ampi__Text_Response__c',
+      'form.democratie.action_promotion_Instruments.posez_la_question_de_quels_instruments_juridiques_internationaux_des_droits'
     ),
     makeSet(
-      'connait_droits_humains',
+      'Do you know the human rights?',
       'ampi__Picklist_Response__c',
-      form.XOX['connait_droits_humains']
+      'form.droits_humains.connaissance_droits.connait_droits_humains'
     ),
     makeSet(
-      'liste_des_droist_humains',
-      'ampi__Text__Response__c',
-      form.XOX['liste_des_droist_humains']
+      'List the rights you know (Tick off the rights listed by the Respondent)',
+      'ampi__Text_Response__c',
+      'form.droits_humains.connaissance_droits.liste_des_droist_humains'
     ),
     makeSet(
-      'total_droit_cite',
+      'total droit cite',
       'ampi__Number_Response__c',
-      form.XOX['total_droit_cite']
+      'form.droits_humains.connaissance_droits.total_droit_cite'
     ),
     makeSet(
-      'actions_communautaire_droits_humains',
+      'In the last 12 months, has your community taken action with other communities to promote human rights?',
       'ampi__Picklist_Response__c',
-      form.XOX['actions_communautaire_droits_humains']
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.actions_communautaire_droits_humains'
     ),
     makeSet(
-      'action_com_DrH',
-      'ampi__Text__Response__c',
-      form.XOX['action_com_DrH']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_com_DrH'
     ),
     makeSet(
-      'action_communautaire_promotion_paix',
+      'In the last 12 months, has your community taken action with other communities to promote peace?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_communautaire_promotion_paix']
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_communautaire_promotion_paix'
     ),
-    makeSet('action_paix', 'ampi__Text__Response__c', form.XOX['action_paix']),
     makeSet(
-      'action_commun_encourager_participation',
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_paix'
+    ),
+    makeSet(
+      'In the last 12 months, has your community taken action with other communities to encourage the participation of all the community members in decision-making?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_commun_encourager_participation']
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_commun_encourager_participation'
     ),
     makeSet(
-      'action_encourager_participation',
-      'ampi__Text__Response__c',
-      form.XOX['action_encourager_participation']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_encourager_participation'
     ),
     makeSet(
-      'action_comm_prom_droit_fem',
+      'In the last 12 months, has your community taken action with other communities to promote women rights?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_comm_prom_droit_fem']
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_comm_prom_droit_fem'
     ),
     makeSet(
-      'which_activities',
-      'ampi__Text__Response__c',
-      form.XOX['which_activities']
+      'Which are those activities?',
+      'ampi__Text_Response__c',
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.which_activities'
     ),
     makeSet(
-      'action_commun_sensibiliser_autorite_DrH',
+      'In the last 12 months, has your community taken action with other communities to raise awareness among authorities on the respect for human rights?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_commun_sensibiliser_autorite_DrH']
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_commun_sensibiliser_autorite_DrH'
     ),
     makeSet(
-      'action_commun_sensibiliser_autorite',
-      'ampi__Text__Response__c',
-      form.XOX['action_commun_sensibiliser_autorite']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_commun_sensibiliser_autorite'
     ),
     makeSet(
-      'promotion_certains_DH',
+      'Do you think that advocacy for some human rights can help establish peace and security?',
       'ampi__Picklist_Response__c',
-      form.XOX['promotion_certains_DH']
+      'form.droits_humains.action_indiv_promotion.promotion_certains_DH'
     ),
     makeSet(
-      'de_quels_droit_sagit-il',
-      'ampi__Text__Response__c',
-      form.XOX['de_quels_droit_sagit-il']
+      'Which are those rights? (Tick off the rights listed by the Respondent)',
+      'ampi__Text_Response__c',
+      'form.droits_humains.action_indiv_promotion.de_quels_droit_sagit-il'
     ),
     makeSet(
-      'action_promotion_droits_huamins',
+      'In the last 12 months, have you raised awareness in your community to advocate for human rights?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_promotion_droits_huamins']
+      'form.droits_humains.action_indiv_promotion.action_promotion_droits_huamins'
     ),
     makeSet(
-      'action_droits_humains',
-      'ampi__Text__Response__c',
-      form.XOX['action_droits_humains']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.droits_humains.action_indiv_promotion.action_droits_humains'
     ),
     makeSet(
-      'encoyrager_participation_prise_de_decision',
+      'In the last 12 months, have you raised awareness in your community to encourage the participation of all the community members in decision-making?',
       'ampi__Picklist_Response__c',
-      form.XOX['encoyrager_participation_prise_de_decision']
+      'form.droits_humains.action_indiv_promotion.encoyrager_participation_prise_de_decision'
     ),
     makeSet(
-      'action_encourager_participation_prise_de_decision',
-      'ampi__Text__Response__c',
-      form.XOX['action_encourager_participation_prise_de_decision']
-    ),
-    makeSet('Conce_paix', 'ampi__Text__Response__c', form.XOX['Conce_paix']),
-    makeSet(
-      'prciser_autre',
-      'ampi__Text__Response__c',
-      form.XOX['prciser_autre']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.droits_humains.action_indiv_promotion.action_encourager_participation_prise_de_decision'
     ),
     makeSet(
-      'existence_culture_paix',
-      'ampi__Text__Response__c',
-      form.XOX['existence_culture_paix']
+      'In your opinion, what does peace mean? (Do not read out the requirements)',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.paix.Conce_paix'
     ),
     makeSet(
-      'action_securite_humaine',
-      'ampi__Text__Response__c',
-      form.XOX['action_securite_humaine']
+      'Please specify other',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.paix.prciser_autre'
     ),
-    makeSet('menace_paix', 'ampi__Text__Response__c', form.XOX['menace_paix']),
     makeSet(
-      'cnce_types_trafic_biens_personnes',
+      'In your opinion, when can we consider that culture of peace prevails in a community? (Do not read out the requirements)',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.paix.existence_culture_paix'
+    ),
+    makeSet(
+      'Specify other',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.paix.action_securite_humaine'
+    ),
+    makeSet(
+      'In your opinion, what can threaten peace?',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.paix.menace_paix'
+    ),
+    makeSet(
+      'Do you know any form of goods and people trafficking?',
       'ampi__Picklist_Response__c',
-      form.XOX['cnce_types_trafic_biens_personnes']
+      'form.paix_et_trafic.le_trafic_des_biens_et_des_personnes.cnce_types_trafic_biens_personnes'
     ),
     makeSet(
-      'types_de_trafic_biens_et_personnes',
-      'ampi__Text__Response__c',
-      form.XOX['types_de_trafic_biens_et_personnes']
+      'What are the forms of goods and people trafficking you know?',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.le_trafic_des_biens_et_des_personnes.types_de_trafic_biens_et_personnes'
     ),
     makeSet(
-      'economie_traite_menace_paix',
-      'ampi__Text__Response__c',
-      form.XOX['economie_traite_menace_paix']
+      'How can trafficking economics pose a threat to peace?',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.le_trafic_des_biens_et_des_personnes.economie_traite_menace_paix'
     ),
     makeSet(
-      'prcisez_autre',
-      'ampi__Text__Response__c',
-      form.XOX['prcisez_autre']
+      'Specify other',
+      'ampi__Text_Response__c',
+      'form.paix_et_trafic.le_trafic_des_biens_et_des_personnes.prcisez_autre'
     ),
     makeSet(
-      'connait_securite_humaine',
+      'Have you ever heard about Human Security?',
       'ampi__Picklist_Response__c',
-      form.XOX['connait_securite_humaine']
+      'form.securite_humaine.connaissance_element_secu_humaine.connait_securite_humaine'
     ),
     makeSet(
-      'conce_elemt_sec_huma',
+      'Do you Human security elements',
       'ampi__Picklist_Response__c',
-      form.XOX['conce_elemt_sec_huma']
+      'form.securite_humaine.connaissance_element_secu_humaine.conce_elemt_sec_huma'
     ),
     makeSet(
-      'elements_securite_humaine',
-      'ampi__Text__Response__c',
-      form.XOX['elements_securite_humaine']
+      "What are the components of human security? Don't read the modalities",
+      'ampi__Text_Response__c',
+      'form.securite_humaine.connaissance_element_secu_humaine.elements_securite_humaine'
     ),
     makeSet(
-      'nombre_element_cite',
+      "nombre d'elements cite",
       'ampi__Number_Response__c',
-      form.XOX['nombre_element_cite']
+      'form.securite_humaine.connaissance_element_secu_humaine.nombre_element_cite'
     ),
     makeSet(
-      'action_secu_alimentaire',
+      'In the last 12 months, have you undertaken actions to Ensure access to quality food (healthy, varied and available) for you, your family and friends at all times?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_secu_alimentaire']
+      'form.securite_humaine.action_promotion_securite_humaine.action_secu_alimentaire'
     ),
     makeSet(
-      'liste_action_secu_alimentaire',
-      'ampi__Text__Response__c',
-      form.XOX['liste_action_secu_alimentaire']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.securite_humaine.action_promotion_securite_humaine.liste_action_secu_alimentaire'
     ),
     makeSet(
-      'action_secu_environnementale',
+      'In the last 12 months, have you undertaken actions to improve your own or your family and friends’ environment (sanitation of public places, plots, reforestation, building of improved homes)?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_secu_environnementale']
+      'form.securite_humaine.action_promotion_securite_humaine.action_secu_environnementale'
     ),
     makeSet(
-      'liste_action_secu_env',
-      'ampi__Text__Response__c',
-      form.XOX['liste_action_secu_env']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.securite_humaine.action_promotion_securite_humaine.liste_action_secu_env'
     ),
     makeSet(
-      'action_secu_sanitaire',
+      'In the last 12 months, have you undertaken actions to Ensure access to medical care and better health conditions for you, your family and friends?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_secu_sanitaire']
+      'form.securite_humaine.action_promotion_securite_humaine.action_secu_sanitaire'
     ),
     makeSet(
-      'liste_action_secu_sanitaire',
-      'ampi__Text__Response__c',
-      form.XOX['liste_action_secu_sanitaire']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.securite_humaine.action_promotion_securite_humaine.liste_action_secu_sanitaire'
     ),
     makeSet(
-      'action_secu_personnelle',
+      'In the last 12 months, have you undertaken actions to prevent discrimination against you or against people you know for gender, ethnic, religious, political or community affiliation?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_secu_personnelle']
+      'form.securite_humaine.action_promotion_securite_humaine.action_secu_personnelle'
     ),
     makeSet(
-      'liste_action_secu_perso',
-      'ampi__Text__Response__c',
-      form.XOX['liste_action_secu_perso']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.securite_humaine.action_promotion_securite_humaine.liste_action_secu_perso'
     ),
     makeSet(
-      'action_secu_communautaire',
+      'In the last 12 months, have you undertaken actions to Ensure protection for you, your family and friends against physical and psychological violence?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_secu_communautaire']
+      'form.securite_humaine.action_promotion_securite_humaine.action_secu_communautaire'
     ),
     makeSet(
-      'liste_action_secu_comm',
-      'ampi__Text__Response__c',
-      form.XOX['liste_action_secu_comm']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.securite_humaine.action_promotion_securite_humaine.liste_action_secu_comm'
     ),
     makeSet(
-      'action_secu_economique',
+      'In the last 12 months, have you undertaken actions to Ensure access to resources (lands, micro-credit, IGAs) and employment for your family members?',
       'ampi__Picklist_Response__c',
-      form.XOX['action_secu_economique']
+      'form.securite_humaine.action_promotion_securite_humaine.action_secu_economique'
     ),
     makeSet(
-      'liste_action_secu_economique',
-      'ampi__Text__Response__c',
-      form.XOX['liste_action_secu_economique']
+      'Which are those actions?',
+      'ampi__Text_Response__c',
+      'form.securite_humaine.action_promotion_securite_humaine.liste_action_secu_economique'
     ),
     makeSet(
-      'connait_outil',
+      'Do you know any conflict analysis tool?',
       'ampi__Picklist_Response__c',
-      form.XOX['connait_outil']
+      'form.prevention_et_gestion_de_conflit.connaissance_outil_analyse_conflit.connait_outil'
     ),
     makeSet(
-      'outil_connu',
+      'Which conflict analysis tool do you know?',
       'ampi__Picklist_Response__c',
-      form.XOX['outil_connu']
+      'form.prevention_et_gestion_de_conflit.connaissance_outil_analyse_conflit.outil_connu'
     ),
     makeSet(
-      'caricature_arbre_conflit',
-      'ampi__Text__Response__c',
-      form.XOX['caricature_arbre_conflit']
+      'If we conducted a conflict analysis using a conflict tree, what would the trunk, the leaves and the roots represent?',
+      'ampi__Text_Response__c',
+      'form.prevention_et_gestion_de_conflit.connaissance_outil_analyse_conflit.caricature_arbre_conflit'
     ),
     makeSet(
-      'startegie_evitement_intensification',
+      'Do you know any strategy to prevent conflict intensification?',
       'ampi__Picklist_Response__c',
-      form.XOX['startegie_evitement_intensification']
+      'form.prevention_et_gestion_de_conflit.strategie_eviter_intensification.startegie_evitement_intensification'
     ),
     makeSet(
-      'quelle_strategie',
-      'ampi__Text__Response__c',
-      form.XOX['quelle_strategie']
+      'Which strategies do you know?',
+      'ampi__Text_Response__c',
+      'form.prevention_et_gestion_de_conflit.strategie_eviter_intensification.quelle_strategie'
     ),
     makeSet(
-      'type_de_conflit_existe',
-      'ampi__Text__Response__c',
-      form.XOX['type_de_conflit_existe']
+      'Which type of conflicts exist in your community?',
+      'ampi__Text_Response__c',
+      'form.prevention_et_gestion_de_conflit.type_de_conflit_existe'
     ),
     makeSet(
-      'preciser_autre',
-      'ampi__Text__Response__c',
-      form.XOX['preciser_autre']
+      'Specify other types of conflicts',
+      'ampi__Text_Response__c',
+      'form.prevention_et_gestion_de_conflit.preciser_autre'
     ),
     makeSet(
-      'temoin_episode_violence',
+      'Have you witnessed any instance of violence in the last 12 months in your community?',
       'ampi__Picklist_Response__c',
-      form.XOX['temoin_episode_violence']
+      'form.prevention_et_gestion_de_conflit.temoin_episode_violence'
     ),
     makeSet(
-      'victims_of_violence',
-      'ampi__Text__Response__c',
-      form.XOX['victims_of_violence']
+      'Who are the victims of the violence you witnessed',
+      'ampi__Text_Response__c',
+      'form.prevention_et_gestion_de_conflit.victims_of_violence'
     ),
     makeSet(
-      'reason_of_violence',
-      'ampi__Text__Response__c',
-      form.XOX['reason_of_violence']
-    ),
-    makeSet('formation', 'ampi__Picklist_Response__c', form.XOX['formation']),
-    makeSet(
-      'formation_souhaitee',
-      'ampi__Text__Response__c',
-      form.XOX['formation_souhaitee']
+      'What were the reasons for the violence you witnessed?',
+      'ampi__Text_Response__c',
+      'form.prevention_et_gestion_de_conflit.reason_of_violence'
     ),
     makeSet(
-      'connait_mediation',
+      'Do you think that you are trained enough to solve the types of conflicts prevailing in your community?',
       'ampi__Picklist_Response__c',
-      form.XOX['connait_mediation']
+      'form.prevention_et_gestion_de_conflit.formation'
     ),
     makeSet(
-      'connaissance_mediation',
+      'Which training do you think you may need to build your capacity in solving these types of conflicts?',
+      'ampi__Text_Response__c',
+      'form.prevention_et_gestion_de_conflit.formation_souhaitee'
+    ),
+    makeSet(
+      'Do you know what mediation is?',
       'ampi__Picklist_Response__c',
-      form.XOX['connaissance_mediation']
+      'form.resolution_conflits.mediation.connait_mediation'
     ),
     makeSet(
-      'type_de_conflit',
-      'ampi__Text__Response__c',
-      form.XOX['type_de_conflit']
-    ),
-    makeSet(
-      'preciser_conflit',
-      'ampi__Text__Response__c',
-      form.XOX['preciser_conflit']
-    ),
-    makeSet(
-      'besoin_nouvelles_connaissances',
+      'Can you define mediation?',
       'ampi__Picklist_Response__c',
-      form.XOX['besoin_nouvelles_connaissances']
+      'form.resolution_conflits.mediation.connaissance_mediation'
     ),
     makeSet(
-      'qui_participe_resolution_conflits',
+      'For which form of conflict have you used this approach?',
+      'ampi__Text_Response__c',
+      'form.resolution_conflits.mediation.type_de_conflit'
+    ),
+    makeSet(
+      'Specify Other form of conflict?',
+      'ampi__Text_Response__c',
+      'form.resolution_conflits.mediation.preciser_conflit'
+    ),
+    makeSet(
+      'Do you think that you need new competences to solve conflicts?',
       'ampi__Picklist_Response__c',
-      form.XOX['qui_participe_resolution_conflits']
+      'form.resolution_conflits.mediation.besoin_nouvelles_connaissances'
     ),
     makeSet(
-      'femmes_plus_impliquees',
+      'In your community, who are participating the most in conflict resolution?',
       'ampi__Picklist_Response__c',
-      form.XOX['femmes_plus_impliquees']
+      'form.femme_paix_et_securite.femmes_paix_et_securite.qui_participe_resolution_conflits'
     ),
     makeSet(
-      'preciser_autre_femme',
-      'ampi__Text__Response__c',
-      form.XOX['preciser_autre_femme']
-    ),
-    makeSet(
-      'femme_impliquee',
+      'If women do participate, who among them are mostly engaged?',
       'ampi__Picklist_Response__c',
-      form.XOX['femme_impliquee']
+      'form.femme_paix_et_securite.femmes_paix_et_securite.femmes_plus_impliquees'
     ),
     makeSet(
-      'si_oui_pourquoi',
-      'ampi__Text__Response__c',
-      form.XOX['si_oui_pourquoi']
+      'Specify other women',
+      'ampi__Text_Response__c',
+      'form.femme_paix_et_securite.femmes_paix_et_securite.preciser_autre_femme'
     ),
     makeSet(
-      'si_non_pourquoi',
-      'ampi__Text__Response__c',
-      form.XOX['si_non_pourquoi']
+      'Do you think that women should be engaged in conflict resolution process?',
+      'ampi__Picklist_Response__c',
+      'form.femme_paix_et_securite.femmes_paix_et_securite.femme_impliquee'
+    ),
+    makeSet(
+      'If yes, why?',
+      'ampi__Text_Response__c',
+      'form.femme_paix_et_securite.femmes_paix_et_securite.si_oui_pourquoi'
+    ),
+    makeSet(
+      'If no, why?',
+      'ampi__Text_Response__c',
+      'form.femme_paix_et_securite.femmes_paix_et_securite.si_non_pourquoi'
     ),
   ];
 
   state.questionArray = state.fieldSets.map(x => {
-    x.RecordType = {
-      Name: 'Answer',
-    };
-    x.ampi__Submission__r = {
-      Submission_ID__c: state.data.id,
-    };
+    x.RecordType = { Name: 'Answer' };
+    x.ampi__Submission__r = { Submission_ID__c: state.data.id };
     return x;
   });
 
@@ -476,11 +485,7 @@ alterState(state => {
 bulk(
   'ampi__Question__c',
   'upsert',
-  {
-    extIdField: 'Question_ID__c',
-    failOnError: true,
-    allowNoOp: true,
-  },
+  { extIdField: 'Question_ID__c', failOnError: true, allowNoOp: true },
   state => {
     return state.questionArray;
   }
