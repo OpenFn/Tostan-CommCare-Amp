@@ -616,216 +616,210 @@ alterState(state => {
     //   'ampi__Number_Response__c',
     //   'form.structures_locales.non_vaccines.non_vaccines'
     // ),
-    // makeSet(
-    //   'Give details for each case treated.',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.structures_locales.non_vaccines.details_non_vaccines'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.structures_locales.non_vaccines.details_non_vaccines.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.non_vaccines.details_non_vaccines.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.non_vaccines.details_non_vaccines.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.non_vaccines.details_non_vaccines.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.structures_locales.non_vaccines.details_non_vaccines',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.structures_locales.non_vaccines.details_non_vaccines',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.structures_locales.non_vaccines.details_non_vaccines',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.structures_locales.non_vaccines.details_non_vaccines',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of unvaccinated children treated',
     //   'ampi__Number_Response__c',
     //   'form.structures_locales.non_vaccines_traites.non_vaccines_traites'
     // ),
-    // makeSet(
-    //   'Give details for each case treated.',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.structures_locales.non_vaccines_traites.details_non_vaccines'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.structures_locales.non_vaccines_traites.details_non_vaccines.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.non_vaccines_traites.details_non_vaccines.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.non_vaccines_traites.details_non_vaccines.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.structures_locales.non_vaccines_traites.details_non_vaccines.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.structures_locales.non_vaccines_traites.details_non_vaccines',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.structures_locales.non_vaccines_traites.details_non_vaccines',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.structures_locales.non_vaccines_traites.details_non_vaccines',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.structures_locales.non_vaccines_traites.details_non_vaccines',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of cases of physical violence against registered children',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_violence_physique.cas_violence_physique'
     // ),
-    // makeSet(
-    //   'Give details for each case recorded',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique.age'
-    // ),
-    // makeSet(
-    //   'Referred (e)',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique.referred'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique.count_if_male'
-    // ),
-    // makeSet(
-    //   'count referred girls',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique.count_referred_filles'
-    // ),
-    // makeSet(
-    //   'count referred boys',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique.details_violence_physique.count_referred_garcons'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_violence_physique.details_violence_physique',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique.details_violence_physique',
+      'age'
+    ),
+    makeRepeat(
+      'Referred (e)',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_violence_physique.details_violence_physique',
+      'referred'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique.details_violence_physique',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique.details_violence_physique',
+      'count_if_male'
+    ),
+    makeRepeat(
+      'count referred girls',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique.details_violence_physique',
+      'count_referred_filles'
+    ),
+    makeRepeat(
+      'count referred boys',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique.details_violence_physique',
+      'count_referred_garcons'
+    ),
     // makeSet(
     //   'Number of physical abuse cases registered and treated children',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_violence_physique_traites.cas_violence_physique_traites'
     // ),
-    // makeSet(
-    //   'Give details for each case registered and processed',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites.age'
-    // ),
-    // makeSet(
-    //   'Referred (e)',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites.referred'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites.count_if_male'
-    // ),
-    // makeSet(
-    //   '',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites.count_referred_filles'
-    // ),
-    // makeSet(
-    //   '',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites.count_referred_garcons'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites',
+      'age'
+    ),
+    makeRepeat(
+      'Referred (e)',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites',
+      'referred'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites',
+      'count_if_male'
+    ),
+    makeRepeat(
+      '',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites',
+      'count_referred_filles'
+    ),
+    makeRepeat(
+      '',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_physique_traites.details_violence_physique_traites',
+      'count_referred_garcons'
+    ),
     // makeSet(
     //   'Number of cases of sexual violence against registered children',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_violence_sexuelles.cas_violence_sexuelles'
     // ),
-    // makeSet(
-    //   'Give details for each case identified',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_violence_sexuelles.details_cas_violence_sexuelles'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_violence_sexuelles.details_cas_violence_sexuelles.gender'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_sexuelles.details_cas_violence_sexuelles.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_sexuelles.details_cas_violence_sexuelles.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_violence_sexuelles.details_cas_violence_sexuelles',
+      'gender'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_sexuelles.details_cas_violence_sexuelles',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_sexuelles.details_cas_violence_sexuelles',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of sexual abuse cases registered and treated children',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_violence_sexuelles_traites.cas_violences_sexuelles_traitees'
     // ),
-    // makeSet(
-    //   'Give details for each case identified',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_violence_sexuelles_traites.details_cas_violence_sexuelles'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_violence_sexuelles_traites.details_cas_violence_sexuelles.gender'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_sexuelles_traites.details_cas_violence_sexuelles.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_violence_sexuelles_traites.details_cas_violence_sexuelles.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_violence_sexuelles_traites.details_cas_violence_sexuelles',
+      'gender'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_sexuelles_traites.details_cas_violence_sexuelles',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_violence_sexuelles_traites.details_cas_violence_sexuelles',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of registered child marriage cases',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_enfants_maries.cas_mariages_enfants'
     // ),
-    // makeSet(
-    //   'Give the age of the child for each registered marriage case',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_enfants_maries.details_mariages_enfants'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enfants_maries.details_mariages_enfants.age'
-    // ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enfants_maries.details_mariages_enfants',
+      'age'
+    ),
     // makeSet(
     //   'Number of child marriage cases prevented',
     //   'ampi__Number_Response__c',
@@ -836,31 +830,30 @@ alterState(state => {
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_malnourris.cas_enfants_malnourris'
     // ),
-    // makeSet(
-    //   'Give details for each case identified',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_malnourris.details_enfants_malnourris'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_malnourris.details_enfants_malnourris.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_malnourris.details_enfants_malnourris.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_malnourris.details_enfants_malnourris.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_malnourris.details_enfants_malnourris.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_malnourris.details_enfants_malnourris',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_malnourris.details_enfants_malnourris',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_malnourris.details_enfants_malnourris',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_malnourris.details_enfants_malnourris',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of malnourished children treated',
     //   'ampi__Text_Response__c',
@@ -871,191 +864,181 @@ alterState(state => {
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_enregistre_etat_civil.enfants_etats_civil'
     // ),
-    // makeSet(
-    //   'Give details for each case identified',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil.details_enfants_etat_civil',
+      'count_if_male'
+    ),
     // makeSet(
     //   "Nombre de civils enregistrés à l'état civil",
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_enregistre_etat_civil_traites.enfants_etats_civil_traites'
     // ),
-    // makeSet(
-    //   'Give details for each case treated',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enregistre_etat_civil_traites.details_enfants_etat_civil_traites',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of school-aged children not enrolled in school',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_enfants_non_inscrits.enfants_non_inscrits'
     // ),
-    // makeSet(
-    //   'Give details for each case identified',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits.details_enfants_non_inscrits',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of school-aged children not enrolled in school treated',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_enfants_non_inscrits_traites.enfants_non_inscrits_traites'
     // ),
-    // makeSet(
-    //   'Give details for each case',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_enfants_non_inscrits_traites.details_enfants_non_inscrits',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of unvaccinated children identified',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_non_vaccines.non_vaccines'
     // ),
-    // makeSet(
-    //   'Give details for each case',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_non_vaccines.details_non_vaccines'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines.details_non_vaccines.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines.details_non_vaccines.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines.details_non_vaccines.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines.details_non_vaccines.count_if_male'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_non_vaccines.details_non_vaccines',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_non_vaccines.details_non_vaccines',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_non_vaccines.details_non_vaccines',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_non_vaccines.details_non_vaccines',
+      'count_if_male'
+    ),
     // makeSet(
     //   'Number of unvaccinated children treated',
     //   'ampi__Number_Response__c',
     //   'form.protection_communautaire.pc_non_vaccines_traites.non_vaccines_traites'
     // ),
-    // makeSet(
-    //   'Give details for each case',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines'
-    // ),
-    // makeSet(
-    //   'sex',
-    //   'ampi__Picklist_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines.gender'
-    // ),
-    // makeSet(
-    //   'Age (in years)',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines.age'
-    // ),
-    // makeSet(
-    //   'count if female',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines.count_if_female'
-    // ),
-    // makeSet(
-    //   'count if male',
-    //   'ampi__Number_Response__c',
-    //   'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines.count_if_male'
-    // ),
-    // makeSet(
-    //   'Which of these cases of child protection are referred to?',
-    //   'Repeat mapping for multiple responses in repeat group',
-    //   'form.protection_communautaire.cas_referred'
-    // ),
-    // makeSet(
-    //   'Indicate the number of registered cases that have been referred to support structures (to be completed for each case)',
-    //   'ampi__Text_Response__c',
-    //   'form.protection_communautaire.cas_referred.cas_refere'
-    // ),
+    makeRepeat(
+      'sex',
+      'ampi__Picklist_Response__c',
+      'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines',
+      'gender'
+    ),
+    makeRepeat(
+      'Age (in years)',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines',
+      'age'
+    ),
+    makeRepeat(
+      'count if female',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines',
+      'count_if_female'
+    ),
+    makeRepeat(
+      'count if male',
+      'ampi__Number_Response__c',
+      'form.protection_communautaire.pc_non_vaccines_traites.details_non_vaccines',
+      'count_if_male'
+    ),
+    makeRepeat(
+      'Indicate the number of registered cases that have been referred to support structures (to be completed for each case)',
+      'ampi__Text_Response__c',
+      'form.protection_communautaire.cas_referred',
+      'cas_refere'
+    ),
   ];
 
   state.questionArray = state.fieldSets.map(x => {
