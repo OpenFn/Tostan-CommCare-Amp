@@ -4,7 +4,14 @@ upsert(
   'Submission_ID__c',
   fields(
     field('ampi__Description__c', dataValue('form.@name')),
-    field('Location__c', dataValue('form.coordonnes_gps')),
+    field(
+      'Location__Location__latitude__s',
+      state => state.data.form.coordonnes_gps.split(' ')[0]
+    ),
+    field(
+      'Location__longitude__s',
+      state => state.data.form.coordonnes_gps.split(' ')[1]
+    ),
     field('Submission_ID__c', dataValue('id')),
     relationship(
       'Project__r',
