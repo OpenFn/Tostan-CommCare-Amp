@@ -49,9 +49,9 @@ alterState(state => {
 
   state.fieldSets = [
     makeSet(
-      'Evaluation Type',
+      "Evaluation Type",
       'ampi__Picklist_Response__c',
-      'form.type_evaluation'
+      "form.type_evaluation"
     ),
     makeSet('Project', 'ampi__Picklist_Response__c', 'form.projet'),
     makeSet(
