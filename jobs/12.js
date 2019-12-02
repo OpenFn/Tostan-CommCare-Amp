@@ -379,7 +379,7 @@ alterState(state => {
       'form.structures_locales.violence_physique_traites.cas_violence_physique_traites'
     ),
     makeSet(
-      'Give details for each case registered and processed',
+      "Give details for each case registered and processed",
       'Repeat mapping for multiple responses in repeat group',
       'form.structures_locales.violence_physique_traites.details_violence_physique_traites'
     ),
@@ -540,7 +540,7 @@ alterState(state => {
       'form.structures_locales.enregistre_etat_civil.details_enfants_etat_civil.count_if_male'
     ),
     makeSet(
-      'Number of cases of non-registered children processed',
+      "Number of cases of non-registered children processed",
       'ampi__Number_Response__c',
       'form.structures_locales.enregistre_etat_civil_traites.enfants_etats_civil_traites'
     ),
