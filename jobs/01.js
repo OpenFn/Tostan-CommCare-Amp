@@ -5,7 +5,7 @@ upsert(
   fields(
     field('ampi__Description__c', dataValue('form.@name')),
     field(
-      'Location__Location__latitude__s',
+      'Location__latitude__s',
       state => state.data.form.coordonnes_gps.split(' ')[0]
     ),
     field(
