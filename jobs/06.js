@@ -120,7 +120,7 @@ alterState(state => {
       'form.identification_comite_de_paix.identification_com_paix.nombre_de_mbres_du_Comite_paix.nbre_de_jeunes_hommes'
     ),
     makeSet(
-      '',
+      'How many members are in the Peace Committee?',
       'ampi__Number_Response__c',
       'form.identification_comite_de_paix.identification_com_paix.nombre_de_mbres_du_Comite_paix.nombre_de_membre_du_comite_de_paix'
     ),
@@ -235,12 +235,12 @@ alterState(state => {
       'form.activite_CP.activites_CP_mediation.mediation_reussi_conflit_religieux'
     ),
     makeSet(
-      '',
+      'How many mediations were conducted?',
       'ampi__Number_Response__c',
       'form.activite_CP.activites_CP_mediation.Total_mediations_menees'
     ),
     makeSet(
-      '',
+      'How many mediations were successful?',
       'ampi__Number_Response__c',
       'form.activite_CP.activites_CP_mediation.Total_mediations_reussies'
     ),
