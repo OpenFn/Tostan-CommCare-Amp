@@ -34,15 +34,15 @@ alterState(state => {
 
     switch (b) {
       case 'ampi__Picklist_Response__c':
-        fieldSet.ampi__Response__Type__c = 'Picklist';
+        fieldSet.ampi__Response_Type__c = 'Picklist';
         break;
 
       case 'ampi__Number_Response__c':
-        fieldSet.ampi__Response__Type__c = 'Number';
+        fieldSet.ampi__Response_Type__c = 'Number';
         break;
 
       case 'ampi__Text__Response__c':
-        fieldSet.ampi__Response__Type__c = 'Qualitative';
+        fieldSet.ampi__Response_Type__c = 'Qualitative';
         break;
 
       default:
