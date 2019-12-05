@@ -479,8 +479,8 @@ alterState(state => {
   ];
 
   state.questionArray = state.fieldSets.map(x => {
-    x.RecordType = { Name: 'Answer' };
-    x.ampi__Submission__r = { Submission_ID__c: state.data.id };
+    x['RecordType.Name'] = 'Answer';
+    x['ampi__Submission__r.Submission_ID__c'] = state.data.id;
     return x;
   });
 
