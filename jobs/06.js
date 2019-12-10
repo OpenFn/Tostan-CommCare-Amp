@@ -288,7 +288,7 @@ alterState(state => {
       'How many actions have you carried out with the sub regional Peace Committee network for conflict prevention and management?',
       'ampi__Number_Response__c',
       'form.reseau_comite_paix.reseau_CP.nombre_action_avec_reseau_ss_regional'
-    ),
+    )
   ];
 
   state.questionArray = state.fieldSets.map(x => {
