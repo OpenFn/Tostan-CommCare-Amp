@@ -39,7 +39,7 @@ alterState(state => {
         fieldSet.ampi__Response_Type__c = 'Number';
         break;
 
-      case 'ampi__Text__Response__c':
+      case 'ampi__Text_Response__c':
         fieldSet.ampi__Response_Type__c = 'Qualitative';
         break;
 
