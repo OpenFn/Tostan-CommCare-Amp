@@ -28,7 +28,7 @@ alterState(state => {
 
   function makeSet(a, b, c) {
     const fieldSet = {
-      Question_ID__c: `${pId}-${a}`,
+      Question_ID__c: `${pId}-${c}`,
       ampi__Description__c: a,
     };
 
@@ -162,7 +162,7 @@ alterState(state => {
       'form.droits_humains.connaissance_droits.action_communautaire_promotion.actions_communautaire_droits_humains'
     ),
     makeSet(
-      'Which are those actions?',
+      'Which are those actions? (Human Rights)',
       'ampi__Text_Response__c',
       'form.droits_humains.connaissance_droits.action_communautaire_promotion.action_com_DrH'
     ),

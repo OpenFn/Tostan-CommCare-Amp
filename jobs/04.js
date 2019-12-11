@@ -25,7 +25,7 @@ alterState(state => {
 
   function makeSet(a, b, c) {
     const fieldSet = {
-      Question_ID__c: `${pId}-${a}`,
+      Question_ID__c: `${pId}-${c}`,
       ampi__Description__c: a,
     };
 
