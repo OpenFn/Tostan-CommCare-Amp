@@ -32,21 +32,22 @@ alterState(state => {
     switch (b) {
       case 'ampi__Picklist_Response__c':
         fieldSet.ampi__Response_Type__c = 'Picklist';
+        fieldSet[b] = dataValue(c)(state);
         break;
 
       case 'ampi__Number_Response__c':
         fieldSet.ampi__Response_Type__c = 'Number';
+        fieldSet[b] = parseInt(dataValue(c)(state));
         break;
 
       case 'ampi__Text_Response__c':
         fieldSet.ampi__Response_Type__c = 'Qualitative';
+        fieldSet[b] = dataValue(c)(state);
         break;
 
       default:
         break;
     }
-
-    fieldSet[b] = dataValue(c)(state);
 
     return fieldSet;
   }
@@ -60,14 +61,17 @@ alterState(state => {
     switch (b) {
       case 'ampi__Picklist_Response__c':
         fieldSet.ampi__Response_Type__c = 'Picklist';
+        fieldSet[b] = dataValue(c)(state);
         break;
 
       case 'ampi__Number_Response__c':
         fieldSet.ampi__Response_Type__c = 'Number';
+        fieldSet[b] = parseInt(dataValue(c)(state));
         break;
 
       case 'ampi__Text_Response__c':
         fieldSet.ampi__Response_Type__c = 'Qualitative';
+        fieldSet[b] = dataValue(c)(state);
         break;
 
       default:

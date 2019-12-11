@@ -8,7 +8,10 @@ upsert(
       'Location__latitude__s',
       state => state.data.form.Coordonnees_GPS.split(' ')[0]
     ),
-    field('Location__longitude__s', state => state.data.form.Coordonnees_GPS.split(' ')[1]),
+    field(
+      'Location__longitude__s',
+      state => state.data.form.Coordonnees_GPS.split(' ')[1]
+    ),
     field('Submission_ID__c', dataValue('id')),
     relationship(
       'Project__r',
@@ -32,21 +35,22 @@ alterState(state => {
     switch (b) {
       case 'ampi__Picklist_Response__c':
         fieldSet.ampi__Response_Type__c = 'Picklist';
+        fieldSet[b] = dataValue(c)(state);
         break;
 
       case 'ampi__Number_Response__c':
         fieldSet.ampi__Response_Type__c = 'Number';
+        fieldSet[b] = parseInt(dataValue(c)(state));
         break;
 
       case 'ampi__Text_Response__c':
         fieldSet.ampi__Response_Type__c = 'Qualitative';
+        fieldSet[b] = dataValue(c)(state);
         break;
 
       default:
         break;
     }
-
-    fieldSet[b] = dataValue(c)(state);
 
     return fieldSet;
   }
