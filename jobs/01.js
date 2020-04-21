@@ -119,7 +119,7 @@ alterState(state => {
     ),
     makeSet(
       'Total_participants',
-      'ampi__Number_Response__c',
+      'ampi__Text_Response__c',
       'form.Situation_demographique.FS-FACIL-01.le_nombre_total_de_participants_est_de_total_participants'
     ),
     makeSet(
