@@ -10,7 +10,7 @@ upsert(
     ),
     field('Location__longitude__s', state => state.data.form.GPS.split(' ')[1]),
     field('Submission_ID__c', dataValue('id')),
-    field('CreatedDate', dataValue('form.var.date_interview')),
+    //field('CreatedDate', dataValue('form.var.date_interview')),
     relationship(
       'Project__r',
       'Project_ID__c',
