@@ -10,6 +10,7 @@ upsert(
     ),
     field('Location__longitude__s', state => state.data.form.GPS.split(' ')[1]),
     field('Submission_ID__c', dataValue('id')),
+    field('CreatedDate', dataValue('form.var.date_interview')),
     relationship(
       'Project__r',
       'Project_ID__c',
@@ -57,11 +58,6 @@ alterState(state => {
   }
 
   state.fieldSets = [
-    makeSet(
-      'date of the interview',
-      'ampi__Submission__c.CreatedDate',
-      'form.var.date_interview'
-    ),
     makeSet('no consent', 'Qualitative', 'form.var.non_consentement'),
     makeSet(
       'departement',
