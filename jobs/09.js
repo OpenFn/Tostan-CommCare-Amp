@@ -13,7 +13,7 @@ upsert(
     relationship(
       'Project__r',
       'Project_ID__c',
-      `${state.data.form.fixture_localization.village}-Post CEP`
+      `${state.data.form.identification.fixture_localization.village}-Post CEP`
     )
   )
 );
@@ -60,17 +60,17 @@ alterState(state => {
     makeSet(
       'departement',
       'ampi__Picklist_Response__c',
-      'form.fixture_localization.departement'
+      'form.identification.fixture_localization.departement'
     ),
     makeSet(
       'commune',
       'ampi__Picklist_Response__c',
-      'form.fixture_localization.commune'
+      'form.identification.fixture_localization.commune'
     ),
     makeSet(
       'village',
       'ampi__Picklist_Response__c',
-      'form.fixture_localization.village'
+      'form.identification.fixture_localization.village'
     ),
     makeSet(
       'langue_interview',
