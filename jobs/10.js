@@ -58,7 +58,7 @@ alterState(state => {
   }
 
   state.fieldSets = [
-    makeSet('no consent', 'Qualitative', 'form.var.non_consentement'),
+    makeSet('no consent', 'ampi__Text_Response__c', 'form.var.non_consentement'),
     makeSet(
       'departement',
       'ampi__Picklist_Response__c',
