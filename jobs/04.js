@@ -449,7 +449,7 @@ alterState(state => {
       'form.Adoption_Sensibilisation.Noms_villages_sensibilises'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_personnelle)',
       'ampi__Text_Response__c',
       'form.Types_activites_securite_personnelle'
     ),
@@ -459,7 +459,7 @@ alterState(state => {
       'form.Activites_Securite_humaine.Activites_securite_politique'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_politique)',
       'ampi__Text_Response__c',
       'form.Activites_Securite_humaine.Types_Activites_securite_politique'
     ),
@@ -469,7 +469,7 @@ alterState(state => {
       'form.Activites_Securite_humaine.Activites_securite_economique'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_economique)',
       'ampi__Text_Response__c',
       'form.Activites_Securite_humaine.Types_activites_securite_economique'
     ),
@@ -479,7 +479,7 @@ alterState(state => {
       'form.Activites_Securite_humaine.Activite_securite_sanitaire'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_sanitaire)',
       'ampi__Text_Response__c',
       'form.Activites_Securite_humaine.Types_activites_securite_sanitaire'
     ),
@@ -489,7 +489,7 @@ alterState(state => {
       'form.Activites_Securite_humaine.Activites_securite_communautaire'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_communautaire)',
       'ampi__Text_Response__c',
       'form.Activites_Securite_humaine.Types_activites_securite_communautaire'
     ),
@@ -499,7 +499,7 @@ alterState(state => {
       'form.Activites_Securite_humaine.Activite_securite_personnelle'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_personnelle)',
       'ampi__Text_Response__c',
       'form.Activites_Securite_humaine.Types_activites_securite_personnelle'
     ),
@@ -509,7 +509,7 @@ alterState(state => {
       'form.Activites_Securite_humaine.Activites_securite_environnementale'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_environnementale)',
       'ampi__Text_Response__c',
       'form.Activites_Securite_humaine.Types_activites_securite_environnementale'
     ),
@@ -519,7 +519,7 @@ alterState(state => {
       'form.Activites_Securite_humaine.Activites_securite_alimentaire'
     ),
     makeSet(
-      'Specify What activities are these?',
+      'Specify What activities are these? (securite_alimentaire)',
       'ampi__Text_Response__c',
       'form.Activites_Securite_humaine.Types_activites_securite_alimentaire'
     ),
