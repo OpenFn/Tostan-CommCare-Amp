@@ -11,9 +11,9 @@ For every CommCare form submission --> OpenFn will create the following in Sales
 - X number of related "Question" records (1 `ampi__Question___c` record for every CC question to be mapped to SF)
 
 Note that Question records are upserted following a specific Amp Impact data structure. This requires all `ampi__Question___c` records to include: 
-1. `Question_ID__c`: uuid created by OpenFn for upserting these records
+1. `Question_ID__c`: uuid created by OpenFn for upserting these records (e.g., `'question1' + state.data.id`)
 2. `Submission_ID__c`: every Question record is linked to the parent `ampi__Submission__c` record via the CC form `id`
 3. `RecordType.Name`: all Question records are created with the Salesforce RecordType `Answer`
-4. `ampi__Description__c`: Question label that is user-friendly
+4. `ampi__Description__c`: Question label that is user-friendly (e.g., `'In what village do you live?`)
 5. `ampi__Response_Type__c`: Options include `Picklist`, `Number`, or `Qualitative`
 6. The CC question answer (e.g., `state.data.form.question1`) is mapped to either `ampi__Picklist_Response__c`|| `ampi__Number_Response__c` || `ampi__Text_Response__c` depending on what is specified for #5 above
