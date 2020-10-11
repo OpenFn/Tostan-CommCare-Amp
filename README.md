@@ -6,7 +6,7 @@ An integration between Tostan's CommCare and Amp Impact implementations.
 ## Solution Overview
 Tostan uses CommCare for M&E data collection. To integrate CommCare with Salesforce Amp Impact for centralized monitoring and analysis of survey responses, OpenFn integrates select CommCare forms with Salesforce `Surveys`. 
 
-Every CommCare form submission --> creates: 
+For every CommCare form submission --> OpenFn will create the following in Salesforce: 
 - 1 "Survey" record (1 `ampi__Submission__c` for every CC form) and 
 - X number of related "Question" records (1 `ampi__Question___c` record for every CC question to be mapped to SF)
 
