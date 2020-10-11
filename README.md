@@ -16,4 +16,4 @@ Note that Question records are upserted following a specific Amp Impact data str
 3. `RecordType.Name`: all Question records are created with the Salesforce RecordType `Answer`
 4. `ampi__Description__c`: Question label that is user-friendly
 5. `ampi__Response_Type__c`: Options include `Picklist`, `Number`, or `Qualitative`
-6. The CC question answer is mapped to either `ampi__Picklist_Response__c`|| `ampi__Number_Response__c` || `ampi__Text_Response__c` depending on what is specified for #5 above
+6. The CC question answer (e.g., `state.data.form.question1`) is mapped to either `ampi__Picklist_Response__c`|| `ampi__Number_Response__c` || `ampi__Text_Response__c` depending on what is specified for #5 above
