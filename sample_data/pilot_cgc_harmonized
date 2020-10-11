@@ -1,0 +1,9 @@
+{
+  "configuration": {
+      "loginUrl": "https://tostan--classy.my.salesforce.com/",
+      "username": "see-LP-Tostan-sandbox",
+      "password": "see-LP",
+      "securityToken": "see-LP"
+    },
+  "data": {...}
+}
