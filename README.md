@@ -4,7 +4,7 @@ An integration between Tostan's CommCare and Amp Impact (Salesforce) implementat
 ***N.B.: all commits to master will sync to OpenFn.org***
 
 ## Implementation Overview
-Tostan uses CommCare for M&E data collection. It would like to begin analyzing this data in a central location and requested that survey data for specific pilot forms be mapped to Salesforce. In 2019/2020, OpenFn implemented integrations for [18 CommCare forms](https://docs.google.com/spreadsheets/d/1GtmP04kuE0FFtCREgJ3Ib9Qi4WPnFUBzQNZEAcpOpQ8/edit#gid=1839537688), but in May 2020 Tostan requested that integrations only be activated for the following pilot forms. _These integrations have not been tested as Tostan is deliberating on how to report on this data in Salesforce.)
+Tostan uses CommCare for M&E data collection. It would like to begin analyzing this data in a central location and requested that survey data for specific pilot forms be mapped to Salesforce. In 2019/2020, OpenFn implemented integrations for [18 CommCare forms](https://docs.google.com/spreadsheets/d/1GtmP04kuE0FFtCREgJ3Ib9Qi4WPnFUBzQNZEAcpOpQ8/edit#gid=1839537688), but in May 2020 Tostan requested that integrations only be activated for the following pilot forms. _These integrations have not been tested as Tostan is deliberating on how to report on this data in Salesforce.)_
 1. Suivi prison
 2. Questionnaire individuel V3 dernière version (Questionnaire Individuel Version Finale)
 3. Suivi Mensuel Classes BG (suivi classe new) 
