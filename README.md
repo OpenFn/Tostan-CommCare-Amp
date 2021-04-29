@@ -1,5 +1,5 @@
 # Tostan-CommCare-Amp
-An integration between Tostan's CommCare and Amp Impact implementations.
+An integration between Tostan's CommCare and Amp Impact (Salesforce) implementations.
 
 ***N.B.: all commits to master will sync to OpenFn.org***
 
