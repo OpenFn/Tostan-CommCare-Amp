@@ -3,8 +3,26 @@ An integration between Tostan's CommCare and Amp Impact implementations.
 
 ***N.B.: all commits to master will sync to OpenFn.org***
 
-## Solution Overview
-Tostan uses CommCare for M&E data collection. To integrate CommCare with Salesforce Amp Impact for centralized monitoring and analysis of survey responses, OpenFn integrates select CommCare forms with Salesforce `Surveys`. 
+## Implementation Overview
+Tostan uses CommCare for M&E data collection. It would like to begin analyzing this data in a central location and requested that survey data for specific pilot forms be mapped to Salesforce. In 2019/2020, OpenFn implemented integrations for 18 CommCare forms, but in May 2020 Tostan requested that integrations only be activated for the following pilot forms, but have not been tested as Tostan is deliberating on how to report on this data. 
+1. Suivi prison
+2. Questionnaire individuel V3 dernière version (Questionnaire Individuel Version Finale)
+3. Suivi Mensuel Classes BG (suivi classe new) 
+4. Suivi Mensuel CGC BG (Suivi CGC BG new)
+5. Questionnaire étude de milieu
+6. Suivi CGC Harmonisé Tout Projet 2020 (new combined tool)
+7. Outil de Suivi des Collectivités Territoriales
+
+
+**January 2021 Email on Questionnaire Individuel V3 for Testing:**
+[This Questionnaire Individuel V3](https://www.commcarehq.org/a/seratostan/reports/form_data/1c9f75b6-e14a-4ae5-ab20-afaa0ace1913/) form submission has been synced to Salesforce. [See related Salesforce Survey](https://tostan.my.salesforce.com/?ec=302&startURL=%2Fvisualforce%2Fsession%3Furl%3Dhttps%253A%252F%252Ftostan.lightning.force.com%252Flightning%252Fr%252Fampi__Question__c%252Fa2t1Y000004GQJvQAO%252Frelated%252Fampi__Questions__r%252Fview) record with related Questions and Answers (when completed by respondent). Please note...
+- In the original design with Vera, we related Surveys to Projects in Salesforce based on the reported Village Name. The Project ID field was missing from production all together and I did not see any records reflecting village names. Tostan to updat
+- We added in the variable mappings Ibrahima requested, however it is hard to fully check our work until we better understand your reporting requirements. Hoping you can work with Vera to determine the optimal reporting output and how to best use the Amp Impact Submissions functionality, and then we're happy to make changes to determine the best way to structure/ reformat the data. 
+
+## Technical Solution Overview
+Tostan uses CommCare for M&E data collection. To integrate CommCare with Salesforce Amp Impact for centralized monitoring and analysis of survey responses, OpenFn integrates select CommCare forms with Salesforce `Surveys` (Amp Impact `ampi__Submission__c` object). 
+
+**N.B. CommCare surveys were mapped to Salesforce per the specifications provided by Vera Solutions. At the time of implementation, it is unclear how this data would be used and reported on in Salesforce, so very few data transformations were implemented to optimize analysis.**
 
 For every CommCare form submission --> OpenFn will create the following in Salesforce: 
 - 1 "Survey" record (1 `ampi__Submission__c` for every CC form) and 
